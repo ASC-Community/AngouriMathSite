@@ -34,7 +34,58 @@ THIS IS A TEMPLATE {
 
 -->
     
-<details open><summary><strong>2.1.0</strong></summary>
+<details open><summary><strong>2.6.0</strong></summary>
+<p>
+    A release about the integrator. Most of its pull requests move integration forward in every chapter
+    of Rubi's integration suite, from rational functions to the special functions, and each new route
+    checks its answer by differentiating it back. Of the 48,305 problems in that suite whose answers use
+    only functions AngouriMath has, 2.6.0 solves all 48,305 and none wrongly; 2.5.0 solved 7,580.
+    Statements became data: quantifiers, congruences,
+    divisibility, set relations and closed forms of sums. Numerical evaluation was rebuilt on
+    fixed-point series and interval arithmetic, and the test harnesses moved into CI.
+    <b>Every input whose result is now different is listed, with both values and why, in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.6.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>
+    under <code>2.6.0 — since 2.5.0</code>. Read that before upgrading.</b>
+    The one to read first: <code>|</code> is divisibility now, and was disjunction, so <code>"2 | 6"</code>
+    is <code>2 divides 6</code>. Writing <code>or</code> keeps the old reading.
+    Assembly version stays <code>2.0.0.0</code>, and nothing public was removed, so this is a drop-in
+    replacement for 2.5.0. The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.6.0">the 2.6.0 release</a>.
+</p>
+</details>
+
+<details><summary><strong>2.5.0</strong></summary>
+<p>
+    The rewrite graph, tier 2 of the Math OS roadmap: an e-graph in the kernel, and every registered rule set running as data through an e-matcher.
+    The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.5.0">the 2.5.0 release</a>, and every changed answer is in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.5.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>.
+</p>
+</details>
+
+<details><summary><strong>2.4.0</strong></summary>
+<p>
+    Tier 1 of the Math OS roadmap: rewrite rules written out as data, a pattern and a replacement.
+    The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.4.0">the 2.4.0 release</a>, and every changed answer is in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.4.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>.
+</p>
+</details>
+
+<details><summary><strong>2.3.0</strong></summary>
+<p>
+    A correctness release measured on an outside corpus: more of Rubi's integration suite answered, and none of it wrong.
+    The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.3.0">the 2.3.0 release</a>, and every changed answer is in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.3.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>.
+</p>
+</details>
+
+<details><summary><strong>2.2.0</strong></summary>
+<p>
+    A real polynomial layer, and a written specification of what canonical form means here.
+    The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.2.0">the 2.2.0 release</a>, and every changed answer is in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.2.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>.
+</p>
+</details>
+
+<details><summary><strong>2.1.0</strong></summary>
 <p>
     A correctness release. Almost everything below is a wrong answer becoming a right one, and most of
     it was found by harnesses rather than reported — boundary points where a rule's assumption fails,
