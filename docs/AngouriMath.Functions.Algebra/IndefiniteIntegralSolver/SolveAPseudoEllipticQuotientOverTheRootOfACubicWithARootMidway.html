@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions.Algebra/IndefiniteIntegralSolver/SolveAPseudoEllipticQuotientOverTheRootOfACubicWithARootMidway</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:heart-16" data-inline="true"></span><a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../../">Home</a>
+<a href="../../../quickstart">Quick start</a>
+<a href="../../../wiki">Wiki</a>
+<a href="../../../docs/namespaces.html">Almanac</a>
+<a href="../../../research">Research</a>
+<a href="../../../whatsnew">What's new</a>
+<a href="../../../demo">Try</a>
+<a href="../../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a>
+<a href="../../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra/IndefiniteIntegralSolver.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">SolveAPseudoEllipticQuotientOverTheRootOfACubicWithARootMidway&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            A linear over a linear beside the reciprocal of the square root of a cubic <c>C</c>,<br>            <c>(x + A - 2 r)/((x - A) sqrt(C))</c>, where <c>C</c> vanishes at <c>r</c>, midway between<br>            the pole and the zero, and <c>C + m (x - r)^2</c> is <c>lambda (x - r) (x - A)^2</c> for a<br>            constant <c>m</c>, <c>lambda</c> the leading coefficient: its integral is<br>            <c>-(2/sqrt(m)) atan(sqrt(m) (x - r)/sqrt(C))</c>. Welz's<br>            <c>(a + x)/((x - a) sqrt(a^2 x - (1 + a^2) x^2 + x^3))</c>.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para>            With <c>z = (x - r)/sqrt(C)</c>, <c>1 + m z^2</c> is <c>(C + m (x - r)^2)/C</c>, which is<br>            <c>lambda (x - r) (x - A)^2/C</c>, and <c>2 C - (x - r) C'</c> is<br>            <c>-lambda (x - r) (x - A) (x + A - 2 r)</c>: so<br>            <c>d/dx atan(sqrt(m) z) = -sqrt(m) (x + A - 2 r)/(2 (x - A) sqrt(C))</c>. That uses only<br>            <c>sqrt(C)^2 = C</c>, so it holds on either branch of the root and of <c>sqrt(m)</c>, and<br>            the arctangent's argument is <c>i</c> or <c>-i</c> only where <c>C</c> or <c>x - A</c>            vanishes. Where <c>m</c> is negative the same is <c>atanh(sqrt(-m) z)/sqrt(-m)</c>. A<br>            linear <c>P</c> in <c>atan(sqrt(m) P/sqrt(C))</c> gives a linear over a linear in one<br>            other way, where <c>C + m P^2</c> is <c>lambda (x - A)^3</c>, which is not read here.<br>            </para><para>            Rubi's answer to Welz's <c>(x - a - sqrt(1 + a^2))/((x - a + sqrt(1 + a^2)) sqrt((x - a) (1 + x^2)))</c>            is this, and to the one in the summary this with the root split as <c>sqrt(x) sqrt(C/x)</c>            and the factor <c>sqrt(x) sqrt(C/x)/sqrt(C)</c> beside it. With numbers for the<br>            coefficients the root is split so, <c>x</c> taken out of it, or the ansatz over Padé<br>            approximants answers; with symbols neither did, and the search past them ran out of time<br>            on Welz's at <c>r = a^2/(2 a - 1)</c>. So with a symbol in the integrand only, the<br>            conditions decided by value, and the answer differentiated back at sampled points.<br>            https://github.com/asc-community/AngouriMath/issues/233<br>            </para></div></p></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2023 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+4862 pages online
+</div>
+</body>
+
+
+
+
+</html>

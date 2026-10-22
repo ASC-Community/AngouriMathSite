@@ -99,7 +99,9 @@ B C - 9 A D = 0, B/A &gt; 0:   q/(12 a D) (atan((a - y)^2/(3 a^2 q x)) + atan(q 
                  B/A &lt; 0:   q/(12 a D) (artanh((a - y)^2/(3 a^2 q x)) - artanh(q x/3)
                                - sqrt(3) atan(sqrt(3) (a - y)/(a q x)))</code></pre><br>            and for the fourth root, with <c>s = sqrt(A + B x^2)</c> and <c>r = sqrt(|B|)</c>, times<br>            <c>B/D</c>, which takes <c>C + D x^2</c> to <c>2 A + B x^2</c>:<br>            <pre><code class="language-cs">A &gt; 0, B &gt; 0:  -(atan(A^(3/4) (1 + s/sqrt(A))/(x y r)) + artanh(A^(3/4) (1 - s/sqrt(A))/(x y r)))/(2 A^(3/4) r)
 A &gt; 0, B &lt; 0:   (atan(A^(3/4) (1 - s/sqrt(A))/(x y r)) + artanh(A^(3/4) (1 + s/sqrt(A))/(x y r)))/(2 A^(3/4) r)
-A &lt; 0:          -(atan(u) + artanh(u))/(2 (-A)^(3/4) sqrt(2) r),   u = x r/((-A)^(1/4) y sqrt(2))</code></pre><br>            Rubi's, from its 1.1.2.3, written for any constants with the ratio; each was checked by<br>            differentiating it at points in every sign case. The derivative of each uses only that<br>            the roots are roots, so for a sign that is a symbol's both forms are given, each where<br>            it holds.<br>            https://github.com/asc-community/AngouriMath/issues/718<br>            </para></div></p></p>
+A &lt; 0:          -(atan(u) + artanh(u))/(2 (-A)^(3/4) sqrt(2) r),   u = x r/((-A)^(1/4) y sqrt(2))</code></pre><br>            Rubi's, from its 1.1.2.3, written for any constants with the ratio; each was checked by<br>            differentiating it at points in every sign case. The derivative of each uses only that<br>            the roots are roots, so for a sign that is a symbol's both forms are given, each where<br>            it holds.<br>            https://github.com/asc-community/AngouriMath/issues/718<br>            </para><para><c>x^2/((A + B x^2)^(3/4) (C + D x^2))</c> at the same ratio is the same two functions'<br>            difference where the quarter power is their sum, with another constant -- Rubi's<br>            1.1.2.4, <c>x^2/((a - b x^2)^(3/4) (2 a - b x^2))</c>, which was declined:<br>            <pre><code class="language-cs">A &gt; 0, B &gt; 0:  -(atan(A^(3/4) (1 + s/sqrt(A))/(x y r)) - artanh(A^(3/4) (1 - s/sqrt(A))/(x y r)))/(A^(1/4) r^3)
+A &gt; 0, B &lt; 0:   (atan(A^(3/4) (1 - s/sqrt(A))/(x y r)) - artanh(A^(3/4) (1 + s/sqrt(A))/(x y r)))/(A^(1/4) r^3)
+A &lt; 0:           (atan(u) - artanh(u))/((-A)^(1/4) sqrt(2) r^3)</code></pre><br>            each times <c>B/D</c> as before, the constants solved for from the two functions'<br>            derivatives and checked at points in every sign case.<br>            </para></div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -113,7 +115,7 @@ A &lt; 0:          -(atan(u) + artanh(u))/(2 (-A)^(3/4) sqrt(2) r),   u = x r/((
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-4405 pages online
+4862 pages online
 </div>
 </body>
 

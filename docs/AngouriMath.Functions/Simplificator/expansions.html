@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions/Simplificator/expansions</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:heart-16" data-inline="true"></span><a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../../">Home</a>
+<a href="../../../quickstart">Quick start</a>
+<a href="../../../wiki">Wiki</a>
+<a href="../../../docs/namespaces.html">Almanac</a>
+<a href="../../../research">Research</a>
+<a href="../../../whatsnew">What's new</a>
+<a href="../../../demo">Try</a>
+<a href="../../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a>
+<a href="../../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<p class="yadg-p "><a href="../../AngouriMath.Functions/Simplificator.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">expansions</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Field</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The expansions the polynomial passes made inside the outermost<br>            <a href="../AngouriMath.Functions/Simplificator/Simplify.html">Simplify(AngouriMath.Entity,System.Int32)</a> on this thread, by the tree expanded, each with the<br>            settings it was made under.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para><a href="../AngouriMath.Functions/Simplificator/Alternate.html">Alternate(AngouriMath.Entity,System.Int32)</a> expands each candidate and reads the expansion as a polynomial<br>            in every variable in turn, and then factors it in every variable, which expands it<br>            again; and nested simplifications meet the same candidate again, since a sum of<br>            fractions simplifies the product of its denominators afresh at each pass that meets<br>            it. <c>t^4/((b t^2 + a + a t^2)^2 (1 + t^2))</c>, the tangent's integrand for Rubi's<br>            4.1.7 <c>sin(c + d x)^4/(a + b sin(c + d x)^2)^2</c>, expanded one product of 342<br>            terms 72 times, 24 trees of it three variables each, at 145 MB a time: 11 GB of<br>            the 12 GB its simplification cost. Under <c>u = sqrt((a x + 1)/(a x - 1))</c> Rubi's<br>            7.4.2 <c>e^(arcoth(a x)) (c - c/(a^2 x^2))^4</c> asked to factor 200 polynomials in<br>            <c>1 - u^2</c> 2145 times, most of them past the degree the factoring takes and<br>            expanded to be told so: 5.4 GB.<br>            </para><para>            The expansion of a tree of numbers, variables, arithmetic and the elementary functions<br>            is a function of the tree and the settings, so one kept is the one the pass would make<br>            again: a tree is looked up by its value, and an expansion is used only while every<br>            setting reads as it did when it was made. Nothing else is kept -- a piecewise, a<br>            calculus operator or a statement simplifies through scopes of its own, an integral by<br>            integrating -- and nothing at all where a derivation is being recorded, whose steps the<br>            expansion writes down each time it runs.<br>            https://github.com/asc-community/AngouriMath/issues/746<br>            </para></div></p></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2023 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+4862 pages online
+</div>
+</body>
+
+
+
+
+</html>

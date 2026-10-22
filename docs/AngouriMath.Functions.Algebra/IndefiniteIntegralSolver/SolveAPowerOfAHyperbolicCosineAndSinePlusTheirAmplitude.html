@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions.Algebra/IndefiniteIntegralSolver/SolveAPowerOfAHyperbolicCosineAndSinePlusTheirAmplitude</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:heart-16" data-inline="true"></span><a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../../">Home</a>
+<a href="../../../quickstart">Quick start</a>
+<a href="../../../wiki">Wiki</a>
+<a href="../../../docs/namespaces.html">Almanac</a>
+<a href="../../../research">Research</a>
+<a href="../../../whatsnew">What's new</a>
+<a href="../../../demo">Try</a>
+<a href="../../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a>
+<a href="../../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra/IndefiniteIntegralSolver.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">SolveAPowerOfAHyperbolicCosineAndSinePlusTheirAmplitude&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'><c>(a + b cosh(y) + c sinh(y))^n</c> for <c>a^2 = b^2 - c^2</c>, <c>y</c> linear in<br>            <c>x</c> and <c>n</c> half-odd, in closed form:<br>            <a href="../AngouriMath.Functions.Algebra/IndefiniteIntegralSolver/SolveAPowerOfACosineAndASinePlusTheirAmplitude.html">SolveAPowerOfACosineAndASinePlusTheirAmplitude(AngouriMath.Entity,AngouriMath.Entity.Variable)</a>'s recurrence for the<br>            hyperbolic functions. With <c>S</c> the base and <c>T = b sinh(y) + c cosh(y)</c>,<br>            <c>T' = S - a</c>, <c>S' = T</c> and <c>T^2 = S (S - 2a)</c>, the last of which is<br>            <c>a^2 = b^2 - c^2</c>, and from them<br>            <pre><code class="language-cs">d/dy (T S^(n-1)) = n S^n - a (2n - 1) S^(n-1)
+            </code></pre><br>            which steps <c>n</c> down to <c>1/2</c>, where the integral is <c>2T/sqrt(S)</c>, or up<br>            to <c>-1/2</c>, where it is <c>(ln(T - i q sqrt(S)) - ln(T + i q sqrt(S)))/(i q)</c> for<br>            <c>q = sqrt(2a)</c>.<br>            https://github.com/asc-community/AngouriMath/issues/233<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para>            Rubi's <c>sqrt(b cosh(x) + c sinh(x) + sqrt(b^2 - c^2))</c> and the rest of the twelve in<br>            its 6.7.1 were declined or past the budget: <c>b cosh(y) + c sinh(y)</c> is<br>            <c>sqrt(b^2 - c^2) cosh(y + phi)</c>, so the base is a square of the half angle turned by a<br>            phase, and <a href="../AngouriMath.Functions.Algebra/IndefiniteIntegralSolver/SolveByTheHalfAngleWhereOnePlusAHyperbolicCosineIsASquare.html">SolveByTheHalfAngleWhereOnePlusAHyperbolicCosineIsASquare(AngouriMath.Entity,AngouriMath.Entity.Variable,System.Boolean)</a> reads<br>            <c>a ± a cosh(y)</c> without one. The recurrence needs no phase.<br>            </para><para>            The base case is two logarithms rather than the arctangent of <c>T/(q sqrt(S))</c>: for<br>            real <c>b &gt; |c|</c>, <c>S</c> is not negative whichever sign <c>a</c> has, and for a<br>            negative <c>a</c> that argument is imaginary and past <c>i</c>, on the arctangent's cut.<br>            The two logarithms are of complex conjugates for a positive <c>a</c> and of two numbers of<br>            one sign for a negative one, real and continuous between the zeros of <c>S</c> either way.<br>            The derivations use only <c>S^(3/2) = S sqrt(S)</c> and <c>(q sqrt(S))^2 = 2a S</c>, which<br>            hold for the principal powers. <c>a^2 = b^2 - c^2</c> is decided, not assumed, and all three<br>            are there: <c>b = 0</c> is <c>a ± i a sinh(y)</c> and <c>c = 0</c> is <c>a ± a cosh(y)</c>,<br>            which the half-angle rules answer.<br>            </para><para>            Half-odd powers only. The whole ones are the exponential substitution's, which answers<br>            <c>1/S^2</c>, <c>1/S^3</c> and <c>1/S^4</c> in 182, 272 and 416 characters, where the<br>            same recurrence stepped up to <c>T/(a S)</c> gives 350, 539 and 728.<br>            </para></div></p></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2023 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+4862 pages online
+</div>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions.Algebra/IndefiniteIntegralSolver/SolveInTheImaginarySumOfAConstantAndATangent</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:heart-16" data-inline="true"></span><a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../../">Home</a>
+<a href="../../../quickstart">Quick start</a>
+<a href="../../../wiki">Wiki</a>
+<a href="../../../docs/namespaces.html">Almanac</a>
+<a href="../../../research">Research</a>
+<a href="../../../whatsnew">What's new</a>
+<a href="../../../demo">Try</a>
+<a href="../../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a>
+<a href="../../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra/IndefiniteIntegralSolver.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">SolveInTheImaginarySumOfAConstantAndATangent&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable,&#8203;System.&#8203;Boolean)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            A rational function of <c>tan(z)</c> beside a power of <c>S = a + c tan(z)</c> with<br>            <c>c = ±i a</c>, below the bar or not whole, integrated in <c>S</c>: <c>tan(z)</c> is<br>            <c>(S - a)/c</c>, and since <c>c^2 = -a^2</c>, <c>dS/dz = c sec(z)^2 = S (S - 2a)/c</c>, so<br>            <c>dz = c dS/(S (S - 2a))</c>.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para>            Rubi's <c>cot(c + d x)^3 (A + B tan(c + d x))/(a + i a tan(c + d x))^2</c> and the rest of<br>            its 4.3.3.1 with a power of the tangent beside <c>(A + B tan)</c> over a power of<br>            <c>a + i a tan</c> ran past the budget, whole powers and half-odd ones alike: under<br>            <c>u = tan(z)</c> each is a rational function over <c>1 + i u</c> and <c>1 - i u</c> with<br>            symbols in every coefficient. In <c>S</c> the factors are <c>S</c>, <c>S - 2a</c> and,<br>            from a cotangent, <c>S - a</c>, with no imaginary root among them, and the same<br>            integrands are a second or two; a half-odd power of <c>S</c> is a root of a linear.<br>            </para><para>            Exact wherever the integrand is defined: the substitution is the identity<br>            <c>sec(z)^2 = 1 + tan(z)^2</c> read in <c>S</c>, and the power of <c>S</c> is the<br>            integrand's own. Only whole powers of the tangent and cotangent of <c>z</c> beside it,<br>            and nothing else in x; a base standing only to positive whole powers is a polynomial in<br>            the tangent, which the rules for those answer.<br>            </para><para>            Beside a second such sum of the same argument, <c>q - i q tan(z)</c>, which is linear in<br>            the first, the one under a power that is not whole is the variable and the other a whole<br>            power of a linear in it: <c>(a + i a tan(z))/(q - i q tan(z))^(3/2)</c>, Rubi's 4.3.2.1,<br>            ran past the budget too. A symbol for the power is not whole either:<br>            <c>(a + i a tan(z))^m (q - i q tan(z))^4</c> is <c>S^(m - 1)</c> times a polynomial in<br>            <c>S</c>, and was declined or past the budget with the rest of 4.3.2.1 and 4.3.3.1 that<br>            write a symbolic power of one sum beside a whole one of the other.<br>            https://github.com/asc-community/AngouriMath/issues/718<br>            </para></div></p></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2023 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+4862 pages online
+</div>
+</body>
+
+
+
+
+</html>

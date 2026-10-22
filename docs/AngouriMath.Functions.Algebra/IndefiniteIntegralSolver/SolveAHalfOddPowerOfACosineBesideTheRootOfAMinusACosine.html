@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions.Algebra/IndefiniteIntegralSolver/SolveAHalfOddPowerOfACosineBesideTheRootOfAMinusACosine</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:heart-16" data-inline="true"></span><a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../../">Home</a>
+<a href="../../../quickstart">Quick start</a>
+<a href="../../../wiki">Wiki</a>
+<a href="../../../docs/namespaces.html">Almanac</a>
+<a href="../../../research">Research</a>
+<a href="../../../whatsnew">What's new</a>
+<a href="../../../demo">Try</a>
+<a href="../../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a>
+<a href="../../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra/IndefiniteIntegralSolver.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">SolveAHalfOddPowerOfACosineBesideTheRootOfAMinusACosine&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            A half-odd power of <c>f = cos(y)</c> beside <c>sqrt(a - a f)</c> or its reciprocal,<br>            <c>y</c> linear in <c>x</c>, in closed form, and the sine's the same. With <c>g</c> the<br>            other function and <c>Q = a - a f</c>, Rubi's substitution<br>            <c>v = g/(sqrt(Q) sqrt(f))</c> makes it rational: <c>a f v^2 = 1 + f</c>, so<br>            <c>f = -1/(1 - a v^2)</c> and <c>Q = a (2 - a v^2)/(1 - a v^2)</c>, and<br>            <c>dv/dy = ± sqrt(Q)/(2a f^(3/2))</c>, plus for the cosine, so that<br>            <c>f^p Q^q dy = ± 2a f^(p + 3/2) Q^(q - 1/2) dv</c> is a whole power of<br>            <c>1 - a v^2</c> over one of <c>2 - a v^2</c> or none. Its integral, back in <c>y</c>,<br>            is a sum of <c>g f^k/sqrt(Q)</c> for half-odd <c>k</c> and of <c>artanh(1/z)/sqrt(a)</c>            and <c>artanh(sqrt(2)/z)/sqrt(2a)</c>, <c>z = sqrt(a) v</c>.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para>            Rubi's <c>cos(c + d x)^(5/2)/sqrt(a - a cos(c + d x))</c> and the ten beside it in 4.2.2.1,<br>            and <c>1/(sqrt(sin(x)) sqrt(a - a sin(x)))</c> in 4.1.2.1, were answered by the sign of the<br>            complement, <c>u = cos(y)</c> with <c>sin(y) = sgn(sin(y)) sqrt(1 - u^2)</c>: right, but<br>            489 to 1,567 characters with a <c>sgn(sqrt(cos(y)) - 1)</c> in them whose derivative is left<br>            unevaluated, so that the corpus could not check them, owing <c>a &gt; 0</c> and<br>            <c>cos(y) &gt;= 0</c>, and up to 25 GB to build.<br>            </para><para>            Exact for any <c>a</c> of either sign, at every real <c>y</c> where the integrand is<br>            defined, a negative cosine included: the step uses only <c>v^2 = (1 + f)/(a f)</c>, a<br>            quotient of squares, and the chain rule for principal roots of real quantities. Rubi<br>            writes <c>artanh(z)</c>, whose argument's square <c>(1 + f)/f</c> exceeds one where the<br>            integrand is real for a positive <c>a</c>, a value on the cut and complex by a constant<br>            there. <c>artanh(1/z)</c> has the same derivative and is <c>ln(f (1 + z)^2)/2</c>, since<br>            <c>z^2 - 1 = 1/f</c>, and <c>artanh(sqrt(2)/z)</c> is <c>ln(f (sqrt(2) + z)^2/(1 - f))/2</c>;<br>            each is written with <c>ln(f)</c> apart, because for a negative <c>a</c> the product<br>            meets the cut where <c>g</c> changes sign inside the real domain. <c>z</c> is real or<br>            imaginary, so <c>(1 + z)^2</c> and <c>(sqrt(2) + z)^2</c> are never negative numbers, and<br>            <c>f</c> keeps its sign between the zeros of the cosine: the answer is continuous on each<br>            interval between the zeros of <c>f</c> and of <c>Q</c>, and real where the integrand is.<br>            </para><para>            Not for <c>a + a f</c>, whose arguments are real beyond one for a negative <c>a</c> and<br>            which the rules after this answer. At the question asked, the two powers alone, before<br>            the polynomial term, which hands the reciprocal of their product down a level, and<br>            <c>q = ±1/2</c>.<br>            https://github.com/asc-community/AngouriMath/issues/233<br>            </para></div></p></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2023 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+4862 pages online
+</div>
+</body>
+
+
+
+
+</html>
