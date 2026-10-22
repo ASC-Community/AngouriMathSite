@@ -80,7 +80,10 @@ also need to address the following resources:
 <hr>
 <p>
     AngouriMath.Terminal is a TUI program to interact with AngouriMath without creating project/opening IDE/etc.,
-    basically using it as your own calculator. Choose the right link for your OS to down it:
+    basically using it as your own calculator. It is released with the library, from 2.6.0, and installs
+    the command <code>amcli</code>. With the .NET SDK, install it as a tool:
+<pre><code>dotnet tool install --global AngouriMath.Terminal</code></pre>
+    Or choose the build for your OS:
     <table class="regular-table">
         <tr>
             <th>OS</th><th>x86 32-bit</th><th>x86 64-bit</th><th>ARM 32-bit</th><th>ARM 64-bit</th>
@@ -88,28 +91,28 @@ also need to address the following resources:
         <tr>
             <td>Debian/Ubuntu</td>
             <td></td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-amd64.deb">x64</a> ✅</td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-arm.deb">arm32</a></td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-arm64.deb">arm64</a></td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-amd64.deb">x64</a> ✅</td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-arm.deb">arm32</a></td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-arm64.deb">arm64</a></td>
         </tr>
         <tr>
             <td>Other Linux</td>
             <td></td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-linux-x64.zip">x64</a> ✅</td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-linux-arm.zip">arm32</a></td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-linux-arm64.zip">arm64</a></td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-linux-x64.zip">x64</a> ✅</td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-linux-arm.zip">arm32</a></td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-linux-arm64.zip">arm64</a></td>
         </tr>
         <tr>
             <td>macOS</td>
             <td></td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-osx-x64.zip">x64</a></td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-osx-x64.zip">x64</a></td>
             <td></td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-osx.12-arm64.zip">arm64</a></td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-osx-arm64.zip">arm64</a></td>
         </tr>
         <tr>
             <td>Windows</td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-win-x86.zip">x86</a></td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/angourimath-terminal-win-x64.zip">x64</a></td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-win-x86.zip">x86</a></td>
+            <td><a href="https://github.com/asc-community/AngouriMath/releases/latest/download/angourimath-terminal-win-x64.zip">x64</a></td>
             <td></td>
             <td></td>
         </tr>
@@ -117,13 +120,13 @@ also need to address the following resources:
     <p>
     ✅ - tested. If you'd like, you're welcome to test for another architecture
     </p>
-    <a href="https://github.com/asc-community/AngouriMathLab/releases">[ All options ]</a>
+    <a href="https://github.com/asc-community/AngouriMath/releases/latest">[ All options ]</a>
     <p>
     Run it:
     <h4>For Debian/Ubuntu users</h4>
     Go to the folder with the deb file you downloaded and run
 <pre><code>sudo apt install ./angourimath-terminal-your-arch.deb</code></pre>
-    Now you can invoke it with `angourimath-terminal` or from your start up menu / application launcher.
+    Now you can invoke it with <code>amcli</code> or <code>angourimath-terminal</code>, or from your start up menu / application launcher.
     <h4>For all others</h4>
     Unzip the file you downloaded. Inside, there's an executable called <code>AngouriMath.Terminal</code> for Linux/macOS users and <code>AngouriMath.Terminal.exe</code> for Windows users.
     </p>
@@ -139,60 +142,20 @@ also need to address the following resources:
 <h3 class="centered"><a name="cli" href="#cli" class="anchor">AngouriMath CLI</a></h3>
 <hr>
 <p>
-    <a src="https://github.com/asc-community/AngouriMathCLI">amcli</a> is a Command Line Interface for
-    AngouriMath. Although it is not as feature-rich, it may be useful for some automation scripts without
-    the need to use AM library within .NET. It's lightweight and with negligible start up time.
-    Choose the right link for your OS to down it:
-    <table class="regular-table">
-        <tr>
-            <th>OS</th><th>x86 32-bit</th><th>x86 64-bit</th><th>ARM 32-bit</th><th>ARM 64-bit</th>
-        </tr>
-        <tr>
-            <td>Debian/Ubuntu</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Other Linux</td>
-            <td></td>
-            <td><a href="https://github.com/asc-community/AngouriMathCLI/releases/latest/download/amcli-linux-x64">x64</a> ✅</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>macOS</td>
-            <td></td>
-            <td><a href="https://github.com/asc-community/AngouriMathCLI/releases/latest/download/amcli-osx-x64">x64</a></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Windows</td>
-            <td></td>
-            <td><a href="https://github.com/asc-community/AngouriMathLab/releases/latest/download/amcli-win-x64.exe">x64</a></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-    <p>
-    ✅ - tested. If you'd like, you're welcome to test for another architecture
-    </p>
-    <a href="https://github.com/asc-community/AngouriMathCLI/releases">[ All options ]</a>
-    <p>
-    Run it:
-    <h4>For Debian/Ubuntu users</h4>
-    Go to the folder with the deb file you downloaded and run
-<pre><code>sudo apt install ./amcli-your-arch.deb</code></pre>
-    Now you can invoke it with `amcli`.
-    <h4>For all others</h4>
-    Just run the executable. As for now, it has no side effects (it won't write anything to anywhere).
-    </p>
-    <p>
-        Run to get detailed help with examples:
-<pre><code>amcli help</code></pre>
-    </p>
+    The standalone <code>amcli</code> is now the Terminal's: install the
+    <a href="#terminal">AngouriMath Terminal</a>, and with a command after it <code>amcli</code> answers
+    once and exits, without opening the terminal, so it can sit in a pipe or a script:
+<pre><code>$ amcli simp "sin(x)^2 + cos(x)^2"
+1
+$ amcli solve x "x^2 - 1 = 0"
+1
+-1
+$ echo "1 + x^2" | amcli diff x
+2 * x</code></pre>
+    The commands are <code>eval</code>, <code>simp</code>, <code>fsimp</code>, <code>diff</code>,
+    <code>solve</code>, <code>sub</code>, <code>latex</code> and <code>info</code>, with the earlier tool's
+    names and argument order, and <code>amcli help</code> says what each takes. <code>amcli mcp</code>
+    serves the library to an LLM agent over the Model Context Protocol.
 </p>
 
 <br>
