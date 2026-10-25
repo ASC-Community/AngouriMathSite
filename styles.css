@@ -203,6 +203,14 @@ a {
     margin-left: 10vh;
 }
 
+/* In a narrow window the column is indented already, and the list's own indent of a tenth of the window's height left the longer page names too little room. After the rule above, which it overrides */
+@media (max-width: 1099px)
+{
+    .wiki-ul-main {
+        margin-left: 0;
+    }
+}
+
 .wiki-ul-main li {
     margin-top: 1vh;
 }
