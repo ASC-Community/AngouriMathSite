@@ -62,8 +62,8 @@ void GenerateWikiToPages()
             if (nameOnly.StartsWith("_"))
                 continue;
 
-            var rawTitle = nameOnly[(nameOnly.IndexOf('-') + 1)..];
-            var title = rawTitle.Replace('-', ' ');
+            // A page's name as the wiki shows it: `Basic-operations` is "Basic operations"
+            var title = nameOnly.Replace('-', ' ');
 
             var altName = destPath[..^2] + "html";
             links.Add((url: nameOnly.Replace("#", "%23") + ".html", name: title));
