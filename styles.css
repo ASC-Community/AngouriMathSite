@@ -92,6 +92,13 @@ summary {
     outline: none;
 }
 
+/* A displayed formula wider than the column scrolls inside its own box instead of running off the page. The padding keeps the bottom pixel of a parenthesis, whose ink reaches below the box MathJax gives it */
+mjx-container[display="true"] {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1px;
+}
+
 @media (max-width: 1099px)
 {
     .main {
