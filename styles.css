@@ -11,6 +11,11 @@ body {
     padding: 10px;
 }
 
+/* Wraps a table wider than the column, which then scrolls inside its own box instead of running off the page */
+.scroll-x {
+    overflow-x: auto;
+}
+
 .main {
     width: 44%;
     margin-top: 10vh;
