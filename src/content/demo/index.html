@@ -233,7 +233,7 @@ by copying this to your first cell:
     You are guaranteed that all functions in AM run in one thread. It is also guaranteed that you can safely run multiple functions from AM in different threads, that is, all static variables and lazy properties are thread-safe.
 </p>
 <p>
-    There is also support of cancellation a task. However, to avoid injecting the cancellation token argument into all methods, we use AsyncLocal<T> instead. That is why instead of passing your token to all methods what you need is to pass it once to the MathS Multithreading SetLocalCancellationToken (CancellationToken) method.
+    There is also support of cancellation a task. However, to avoid injecting the cancellation token argument into all methods, we use <code>AsyncLocal&lt;T&gt;</code> instead. That is why instead of passing your token to all methods what you need is to pass it once to the <code>MathS.Multithreading.SetLocalCancellationToken</code> method.
 </p>
 <details><summary>Example</summary>
 
