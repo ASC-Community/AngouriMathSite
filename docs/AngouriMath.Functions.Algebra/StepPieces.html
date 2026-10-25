@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions.Algebra/StepPieces</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:heart-16" data-inline="true"></span><a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../">Home</a>
+<a href="../../quickstart">Quick start</a>
+<a href="../../wiki">Wiki</a>
+<a href="../../docs/namespaces.html">Almanac</a>
+<a href="../../research">Research</a>
+<a href="../../whatsnew">What's new</a>
+<a href="../../demo">Try</a>
+<a href="../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="https://www.patreon.com/AngouriMath" target="_blank"><s>Donate</s></a>
+<a href="../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<h2 class="yadg-h2 centered">StepPieces</h2><hr/><p class="yadg-p "><a href="../AngouriMath.Functions.Algebra.html">&#8592; Back to list of classes</a></p><h2 class="yadg-h2 ">Description</h2><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            An expression with floors and ceilings of <c>x</c> in it, written over a bounded range as the piecewise it is<br>            there: each floor and ceiling replaced by its value on each piece, the pieces' ends exact, and each end owned by<br>            the piece whose value it has. <c>floor(x^2)</c> over <c>[0, 2]</c> is <c>0</c> on <c>[0, 1)</c>, <c>1</c> on<br>            <c>[1, sqrt(2))</c>, <c>2</c> on <c>[sqrt(2), sqrt(3))</c>, <c>3</c> on <c>[sqrt(3), 2)</c> and <c>4</c> at 2.<br>            https://github.com/asc-community/AngouriMath/issues/1807<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para>            The ends are where a step's argument <c>g</c> is a whole number: the roots of <c>g(x) = k</c> for each whole<br>            <c>k</c> in <c>g</c>'s range there, as the solver gives them, each checked to be one exactly. What makes the<br>            answer a partition rather than a list of the roots the solver happened to find is the proof that between two<br>            consecutive ends <c>g</c> reaches no whole number: by bisection, each part settled by intervals that hold every<br>            value there (see <a href="../AngouriMath.Numerics/IntervalEvaluation/Over.html">Over(AngouriMath.Entity,AngouriMath.Entity.Variable,AngouriMath.Numerics.Interval)</a>) -- <c>g</c> inside one <c>(k, k + 1)</c>, or <c>g</c>            strictly monotone with no whole number between its values at the part's ends, or, next to an end where<br>            <c>g = k</c>, the first derivative of <c>g</c> that does not vanish there of one sign throughout, so that by<br>            Taylor's theorem <c>g - k</c> has one sign beside the end. A root the solver missed is a part none of these<br>            settles, and the whole is declined: <text class="yadg-text cw">null</text>, not an answer with a piece missing.<br>            </para><para>            The last criterion is for the ends where <c>g</c> only touches a whole number, which are most of them for a<br>            sine: <c>floor(sin(pi x (4 - x)/2))</c> over <c>[0, 4]</c> reaches 1, -1 and 0 at the turning points of its<br>            argument, where <c>g' = 0</c> and no monotone part has the end in it.<br>            </para></div><h2 class="yadg-h2 ">Members</h2><p class="yadg-p "><ul class="yadg-ul "><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/AsADouble.html"><h3 class="yadg-h3 ">AsADouble&#8203;(PeterO.&#8203;Numbers.&#8203;EDecimal)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/AtAnEnd.html"><h3 class="yadg-h3 ">AtAnEnd&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable,&#8203;System.&#8203;ValueTuple{AngouriMath.&#8203;Entity,&#8203;PeterO.&#8203;Numbers.&#8203;EDecimal},&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;Dictionary{AngouriMath.&#8203;Entity,&#8203;PeterO.&#8203;Numbers.&#8203;EInteger})</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/Between.html"><h3 class="yadg-h3 ">Between&#8203;(AngouriMath.&#8203;Functions.&#8203;Algebra.&#8203;StepPieces.&#8203;Value,&#8203;AngouriMath.&#8203;Functions.&#8203;Algebra.&#8203;StepPieces.&#8203;Value)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/HighestDerivative.html"><h3 class="yadg-h3 ">HighestDerivative</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/MostEvaluationsPerGap.html"><h3 class="yadg-h3 ">MostEvaluationsPerGap</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/MostWholeNumbers.html"><h3 class="yadg-h3 ">MostWholeNumbers</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/OnAGap.html"><h3 class="yadg-h3 ">OnAGap&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable,&#8203;AngouriMath.&#8203;Functions.&#8203;Algebra.&#8203;StepPieces.&#8203;Derivatives,&#8203;System.&#8203;ValueTuple{System.&#8203;ValueTuple{AngouriMath.&#8203;Entity,&#8203;PeterO.&#8203;Numbers.&#8203;EDecimal},&#8203;AngouriMath.&#8203;Functions.&#8203;Algebra.&#8203;StepPieces.&#8203;Value},&#8203;System.&#8203;ValueTuple{System.&#8203;ValueTuple{AngouriMath.&#8203;Entity,&#8203;PeterO.&#8203;Numbers.&#8203;EDecimal},&#8203;AngouriMath.&#8203;Functions.&#8203;Algebra.&#8203;StepPieces.&#8203;Value})</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/Ordered.html"><h3 class="yadg-h3 ">Ordered&#8203;(System.&#8203;Collections.&#8203;Generic.&#8203;List{System.&#8203;ValueTuple{AngouriMath.&#8203;Entity,&#8203;PeterO.&#8203;Numbers.&#8203;EDecimal}})</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/ParameterWindow.html"><h3 class="yadg-h3 ">ParameterWindow</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./StepPieces/WholeNumbersReached.html"><h3 class="yadg-h3 ">WholeNumbersReached&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable,&#8203;AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Real,&#8203;AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Real,&#8203;AngouriMath.&#8203;Numerics.&#8203;Interval)</h3></a>Method</p></li></ul></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2023 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+4970 pages online
+</div>
+</body>
+
+
+
+
+</html>
