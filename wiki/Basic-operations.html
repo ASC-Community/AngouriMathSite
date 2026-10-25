@@ -90,46 +90,47 @@
 
 <!--Top end-->
 
-<h2 class='centered'>Basic operations</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p>Many of functions are MathS' methods where MathS is a public static class. All its methods are documented in the code.
-
+<h2 class='centered'>Basic operations</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p><p>Many of functions are MathS' methods where MathS is a public static class. All its methods are documented in the code.</p>
 <h2>MathS</h2>
-
-It is the main static class for functions. Some of them create new nodes, like <text class='cw'>MathS.Sin</text>, <text class='cw'>MathS.Var</text>, and others.
-Functions like <text class='cw'>MathS.Hyperbolic.Sinh</text> create an expression according to its symbolic definition.
-
-Method <text class='cw'>FromString</text> parses a string and returns an expression. For example,
+<p>It is the main static class for functions. Some of them create new nodes, like <text class='cw'>MathS.Sin</text>, <text class='cw'>MathS.Var</text>, and others.
+Functions like <text class='cw'>MathS.Hyperbolic.Sinh</text> create an expression according to its symbolic definition.</p>
+<p>Method <text class='cw'>FromString</text> parses a string and returns an expression. For example,</p>
 <pre><code>using static AngouriMath.MathS;
-var expr = FromString("x + 2");</code></pre>
-Would return the same result as
-<pre><code>Entity expr = "x + 2";</code></pre>
-Method <text class='cw'>FromString</text> uses caching by string. If you need to save memory or confident that
-expressions will never repeat, then you may want to disable it like this:
-<pre><code>var expr = FromString("a + x", useCache: false);</code></pre>
-Then it will not look up for cache neither it will cache the result. The implicit operator
+var expr = FromString(&quot;x + 2&quot;);
+</code></pre>
+<p>Would return the same result as</p>
+<pre><code>Entity expr = &quot;x + 2&quot;;
+</code></pre>
+<p>Method <text class='cw'>FromString</text> uses caching by string. If you need to save memory or confident that
+expressions will never repeat, then you may want to disable it like this:</p>
+<pre><code>var expr = FromString(&quot;a + x&quot;, useCache: false);
+</code></pre>
+<p>Then it will not look up for cache neither it will cache the result. The implicit operator
 from string does use the cache.
-Note, that this method, as well as the implicit operator, will not simplify the result.
-
-Method <text class='cw'>ToString</text> returns a mathematical representation of the given expression.
+Note, that this method, as well as the implicit operator, will not simplify the result.</p>
+<p>Method <text class='cw'>ToString</text> returns a mathematical representation of the given expression.
 Although in most cases it will return an expression that can be parsed from string
 back into an <text class='cw'>Entity</text>, there is no guarantee so far that it will not change.
-Example:
-<pre><code>Entity expr = "a x + b";
-Console.WriteLine(expr);</code></pre>
-Output:
-<pre><code>a * x + b</code></pre>
-
-Method <text class='cw'>Latexize</text> returns a <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>
+Example:</p>
+<pre><code>Entity expr = &quot;a x + b&quot;;
+Console.WriteLine(expr);
+</code></pre>
+<p>Output:</p>
+<pre><code>a * x + b
+</code></pre>
+<p>Method <text class='cw'>Latexize</text> returns a <a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>
 code that can be then rendered into an image.
-Example:
-<pre><code>Entity expr = "a / b + sqrt(c)";
-Console.WriteLine(expr.Latexize());</code></pre>
-Output:
-<pre><code>\frac{a}{b}+\sqrt{c}</code></pre>
+Example:</p>
+<pre><code>Entity expr = &quot;a / b + sqrt(c)&quot;;
+Console.WriteLine(expr.Latexize());
+</code></pre>
+<p>Output:</p>
+<pre><code>\frac{a}{b}+\sqrt{c}
+</code></pre>
+<p>It was spelled <text class='cw'>Latexise</text> before 2.0; see
+<a href="https://github.com/asc-community/AngouriMath/blob/master/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>.</p>
+<p>Extensions: <text class='cw'>string.Latexize()</text>, <text class='cw'>string.ToEntity()</text>, in namespace <text class='cw'>AngouriMath.Extensions</text>.</p>
 
-It was spelled <text class='cw'>Latexise</text> before 2.0; see
-<a href="https://github.com/asc-community/AngouriMath/blob/master/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>.
-
-Extensions: <text class='cw'>string.Latexize()</text>, <text class='cw'>string.ToEntity()</text>, in namespace <text class='cw'>AngouriMath.Extensions</text>.
 <!--Bottom begin-->
 
 <br><br><br><br>

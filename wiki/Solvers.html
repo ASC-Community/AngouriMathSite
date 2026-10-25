@@ -90,119 +90,121 @@
 
 <!--Top end-->
 
-<h2 class='centered'>Solvers</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p>Here we shall review different ways to solve equations, inequalities, statements, systems.
-
+<h2 class='centered'>Solvers</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p><p>Here we shall review different ways to solve equations, inequalities, statements, systems.</p>
 <h2>Solving a classic equation</h2>
-
-The method to solve a classic equation over a single variable in AM is <text class='cw'>SolveEquation</text>.
+<p>The method to solve a classic equation over a single variable in AM is <text class='cw'>SolveEquation</text>.
 Since an equation generally has a form of <text class='cw'>f(x) = g(x)</text>, the method <text class='cw'>SolveEquation</text> expects
-your expression to be <text class='cw'>f(x) - g(x)</text>, that is, it should be a function. Example:
-<pre><code>Entity expr = "2sin(a x) - b";
-Console.WriteLine(expr.SolveEquation("x"));</code></pre>
-Output:
-<pre><code>{ (arcsin(b / 2) + 2 * pi * n_1) / a, (pi - arcsin(b / 2) + 2 * pi * n_1) / a }</code></pre>
-
-Nonetheless, AM allows you to solve <text class='cw'>Statement</text>s, be that equalities, inequalities, and more advanced cases.
-
-Extension: <text class='cw'>string.SolveEquation(Variable)</text>.
-
+your expression to be <text class='cw'>f(x) - g(x)</text>, that is, it should be a function. Example:</p>
+<pre><code>Entity expr = &quot;2sin(a x) - b&quot;;
+Console.WriteLine(expr.SolveEquation(&quot;x&quot;));
+</code></pre>
+<p>Output:</p>
+<pre><code>{ (arcsin(b / 2) + 2 * pi * n_1) / a, (pi - arcsin(b / 2) + 2 * pi * n_1) / a }
+</code></pre>
+<p>Nonetheless, AM allows you to solve <text class='cw'>Statement</text>s, be that equalities, inequalities, and more advanced cases.</p>
+<p>Extension: <text class='cw'>string.SolveEquation(Variable)</text>.</p>
 <h2>Solving a statement</h2>
-
-A <text class='cw'>Statement</text> is an expression, that is considered to be true or false.
-For example, <text class='cw'>a and b</text> is a statement, as well as <text class='cw'>x2 = 4</text>, or <text class='cw'>x > a and x2 = b</text>.
-
-Let us start from a simple example:
-<pre><code>Entity expr = "x2 = 16";
-Console.WriteLine(expr.Solve("x"));</code></pre>
-Output:
-<pre><code>{ 4, -4 }</code></pre>
-
-Here is a more advanced example:
-<pre><code>Entity expr = "x4 = 16 and x in RR and x > 0";
-Console.WriteLine(expr.Solve("x"));</code></pre>
-Output:
-<pre><code>{ 2 }</code></pre>
-
-Adding another condition:
-<pre><code>Entity expr = "x4 = 16 and x in RR and x > 0 or x^a = 6";
-Console.WriteLine(expr.Solve("x"));</code></pre>
-Output:
-<pre><code>{ 2, 6 ^ (1 / a) }</code></pre>
-
-Example with inequalities:
-<pre><code>Entity expr = "2x2 - 3 > 0 and x > 0";
-Console.WriteLine(expr.Solve("x").Simplify());
-Entity expr2 = "2x2 - 3 > 0 or x > 0";
-Console.WriteLine(expr2.Solve("x").Simplify());</code></pre>
-Output:
+<p>A <text class='cw'>Statement</text> is an expression, that is considered to be true or false.
+For example, <text class='cw'>a and b</text> is a statement, as well as <text class='cw'>x2 = 4</text>, or <text class='cw'>x &gt; a and x2 = b</text>.</p>
+<p>Let us start from a simple example:</p>
+<pre><code>Entity expr = &quot;x2 = 16&quot;;
+Console.WriteLine(expr.Solve(&quot;x&quot;));
+</code></pre>
+<p>Output:</p>
+<pre><code>{ 4, -4 }
+</code></pre>
+<p>Here is a more advanced example:</p>
+<pre><code>Entity expr = &quot;x4 = 16 and x in RR and x &gt; 0&quot;;
+Console.WriteLine(expr.Solve(&quot;x&quot;));
+</code></pre>
+<p>Output:</p>
+<pre><code>{ 2 }
+</code></pre>
+<p>Adding another condition:</p>
+<pre><code>Entity expr = &quot;x4 = 16 and x in RR and x &gt; 0 or x^a = 6&quot;;
+Console.WriteLine(expr.Solve(&quot;x&quot;));
+</code></pre>
+<p>Output:</p>
+<pre><code>{ 2, 6 ^ (1 / a) }
+</code></pre>
+<p>Example with inequalities:</p>
+<pre><code>Entity expr = &quot;2x2 - 3 &gt; 0 and x &gt; 0&quot;;
+Console.WriteLine(expr.Solve(&quot;x&quot;).Simplify());
+Entity expr2 = &quot;2x2 - 3 &gt; 0 or x &gt; 0&quot;;
+Console.WriteLine(expr2.Solve(&quot;x&quot;).Simplify());
+</code></pre>
+<p>Output:</p>
 <pre><code>(sqrt(6) / 2; +oo)
-(-oo; -1/2 * sqrt(6)) \/ (0; +oo)</code></pre>
-The endpoints of a quadratic inequality are written as <text class='cw'>|a|</text>, which is the form that is right
+(-oo; -1/2 * sqrt(6)) \/ (0; +oo)
+</code></pre>
+<p>The endpoints of a quadratic inequality are written as <text class='cw'>|a|</text>, which is the form that is right
 for either sign of a symbolic coefficient. Where the coefficient is concrete, as here, the
-absolute value folds away.
-
-Extension: <text class='cw'>string.Solve(Variable)</text>.
-
-
-The returned value is a <text class='cw'>Set</text>, which could be of four types: <text class='cw'>FiniteSet</text>, <text class='cw'>Interval</text>, <text class='cw'>SpecialSet</text>, <text class='cw'>ConditionalSet</text>. Let us consider
-a basic example:
-<pre><code>Entity expr = "a x2 + b x + c = 0";
-var solutions = expr.Solve("x");
+absolute value folds away.</p>
+<p>Extension: <text class='cw'>string.Solve(Variable)</text>.</p>
+<p>The returned value is a <text class='cw'>Set</text>, which could be of four types: <text class='cw'>FiniteSet</text>, <text class='cw'>Interval</text>, <text class='cw'>SpecialSet</text>, <text class='cw'>ConditionalSet</text>. Let us consider
+a basic example:</p>
+<pre><code>Entity expr = &quot;a x2 + b x + c = 0&quot;;
+var solutions = expr.Solve(&quot;x&quot;);
 if (solutions is Entity.Set.FiniteSet finiteSet)
 {
     foreach (var root in finiteSet)
-        Console.WriteLine($"Root: {root}");
-}</code></pre>
-Output:
+        Console.WriteLine($&quot;Root: {root}&quot;);
+}
+</code></pre>
+<p>Output:</p>
 <pre><code>Root: (-b - sqrt(b ^ 2 - 4 * a * c)) / (2 * a)
-Root: (-b + sqrt(b ^ 2 - 4 * a * c)) / (2 * a)</code></pre>
-
+Root: (-b + sqrt(b ^ 2 - 4 * a * c)) / (2 * a)
+</code></pre>
 <h2>Solving system of equations</h2>
-
-Every equation of the system should be written as a simple equation
-(as in the first part of the article). The method of <text class='cw'>MathS</text> named <text class='cw'>Equations</text>:
+<p>Every equation of the system should be written as a simple equation
+(as in the first part of the article). The method of <text class='cw'>MathS</text> named <text class='cw'>Equations</text>:</p>
 <pre><code>var system = Equations(
-    "x2 + a y3",
-    "y - x - b"
-);</code></pre>
-This creates an instance of <text class='cw'>EquationSystem</text>. Let us print it out:
+    &quot;x2 + a y3&quot;,
+    &quot;y - x - b&quot;
+);
+</code></pre>
+<p>This creates an instance of <text class='cw'>EquationSystem</text>. Let us print it out:</p>
 <!-- amcheck:continues -->
-<pre><code>Console.WriteLine(system);</code></pre>
-Output:
+<pre><code>Console.WriteLine(system);
+</code></pre>
+<p>Output:</p>
 <pre><code>x ^ 2 + a * y ^ 3 = 0
-y - x - b = 0</code></pre>
-
-The method <text class='cw'>Solve()</text> of instance <text class='cw'>EquationSystem</text> takes variables in the same order,
+y - x - b = 0
+</code></pre>
+<p>The method <text class='cw'>Solve()</text> of instance <text class='cw'>EquationSystem</text> takes variables in the same order,
 as their values are then written to a solution matrix.
-Let us consider a very simple example:
+Let us consider a very simple example:</p>
 <pre><code>var system = Equations(
-    "x2 + y",
-    "y - x - 3"
+    &quot;x2 + y&quot;,
+    &quot;y - x - 3&quot;
 );
-Console.WriteLine(system.Solve("x", "y"));</code></pre>
-Output:
-<pre><code>[[-(-(5 - sqrt(-11)) / 2 + 3), (5 - sqrt(-11)) / 2], [-(-(5 + sqrt(-11)) / 2 + 3), (5 + sqrt(-11)) / 2]]</code></pre>
-The first (left) column are values for <text class='cw'>x</text>, the right one for <text class='cw'>y</text>. The first row
-is the first solution set, the second row is the second one.
-
-Every entry here is <text class='cw'>x = (-1 ± sqrt(-11)) / 2</text> and <text class='cw'>y = x + 3</text> written the long way round.
-<text class='cw'>ToString(multilineFormat: true)</text> lays the matrix out as a grid, which is easier to read:
+Console.WriteLine(system.Solve(&quot;x&quot;, &quot;y&quot;));
+</code></pre>
+<p>Output:</p>
+<pre><code>[[-(-(5 - sqrt(-11)) / 2 + 3), (5 - sqrt(-11)) / 2], [-(-(5 + sqrt(-11)) / 2 + 3), (5 + sqrt(-11)) / 2]]
+</code></pre>
+<p>The first (left) column are values for <text class='cw'>x</text>, the right one for <text class='cw'>y</text>. The first row
+is the first solution set, the second row is the second one.</p>
+<p>Every entry here is <text class='cw'>x = (-1 ± sqrt(-11)) / 2</text> and <text class='cw'>y = x + 3</text> written the long way round.
+<text class='cw'>ToString(multilineFormat: true)</text> lays the matrix out as a grid, which is easier to read:</p>
 <pre><code>var system = Equations(
-    "x2 + y",
-    "y - x - 3"
+    &quot;x2 + y&quot;,
+    &quot;y - x - 3&quot;
 );
-var solutions = (Entity.Matrix)system.Solve("x", "y");
-Console.WriteLine(solutions.ToString(multilineFormat: true));</code></pre>
-Output:
+var solutions = (Entity.Matrix)system.Solve(&quot;x&quot;, &quot;y&quot;);
+Console.WriteLine(solutions.ToString(multilineFormat: true));
+</code></pre>
+<p>Output:</p>
 <pre><code>Matrix[2 x 2]
 -(-(5 - sqrt(-11)) / 2 + 3)   (5 - sqrt(-11)) / 2           
--(-(5 + sqrt(-11)) / 2 + 3)   (5 + sqrt(-11)) / 2</code></pre>
-<text class='cw'>Simplify()</text> on the matrix does not shorten these, because <text class='cw'>Simplify</text> rewrites the node it
+-(-(5 + sqrt(-11)) / 2 + 3)   (5 + sqrt(-11)) / 2           
+</code></pre>
+<p><text class='cw'>Simplify()</text> on the matrix does not shorten these, because <text class='cw'>Simplify</text> rewrites the node it
 is given and not the entries inside it —
 <a href="https://github.com/asc-community/AngouriMath/issues/882">#882</a>. Simplifying an
-entry on its own does work, so read the entries out and simplify each.
+entry on its own does work, so read the entries out and simplify each.</p>
+<p>Extensions: <text class='cw'>(string, string).Solve(Variable, Variable)</text>, <text class='cw'>(string, string, string).Solve(Variable, Variable, Variable)</text>, etc.</p>
 
-Extensions: <text class='cw'>(string, string).Solve(Variable, Variable)</text>, <text class='cw'>(string, string, string).Solve(Variable, Variable, Variable)</text>, etc.
 <!--Bottom begin-->
 
 <br><br><br><br>

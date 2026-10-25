@@ -90,51 +90,55 @@
 
 <!--Top end-->
 
-<h2 class='centered'>Differentiation</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p>Analytical differentation is available in AngouriMath.
-
+<h2 class='centered'>Differentiation</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p><p>Analytical differentation is available in AngouriMath.</p>
 <h2>Differentiation</h2>
-
-This is fairly simple process of analytical computations of a derivative of an
-expression over one variable. To perform it, call method <text class='cw'>Differentiate</text>. Example:
-<pre><code>Entity expr = "a x ^ 2 + b sin(x) + c";
-Console.WriteLine(expr.Differentiate("x"));</code></pre>
-Output:
-<pre><code>2 * x * a + cos(x) * b</code></pre>
-
-If no derivative can be found, it will return node <text class='cw'>Entity.Derivativef</text>. It might
-happen if the differentiated expression is not numerical, for example:
-<pre><code>Entity expr = "a and x";
-Console.WriteLine(expr.Differentiate("x"));</code></pre>
-Output:
-<pre><code>derivative(a and x, x)</code></pre>
-Adding a number to a set adds it to every element, so differentiating one differentiates
-every element — and the two derivatives here coincide, leaving a one-element set:
-<pre><code>Entity expr = "{ 1, 2 } + sin(x)";
-Console.WriteLine(expr.Differentiate("x"));</code></pre>
-Output:
-<pre><code>{ cos(x) }</code></pre>
-
-You can also use this node in your expressions, and if the first argument of this node
+<p>This is fairly simple process of analytical computations of a derivative of an
+expression over one variable. To perform it, call method <text class='cw'>Differentiate</text>. Example:</p>
+<pre><code>Entity expr = &quot;a x ^ 2 + b sin(x) + c&quot;;
+Console.WriteLine(expr.Differentiate(&quot;x&quot;));
+</code></pre>
+<p>Output:</p>
+<pre><code>2 * x * a + cos(x) * b
+</code></pre>
+<p>If no derivative can be found, it will return node <text class='cw'>Entity.Derivativef</text>. It might
+happen if the differentiated expression is not numerical, for example:</p>
+<pre><code>Entity expr = &quot;a and x&quot;;
+Console.WriteLine(expr.Differentiate(&quot;x&quot;));
+</code></pre>
+<p>Output:</p>
+<pre><code>derivative(a and x, x)
+</code></pre>
+<p>Adding a number to a set adds it to every element, so differentiating one differentiates
+every element — and the two derivatives here coincide, leaving a one-element set:</p>
+<pre><code>Entity expr = &quot;{ 1, 2 } + sin(x)&quot;;
+Console.WriteLine(expr.Differentiate(&quot;x&quot;));
+</code></pre>
+<p>Output:</p>
+<pre><code>{ cos(x) }
+</code></pre>
+<p>You can also use this node in your expressions, and if the first argument of this node
 is a numerical node, then <text class='cw'>InnerSimplified</text> and <text class='cw'>Simplify</text> will execute differentiation.
-Example:
-<pre><code>Entity expr = "x derivative(sin(x) + a x, x) + 16";
-Console.WriteLine(expr.Simplify());</code></pre>
-Output:
-<pre><code>16 + x * (cos(x) + a)</code></pre>
-
-You can also pass the third argument. It reflects the number of sequential differentiation
-of the same expression. Example:
-<pre><code>Entity expr = "derivative(sin(x), x, 2)";
+Example:</p>
+<pre><code>Entity expr = &quot;x derivative(sin(x) + a x, x) + 16&quot;;
 Console.WriteLine(expr.Simplify());
-Entity expr2 = "derivative(derivative(sin(x), x), x)";
-Console.WriteLine(expr2.Simplify().InnerSimplified);</code></pre>
-Output:
+</code></pre>
+<p>Output:</p>
+<pre><code>16 + x * (cos(x) + a)
+</code></pre>
+<p>You can also pass the third argument. It reflects the number of sequential differentiation
+of the same expression. Example:</p>
+<pre><code>Entity expr = &quot;derivative(sin(x), x, 2)&quot;;
+Console.WriteLine(expr.Simplify());
+Entity expr2 = &quot;derivative(derivative(sin(x), x), x)&quot;;
+Console.WriteLine(expr2.Simplify().InnerSimplified);
+</code></pre>
+<p>Output:</p>
 <pre><code>-sin(x)
--sin(x)</code></pre>
-In other words, <text class='cw'>derivative(sin(x), x, 2)</text> is the second derivative of sin(x) or derivative of sin(x)
-of order 2.
-
-Extension: <text class='cw'>string.Differentiate(Variable)</text>.
+-sin(x)
+</code></pre>
+<p>In other words, <text class='cw'>derivative(sin(x), x, 2)</text> is the second derivative of sin(x) or derivative of sin(x)
+of order 2.</p>
+<p>Extension: <text class='cw'>string.Differentiate(Variable)</text>.</p>
 
 <!--Bottom begin-->
 

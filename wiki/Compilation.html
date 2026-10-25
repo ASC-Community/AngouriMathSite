@@ -90,118 +90,113 @@
 
 <!--Top end-->
 
-<h2 class='centered'>Compilation</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p>We will consider ways to improve the performance of computations via compiling functions.
-
+<h2 class='centered'>Compilation</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p><p>We will consider ways to improve the performance of computations via compiling functions.</p>
 <h2>Compilation into a native delegate</h2>
-
-Here we will consider a bunch of methods, which all are overloads of one: <text class='cw'>Compile</text>.
+<p>Here we will consider a bunch of methods, which all are overloads of one: <text class='cw'>Compile</text>.
 This method compiles a given symbolic expression into a native delegate, which then
 can be executed with a very high speed. This time, we first consider the way
 you highly likely need it to be compiled.
-Let us start with a simple example:
-<pre><code>Entity expr = "sin(x)";
-Func<float, float> mySin = expr.Compile<float, float>("x");
-Console.WriteLine(mySin(4.2f));</code></pre>
-Output:
-<pre><code>-0.87157565</code></pre>
-The variable <text class='cw'>mySin</text> has type <text class='cw'>Func<float, float></text>. Its type parameters accurately correspond
-to the type parameters of method <text class='cw'>Compile</text>. Let us consider a more complicated example:
-<pre><code>Entity expr = "sqrt(sin(x) + 3)";
-var f = expr.Compile<float, float>("x");
-Console.WriteLine(f(4.2f));</code></pre>
-Output:
-<pre><code>1.458912</code></pre>
-The number <text class='cw'>3</text>, although integer, is upcasted to <text class='cw'>float</text> automatically. But if only you passed
-an integer as type params, <text class='cw'>sin</text> will return an <text class='cw'>int</text> as well. Example:
-<pre><code>Entity expr = "sqrt(sin(x) + 3)";
-var f = expr.Compile<int, int>("x");
-Console.WriteLine(f(4));</code></pre>
-Output:
-<pre><code>1</code></pre>
-
-You can also pass multiple parameters, as well as multiple parameters of different types. Example:
-<pre><code>Entity expr = "sin(x) + y";
-var f = expr.Compile<float, double, float>("x", "y");
-Console.WriteLine(f(4.3f, 7.8d));</code></pre>
-Output:
-<pre><code>6.883834</code></pre>
-
-The supported types are: <text class='cw'>int</text>, <text class='cw'>long</text>, <text class='cw'>float</text>, <text class='cw'>double</text>, <text class='cw'>Complex</text>, <text class='cw'>BigInteger</text>. Let us consider
-an example, where <text class='cw'>int</text> is upcasted to a <text class='cw'>Complex</text>:
+Let us start with a simple example:</p>
+<pre><code>Entity expr = &quot;sin(x)&quot;;
+Func&lt;float, float&gt; mySin = expr.Compile&lt;float, float&gt;(&quot;x&quot;);
+Console.WriteLine(mySin(4.2f));
+</code></pre>
+<p>Output:</p>
+<pre><code>-0.87157565
+</code></pre>
+<p>The variable <text class='cw'>mySin</text> has type <text class='cw'>Func&lt;float, float&gt;</text>. Its type parameters accurately correspond
+to the type parameters of method <text class='cw'>Compile</text>. Let us consider a more complicated example:</p>
+<pre><code>Entity expr = &quot;sqrt(sin(x) + 3)&quot;;
+var f = expr.Compile&lt;float, float&gt;(&quot;x&quot;);
+Console.WriteLine(f(4.2f));
+</code></pre>
+<p>Output:</p>
+<pre><code>1.458912
+</code></pre>
+<p>The number <text class='cw'>3</text>, although integer, is upcasted to <text class='cw'>float</text> automatically. But if only you passed
+an integer as type params, <text class='cw'>sin</text> will return an <text class='cw'>int</text> as well. Example:</p>
+<pre><code>Entity expr = &quot;sqrt(sin(x) + 3)&quot;;
+var f = expr.Compile&lt;int, int&gt;(&quot;x&quot;);
+Console.WriteLine(f(4));
+</code></pre>
+<p>Output:</p>
+<pre><code>1
+</code></pre>
+<p>You can also pass multiple parameters, as well as multiple parameters of different types. Example:</p>
+<pre><code>Entity expr = &quot;sin(x) + y&quot;;
+var f = expr.Compile&lt;float, double, float&gt;(&quot;x&quot;, &quot;y&quot;);
+Console.WriteLine(f(4.3f, 7.8d));
+</code></pre>
+<p>Output:</p>
+<pre><code>6.883834
+</code></pre>
+<p>The supported types are: <text class='cw'>int</text>, <text class='cw'>long</text>, <text class='cw'>float</text>, <text class='cw'>double</text>, <text class='cw'>Complex</text>, <text class='cw'>BigInteger</text>. Let us consider
+an example, where <text class='cw'>int</text> is upcasted to a <text class='cw'>Complex</text>:</p>
 <pre><code>using System.Numerics;
 
-Entity expr = "x + y";
-var f = expr.Compile<Complex, int, Complex>("x", "y");
-Console.WriteLine(f(new(4, 5), 5));</code></pre>
-Output:
-<pre><code><9; 5></code></pre>
-<text class='cw'>Complex</text> here is <text class='cw'>System.Numerics.Complex</text>, and the printed form is that type's own —
-it was <text class='cw'>(9, 5)</text> before .NET 8 changed it.
-
-You can pass up to 8 type parameters excluding the one for output.
-
-Extensions include the same set of methods, but for string.
-
-If needed to pass more than 8 parameters, or other types than the ones listed, or 
-custom rules for types, consider declaring your own <text class='cw'>CompilationProtocol</text>.
-
+Entity expr = &quot;x + y&quot;;
+var f = expr.Compile&lt;Complex, int, Complex&gt;(&quot;x&quot;, &quot;y&quot;);
+Console.WriteLine(f(new(4, 5), 5));
+</code></pre>
+<p>Output:</p>
+<pre><code>&lt;9; 5&gt;
+</code></pre>
+<p><text class='cw'>Complex</text> here is <text class='cw'>System.Numerics.Complex</text>, and the printed form is that type's own —
+it was <text class='cw'>(9, 5)</text> before .NET 8 changed it.</p>
+<p>You can pass up to 8 type parameters excluding the one for output.</p>
+<p>Extensions include the same set of methods, but for string.</p>
+<p>If needed to pass more than 8 parameters, or other types than the ones listed, or
+custom rules for types, consider declaring your own <text class='cw'>CompilationProtocol</text>.</p>
 <h2>CompilationProtocol</h2>
-
-Since <a href="https://habr.com/en/post/546926/">the way</a> AM compiles an expression is through
-Linq.Expression, it requires provided rules for constants to be converted into a constant, 
-unary/binary/n-ary nodes to be converted into calls or operators.
-
-That is why AM has class <text class='cw'>CompilationProtocol</text> which defines a number of rules for every such
-operation.
-
-Its property <text class='cw'>ConstantConverter</text> is responsible for converting a given constant
-expression of type <text class='cw'>Entity</text> into a Linq.Expression.
-
-<text class='cw'>BinaryNodeConverter</text> takes two arguments of type <text class='cw'>Linq.Expression</text> and one argument of type
+<p>Since <a href="https://habr.com/en/post/546926/">the way</a> AM compiles an expression is through
+Linq.Expression, it requires provided rules for constants to be converted into a constant,
+unary/binary/n-ary nodes to be converted into calls or operators.</p>
+<p>That is why AM has class <text class='cw'>CompilationProtocol</text> which defines a number of rules for every such
+operation.</p>
+<p>Its property <text class='cw'>ConstantConverter</text> is responsible for converting a given constant
+expression of type <text class='cw'>Entity</text> into a Linq.Expression.</p>
+<p><text class='cw'>BinaryNodeConverter</text> takes two arguments of type <text class='cw'>Linq.Expression</text> and one argument of type
 <text class='cw'>Entity</text>. Although allowed, it is not recommended to rely on the third argument's value. Instead,
 we encourage to use it as a type holder and switch over it when looking for a good node. For example,
-that is a fragment of code for this ruleset:
+that is a fragment of code for this ruleset:</p>
 <!-- amcheck:skip a fragment, not a whole sample -->
 <pre><code>...
 return typeHolder switch
 {
-	Sumf => Expression.Add(left, right),
-	Minusf => Expression.Subtract(left, right),
-	Mulf => Expression.Multiply(left, right),
-	Divf => Expression.Divide(left, right),
-...</code></pre>
-
-Same way it is recommended to define <text class='cw'>UnaryNodeConverter</text> and <text class='cw'>AnyArgumentConverter</text> (the latter
-for n-ary nodes).
-
-Now, after you defined your own compilation protocol, you need to pass your delegate and parameters
-of the final function:
-<pre><code>Entity expr = "x + y";
-var f = expr.Compile<Func<float, float, float>>(
+	Sumf =&gt; Expression.Add(left, right),
+	Minusf =&gt; Expression.Subtract(left, right),
+	Mulf =&gt; Expression.Multiply(left, right),
+	Divf =&gt; Expression.Divide(left, right),
+...
+</code></pre>
+<p>Same way it is recommended to define <text class='cw'>UnaryNodeConverter</text> and <text class='cw'>AnyArgumentConverter</text> (the latter
+for n-ary nodes).</p>
+<p>Now, after you defined your own compilation protocol, you need to pass your delegate and parameters
+of the final function:</p>
+<pre><code>Entity expr = &quot;x + y&quot;;
+var f = expr.Compile&lt;Func&lt;float, float, float&gt;&gt;(
         new(), typeof(float), 
-        new[] { (typeof(float), Var("x")), (typeof(float), Var("y")) }
+        new[] { (typeof(float), Var(&quot;x&quot;)), (typeof(float), Var(&quot;y&quot;)) }
         );
-Console.WriteLine(f(4, 5));</code></pre>
-Here we use <text class='cw'>new()</text> instead of an instance of <text class='cw'>CompilationProtocol</text>, but instead of it a custom
-protocol can be passed.
-
-
+Console.WriteLine(f(4, 5));
+</code></pre>
+<p>Here we use <text class='cw'>new()</text> instead of an instance of <text class='cw'>CompilationProtocol</text>, but instead of it a custom
+protocol can be passed.</p>
 <h2>Compilation into FastExpression</h2>
+<p>It is highly recommend to compile a given expression the way it is described above.</p>
+<p><text class='cw'>FastExpression</text> is a special type. It contains instructions for every node and works as a stack
+machine. When compiled into it, it translates a given expression into a number of instructions,
+which are then sequentially executed.</p>
+<p>It does not accept any arguments, as it unconditionally work with <text class='cw'>Complex</text>. Example:</p>
+<pre><code>Entity expr = &quot;x + y&quot;;
+var f = expr.Compile(&quot;x&quot;, &quot;y&quot;);
+Console.WriteLine(f.Call(4, 5));
+</code></pre>
+<p>Output:</p>
+<pre><code>&lt;9; 0&gt;
+</code></pre>
+<p>It is not as fast and flexible as <text class='cw'>Compile&lt;&gt;</text>.</p>
 
-It is highly recommend to compile a given expression the way it is described above.
-
-<text class='cw'>FastExpression</text> is a special type. It contains instructions for every node and works as a stack
-machine. When compiled into it, it translates a given expression into a number of instructions, 
-which are then sequentially executed.
-
-It does not accept any arguments, as it unconditionally work with <text class='cw'>Complex</text>. Example:
-<pre><code>Entity expr = "x + y";
-var f = expr.Compile("x", "y");
-Console.WriteLine(f.Call(4, 5));</code></pre>
-Output:
-<pre><code><9; 0></code></pre>
-
-It is not as fast and flexible as <text class='cw'>Compile<></text>.
 <!--Bottom begin-->
 
 <br><br><br><br>

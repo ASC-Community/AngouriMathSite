@@ -90,95 +90,95 @@
 
 <!--Top end-->
 
-<h2 class='centered'>Simplification</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p>Here we alternate the given expression into different possible forms.
-
+<h2 class='centered'>Simplification</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p><p>Here we alternate the given expression into different possible forms.</p>
 <h2>Alternate</h2>
-
-The main method for Simplification is method <text class='cw'>Alternate</text>. It finds alternative
+<p>The main method for Simplification is method <text class='cw'>Alternate</text>. It finds alternative
 forms of the given expression and returns a sorted IEnumerable, from the simplest
-to the most complicated. Example:
-<pre><code>Entity expr = "sin(x / a) + cos(3) + sqrt(e - x)";
+to the most complicated. Example:</p>
+<pre><code>Entity expr = &quot;sin(x / a) + cos(3) + sqrt(e - x)&quot;;
 foreach (var alt in expr.Alternate(5))
-    Console.WriteLine(alt);</code></pre>
-Output:
+    Console.WriteLine(alt);
+</code></pre>
+<p>Output:</p>
 <pre><code>sin(x / a) + cos(3) + sqrt(e - x)
 cos(3) + sqrt(e - x) + sin(x / a)
 cos(3) + sin(x / a) + sqrt(e - x)
-cos(3) + sin(1 / a * x) + sqrt(e + -x)</code></pre>
-The only argument of this method is responsible for the number of iterations
-the simplification will go through.
-
-The measure of the complexity of an expression is <text class='cw'>Entity</text>'s property <text class='cw'>SimplifiedRate</text>.
+cos(3) + sin(1 / a * x) + sqrt(e + -x)
+</code></pre>
+<p>The only argument of this method is responsible for the number of iterations
+the simplification will go through.</p>
+<p>The measure of the complexity of an expression is <text class='cw'>Entity</text>'s property <text class='cw'>SimplifiedRate</text>.
 It has a type of <text class='cw'>double</text>. The higher its value is, the more complicated the expression
-is. That is the number by which method <text class='cw'>Alternate</text> sorts expressions. Example:
-<pre><code>Entity expr = "sin(x / a) + cos(3) + sqrt(e - x)";
+is. That is the number by which method <text class='cw'>Alternate</text> sorts expressions. Example:</p>
+<pre><code>Entity expr = &quot;sin(x / a) + cos(3) + sqrt(e - x)&quot;;
 foreach (var alt in expr.Alternate(5))
-    Console.WriteLine(alt.SimplifiedRate);</code></pre>
-Output:
+    Console.WriteLine(alt.SimplifiedRate);
+</code></pre>
+<p>Output:</p>
 <pre><code>37
 37
 37
-49</code></pre>
-The user's algorithms should not rely on the number, produced by <text class='cw'>SimplifiedRate</text>, as
-it might vary from version to version.
-
-Method <text class='cw'>Simplify</text> simply returns the first expression of all those returned
-by <text class='cw'>Alternate</text>, that is, the one with the lowest <text class='cw'>SimplifiedRate</text>.
-
+49
+</code></pre>
+<p>The user's algorithms should not rely on the number, produced by <text class='cw'>SimplifiedRate</text>, as
+it might vary from version to version.</p>
+<p>Method <text class='cw'>Simplify</text> simply returns the first expression of all those returned
+by <text class='cw'>Alternate</text>, that is, the one with the lowest <text class='cw'>SimplifiedRate</text>.</p>
 <h2>Critera of complexity and other methods</h2>
-
-To change the critera by which an expression's complexity is computed, you may want
+<p>To change the critera by which an expression's complexity is computed, you may want
 to change setting <text class='cw'>MathS.Settings.ComplexityCriteria</text> (dicussed in further chapters).
 The higher value for the given expression you return - the worse it appears for the AM's
-simplification algorithm.
-
-<text class='cw'>Simplify</text> is an active and expensive operation. <text class='cw'>Entity</text> has also property <text class='cw'>InnerSimplified</text>,
-which is usually called as "automatic simplification". Since there exists no automatic
+simplification algorithm.</p>
+<p><text class='cw'>Simplify</text> is an active and expensive operation. <text class='cw'>Entity</text> has also property <text class='cw'>InnerSimplified</text>,
+which is usually called as &quot;automatic simplification&quot;. Since there exists no automatic
 simplification in AM, you can address this property to get a naively simplified result.
 For example, it will cancel out zeros in sums, ones in products, and other basic operations.
-Example:
-<pre><code>Entity expr1 = "a + 0";
+Example:</p>
+<pre><code>Entity expr1 = &quot;a + 0&quot;;
 Console.WriteLine(expr1.InnerSimplified); // a
-Entity expr2 = "sin(x)2 + cos(x)2";
-Console.WriteLine(expr2.InnerSimplified); // sin(x) ^ 2 + cos(x) ^ 2</code></pre>
-As it could be seen, it will not simplify cases which require applying patterns.
-To simplify the latter case, call <text class='cw'>Simplify</text>.
-
-Same way as with <text class='cw'>Evaled</text>, consider <text class='cw'>InnerSimplified</text> as a free-to-call property.
-
-Extension: <text class='cw'>string.Simplify()</text>.
-
-## Conditions on the answer: <text class='cw'>provided</text>
-
-A rewrite that removes a singularity carries a condition, so that the answer does not claim a
+Entity expr2 = &quot;sin(x)2 + cos(x)2&quot;;
+Console.WriteLine(expr2.InnerSimplified); // sin(x) ^ 2 + cos(x) ^ 2
+</code></pre>
+<p>As it could be seen, it will not simplify cases which require applying patterns.
+To simplify the latter case, call <text class='cw'>Simplify</text>.</p>
+<p>Same way as with <text class='cw'>Evaled</text>, consider <text class='cw'>InnerSimplified</text> as a free-to-call property.</p>
+<p>Extension: <text class='cw'>string.Simplify()</text>.</p>
+<h2>Conditions on the answer: <text class='cw'>provided</text></h2>
+<p>A rewrite that removes a singularity carries a condition, so that the answer does not claim a
 value the input never had. <text class='cw'>x/x</text> has no value at zero; <text class='cw'>1</text> has one; so the simplified form says
-where it stands for the input:
-<pre><code>Entity expr = "x / x";
-Console.WriteLine(expr.Simplify());</code></pre>
-Output:
-<pre><code>1 provided not x = 0</code></pre>
-<text class='cw'>a provided c</text> is <text class='cw'>a</text> where <text class='cw'>c</text> holds and has no value where it does not. A condition the answer
+where it stands for the input:</p>
+<pre><code>Entity expr = &quot;x / x&quot;;
+Console.WriteLine(expr.Simplify());
+</code></pre>
+<p>Output:</p>
+<pre><code>1 provided not x = 0
+</code></pre>
+<p><text class='cw'>a provided c</text> is <text class='cw'>a</text> where <text class='cw'>c</text> holds and has no value where it does not. A condition the answer
 already states on its own is not written twice: the derivative of <text class='cw'>x ^ x</text> is <text class='cw'>0 ^ 0</text> at zero and
 the derivative of <text class='cw'>ln(x) / x</text> is a quotient by <text class='cw'>x ^ 2</text>, and each excludes zero by its own domain
-condition, so a <text class='cw'>provided not x = 0</text> beside either says nothing and is dropped.
-<pre><code>Entity expr = "x ^ x";
-Console.WriteLine(expr.Differentiate("x").Simplify());
-Entity expr2 = "ln(x) / x";
-Console.WriteLine(expr2.Differentiate("x").Simplify());</code></pre>
-Output:
+condition, so a <text class='cw'>provided not x = 0</text> beside either says nothing and is dropped.</p>
+<pre><code>Entity expr = &quot;x ^ x&quot;;
+Console.WriteLine(expr.Differentiate(&quot;x&quot;).Simplify());
+Entity expr2 = &quot;ln(x) / x&quot;;
+Console.WriteLine(expr2.Differentiate(&quot;x&quot;).Simplify());
+</code></pre>
+<p>Output:</p>
 <pre><code>x ^ x * (1 + ln(x))
-(1 - ln(x)) / x ^ 2</code></pre>
-What decides it is the expression's own domain condition, read in the codomain the question is
+(1 - ln(x)) / x ^ 2
+</code></pre>
+<p>What decides it is the expression's own domain condition, read in the codomain the question is
 asked in (<text class='cw'>Entity.DomainConditionIn</text>, under <text class='cw'>MathS.Settings.Codomain</text>): a quotient accepts a
 nonzero divisor, a power a nonzero base or a positive exponent, a tangent an argument whose
 cosine is nonzero, and so on. A condition that only excludes points that domain condition
-already excludes is redundant, whatever shape the expression has:
-<pre><code>Entity expr = "tan(x) provided not cos(x) = 0";
-Console.WriteLine(expr.Simplify());</code></pre>
-Output:
-<pre><code>tan(x)</code></pre>
-A condition the expression does not state stays — <text class='cw'>1 / (1 + x ^ 2) provided not x = 0</text> keeps
-its clause, since the quotient is defined at zero and the condition takes that point away.
+already excludes is redundant, whatever shape the expression has:</p>
+<pre><code>Entity expr = &quot;tan(x) provided not cos(x) = 0&quot;;
+Console.WriteLine(expr.Simplify());
+</code></pre>
+<p>Output:</p>
+<pre><code>tan(x)
+</code></pre>
+<p>A condition the expression does not state stays — <text class='cw'>1 / (1 + x ^ 2) provided not x = 0</text> keeps
+its clause, since the quotient is defined at zero and the condition takes that point away.</p>
 
 <!--Bottom begin-->
 

@@ -90,67 +90,58 @@
 
 <!--Top end-->
 
-<h2 class='centered'>Home</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p>Welcome to the AngouriMath wiki. These pages are the guide; the
-<a href="https://am.angouri.org/docs/namespaces.html">almanac</a> is the per-member reference.
-
-**Getting started**
-[Parsing an expression from string](Parsing-expression-from-string) ·
-[Expressions](Expressions) ·
-[Basic operations](Basic-operations) ·
-[Evaluation](Evaluation)
-
-**Doing mathematics**
-[Simplification](Simplification) ·
-[Solvers](Solvers) ·
-[Differentiation](Differentiation) ·
-[Integration](Integration) ·
-[Limits](Limits) ·
-[Matrices](Matrices)
-
-**Using it in a program**
-[Compilation](Compilation) ·
-[Settings](Settings) ·
-[Multithreading](Multithreading) ·
-[Exceptions](Exceptions)
-
-**Other surfaces**
-[AngouriMath in F#](AngouriMath-in-F%23) ·
-[Jupyter notebooks](Jupyter-notebooks) ·
-[Terminal](Terminal)
-
-The pages describe **2.1.0**. Answers changed in both 2.0.0 and 2.1.0 because the old ones were
+<h2 class='centered'>Home</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p><p>Welcome to the AngouriMath wiki. These pages are the guide; the
+<a href="https://am.angouri.org/docs/namespaces.html">almanac</a> is the per-member reference.</p>
+<p><strong>Getting started</strong>
+<a href="Parsing-expression-from-string.html">Parsing an expression from string</a> ·
+<a href="Expressions.html">Expressions</a> ·
+<a href="Basic-operations.html">Basic operations</a> ·
+<a href="Evaluation.html">Evaluation</a></p>
+<p><strong>Doing mathematics</strong>
+<a href="Simplification.html">Simplification</a> ·
+<a href="Solvers.html">Solvers</a> ·
+<a href="Differentiation.html">Differentiation</a> ·
+<a href="Integration.html">Integration</a> ·
+<a href="Limits.html">Limits</a> ·
+<a href="Matrices.html">Matrices</a></p>
+<p><strong>Using it in a program</strong>
+<a href="Compilation.html">Compilation</a> ·
+<a href="Settings.html">Settings</a> ·
+<a href="Multithreading.html">Multithreading</a> ·
+<a href="Exceptions.html">Exceptions</a></p>
+<p><strong>Other surfaces</strong>
+<a href="AngouriMath-in-F%23.html">AngouriMath in F#</a> ·
+<a href="Jupyter-notebooks.html">Jupyter notebooks</a> ·
+<a href="Terminal.html">Terminal</a></p>
+<p>The pages describe <strong>2.1.0</strong>. Answers changed in both 2.0.0 and 2.1.0 because the old ones were
 wrong, and every one of them is listed with both values, under a heading per release, in
 <a href="https://github.com/asc-community/AngouriMath/blob/master/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>.
-2.1.0 is a drop-in replacement for 2.0.0.
-
----
-
-### For anyone editing these pages
-
-Every <text class='cw'><pre><code></text> and <text class='cw'><pre><code></text> block here is compiled against a build of the library, run, and
+2.1.0 is a drop-in replacement for 2.0.0.</p>
+<hr />
+<h3>For anyone editing these pages</h3>
+<p>Every <text class='cw'>```cs</text> and <text class='cw'>```fs</text> block here is compiled against a build of the library, run, and
 its stated output compared with the one produced, by a harness that reports a page and line
 for anything that does not hold. So a sample that names a member the library no longer has
-is caught here rather than by a reader.
-
-Two conventions make that work, and both are worth keeping for the reader's sake anyway:
-
-- **<text class='cw'>using AngouriMath;</text>, <text class='cw'>using static AngouriMath.MathS;</text> and <text class='cw'>using static
-  AngouriMath.Entity;</text> are implied** in every sample, along with <text class='cw'>using System;</text>. Anything
-  else a sample needs, it states — <text class='cw'>using System.Numerics;</text> for <text class='cw'>Complex</text>,
-  <text class='cw'>using AngouriMath.Extensions;</text> for the <text class='cw'>string</text> extensions.
-- **What a sample prints goes in a bare fence introduced by <text class='cw'>Output:</text>**, on its own line.
-  Not <text class='cw'></code></pre>cs</text>, which marks code. Short outputs may instead be trailing comments on the
-  <text class='cw'>Console.WriteLine</text> lines, and then every printing line needs one.
-
-A block that cannot be a whole program — a fragment, pseudo-code, something written against
+is caught here rather than by a reader.</p>
+<p>Two conventions make that work, and both are worth keeping for the reader's sake anyway:</p>
+<ul>
+<li><strong><text class='cw'>using AngouriMath;</text>, <text class='cw'>using static AngouriMath.MathS;</text> and <text class='cw'>using static AngouriMath.Entity;</text> are implied</strong> in every sample, along with <text class='cw'>using System;</text>. Anything
+else a sample needs, it states — <text class='cw'>using System.Numerics;</text> for <text class='cw'>Complex</text>,
+<text class='cw'>using AngouriMath.Extensions;</text> for the <text class='cw'>string</text> extensions.</li>
+<li><strong>What a sample prints goes in a bare fence introduced by <text class='cw'>Output:</text></strong>, on its own line.
+Not <text class='cw'>```cs</text>, which marks code. Short outputs may instead be trailing comments on the
+<text class='cw'>Console.WriteLine</text> lines, and then every printing line needs one.</li>
+</ul>
+<p>A block that cannot be a whole program — a fragment, pseudo-code, something written against
 a UI, something that throws on purpose — says so in an HTML comment before the fence, which
-does not render:</code></pre>
-<!-- amcheck:skip a fragment, not a whole sample -->
-<!-- amcheck:compile throws on purpose -->
-<!-- amcheck:continues -->
-<!-- amcheck:nooutput the printed set is abbreviated on purpose -->
-<text class='cw'></text><text class='cw'></text>continues` appends the block to the sample before it, which is how a page can build a value
-in one block and print it in the next.
+does not render:</p>
+<pre><code>&lt;!-- amcheck:skip a fragment, not a whole sample --&gt;
+&lt;!-- amcheck:compile throws on purpose --&gt;
+&lt;!-- amcheck:continues --&gt;
+&lt;!-- amcheck:nooutput the printed set is abbreviated on purpose --&gt;
+</code></pre>
+<p><text class='cw'>continues</text> appends the block to the sample before it, which is how a page can build a value
+in one block and print it in the next.</p>
 
 <!--Bottom begin-->
 

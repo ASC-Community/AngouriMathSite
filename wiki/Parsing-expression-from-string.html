@@ -90,36 +90,31 @@
 
 <!--Top end-->
 
-<h2 class='centered'>Parsing expression from string</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p>There are a few ways to parse an expression from string.
-
-## With FromString
-
+<h2 class='centered'>Parsing expression from string</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p><p>There are a few ways to parse an expression from string.</p>
+<h2>With FromString</h2>
 <pre><code>using AngouriMath;
 
-var expr = MathS.FromString("1 + 1");</code></pre>
-
-It will throw an exception if input is bad.
-
-## With implicit cast
-
+var expr = MathS.FromString(&quot;1 + 1&quot;);
+</code></pre>
+<p>It will throw an exception if input is bad.</p>
+<h2>With implicit cast</h2>
 <pre><code>using AngouriMath;
 
-Entity expr = "1 + 1";</code></pre>
-
-It will also throw an exception in case of bad input.
-
-## With method Parse
-
-Unlike others, this one won't throw. However, it returns an object which requries validation:
-
-<pre><code>var expr5 = Parse("a + b").Switch(
-    res => res,
-    failure => failure.Reason.Switch<object>(
-        unknown => throw new("Unknown reason"),
-        missingOp => throw new("Missing operator"),
-        internalError => throw new("Internal error") 
+Entity expr = &quot;1 + 1&quot;;
+</code></pre>
+<p>It will also throw an exception in case of bad input.</p>
+<h2>With method Parse</h2>
+<p>Unlike others, this one won't throw. However, it returns an object which requries validation:</p>
+<pre><code>var expr5 = Parse(&quot;a + b&quot;).Switch(
+    res =&gt; res,
+    failure =&gt; failure.Reason.Switch&lt;object&gt;(
+        unknown =&gt; throw new(&quot;Unknown reason&quot;),
+        missingOp =&gt; throw new(&quot;Missing operator&quot;),
+        internalError =&gt; throw new(&quot;Internal error&quot;) 
     )
-);</code></pre>
+);
+</code></pre>
+
 <!--Bottom begin-->
 
 <br><br><br><br>

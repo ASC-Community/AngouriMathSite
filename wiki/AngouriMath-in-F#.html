@@ -90,35 +90,31 @@
 
 <!--Top end-->
 
-<h2 class='centered'>AngouriMath in F#</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p>Here we will cover usage of the library for research purposes.
-
+<h2 class='centered'>AngouriMath in F#</h2><hr><p><a href='index.html'>&#8592; Back to the main page</a></p><p>Here we will cover usage of the library for research purposes.</p>
 <h2>Usage</h2>
-
-The library has its <a href="https://www.nuget.org/packages/AngouriMath.FSharp/">wrapper</a> 
+<p>The library has its <a href="https://www.nuget.org/packages/AngouriMath.FSharp/">wrapper</a>
 for the F# language. This makes it easier to use the library for projects, written in
-F#. Example:
+F#. Example:</p>
 <pre><code>open AngouriMath.FSharp.Core
 open AngouriMath.FSharp.Functions
 open AngouriMath.FSharp.Shortcuts
 
-printfn "%O" (asNumber "2 + 3")
-printfn "%O" (<text class='cw'></text>d/dx<text class='cw'></text> "x2 + a x")
-printfn "%O" (<text class='cw'></text>int [dx]<text class='cw'></text> "x2 + e")
-printfn "%O" (<text class='cw'></text>lim x->0<text class='cw'></text> "sin(a x) / x")</code></pre>
-Output:
+printfn &quot;%O&quot; (asNumber &quot;2 + 3&quot;)
+printfn &quot;%O&quot; (``d/dx`` &quot;x2 + a x&quot;)
+printfn &quot;%O&quot; (``int [dx]`` &quot;x2 + e&quot;)
+printfn &quot;%O&quot; (``lim x-&gt;0`` &quot;sin(a x) / x&quot;)
+</code></pre>
+<p>Output:</p>
 <pre><code>5
 2 * x + a
 x ^ 3 / 3 + e * x + C
-a</code></pre>
-
-The three modules divide up like this: <text class='cw'>Core</text> converts to and from <text class='cw'>Entity</text>, <text class='cw'>Functions</text>
+a
+</code></pre>
+<p>The three modules divide up like this: <text class='cw'>Core</text> converts to and from <text class='cw'>Entity</text>, <text class='cw'>Functions</text>
 carries the operations with every argument given, and <text class='cw'>Shortcuts</text> holds the forms that
-fix <text class='cw'>x</text> as the variable — <text class='cw'></text> <text class='cw'>d/dx</text> <text class='cw'></text>, <text class='cw'></text> <text class='cw'>int [dx]</text> <text class='cw'></text>, <text class='cw'></text> <text class='cw'>lim x->0</text> <text class='cw'></text>,
-<text class='cw'></text> <text class='cw'>lim x->+oo</text> <text class='cw'></text> and the rest.
-
-
-Nonetheless, you still can call methods from the C# library itself in your code.
-
+fix <text class='cw'>x</text> as the variable — <text class='cw'>`d/dx`</text>, <text class='cw'>`int [dx]`</text>, <text class='cw'>`lim x-&gt;0`</text>,
+<text class='cw'>`lim x-&gt;+oo`</text> and the rest.</p>
+<p>Nonetheless, you still can call methods from the C# library itself in your code.</p>
 
 <!--Bottom begin-->
 
