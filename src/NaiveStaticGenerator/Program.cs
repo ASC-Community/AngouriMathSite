@@ -1,4 +1,10 @@
-﻿using NaiveStaticGenerator;
+﻿using Markdig;
+using Markdig.Renderers;
+using Markdig.Renderers.Html;
+using Markdig.Renderers.Html.Inlines;
+using Markdig.Syntax;
+using Markdig.Syntax.Inlines;
+using NaiveStaticGenerator;
 using System.Text;
 using YadgNet;
 
@@ -89,33 +95,34 @@ void GenerateWikiToPages()
 
     static string MdToHtml(string md, string title)
     {
-        // 
+        // The wiki is written for GitHub, so it is read as GitHub reads it: markdown, with the HTML in it passed through
+        var pipeline = new MarkdownPipelineBuilder().UsePipeTables().UseEmphasisExtras().UseAutoLinks().UseTaskLists().Build();
+        var document = Markdown.Parse(md.Replace("\r", ""), pipeline);
+
+        // A link to another page of the wiki names the page, as `[Expressions](Expressions)` does, and the page is Expressions.html here
+        foreach (var link in document.Descendants<LinkInline>())
+            if (!link.IsImage && link.Url is { } url && IsWikiPage(url))
+                link.Url = url.IndexOf('#') is var hash and >= 0 ? url[..hash] + ".html" + url[hash..] : url + ".html";
+
+        // The site's highlight.js guesses each block's language, and it has no F#: a block marked as F# would not be highlighted at all
+        foreach (var block in document.Descendants<FencedCodeBlock>())
+            block.GetAttributes().Classes?.Clear();
+
+        var html = new StringWriter();
+        var renderer = new HtmlRenderer(html);
+        pipeline.Setup(renderer);
+        renderer.ObjectRenderers.Replace<CodeInlineRenderer>(new CodeInlineAsCw());
+        renderer.Render(document);
+
         var sb = new StringBuilder();
         sb.Append($"<h2 class='centered'>{title}</h2><hr>");
         sb.Append("<p><a href='index.html'>&#8592; Back to the main page</a></p>");
-        sb.Append($"{md}");
-        sb.Replace("\r", "");
-        // sb.Replace("\n\n", "<br><br>");
+        sb.Append(html);
         sb.Replace("<img ", "<img style='width: 100%'");
-        return 
-            Wrap("`", "`", "<text class='cw'>", "</text>",
-                Wrap("```", "```", "<pre><code>", "</code></pre>",
-                    Wrap("```cs", "```", "<pre><code>", "</code></pre>",
-                        Wrap("```fs", "```", "<pre><code>", "</code></pre>",
-                            sb.ToString()
-                        )
-                    )
-                )
-            );
+        return sb.ToString();
 
-        static string Wrap(string before, string after, string newBefore, string newAfter, string src)
-        {
-            var unjailed = DescriptionFromXmlBuilder.Unjail(before, after, src);
-            if (unjailed is not { } notNull)
-                return src;
-            var (inside, first, last) = notNull;
-            return src[..first] + newBefore + inside.Trim() + newAfter + Wrap(before, after, newBefore, newAfter, src[last..]);
-        }
+        static bool IsWikiPage(string url)
+            => !url.Contains(':') && !url.StartsWith('/') && !url.StartsWith('#') && !Path.HasExtension(url.Split('#')[0]);
     }
 }
 
@@ -375,6 +382,17 @@ public sealed class PageSaverAndCounter : IPageSave
         File.WriteAllText(finalPath, text);
         Console.WriteLine($"Writing to {finalPath}");
         PageSavedCount++;
+    }
+}
+
+// Inline code in the wiki's pages, in the site's own style for it
+public sealed class CodeInlineAsCw : HtmlObjectRenderer<CodeInline>
+{
+    protected override void Write(HtmlRenderer renderer, CodeInline code)
+    {
+        renderer.Write("<text class='cw'>");
+        renderer.WriteEscape(code.ContentSpan);
+        renderer.Write("</text>");
     }
 }
 
