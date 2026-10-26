@@ -323,6 +323,57 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.FastExpression/Compiler/%23ctor.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.FastExpression/Compiler/Compile.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.FastExpression/Scratch.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/All.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Alternatives.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Determinant.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Differentiate.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/DivisorCount.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Evaluate.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/EvaluateNumerically.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Expand.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Factorize.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Find.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/FromBase.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/GreatestCommonDivisor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Integrate.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Inverse.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/IsPrime.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Latex.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Limit.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Normalize.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/PrimeFactorization.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Rank.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/ReducedRowEchelonForm.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/SatisfyingAssignments.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Series.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Simplify.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Solve.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/SolveSystem.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Substitute.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Sympy.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/TensorProduct.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/ToBase.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Totient.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Trace.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Transpose.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/TruthTable.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Catalogue/Variables.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Operation.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Operation/Description.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Operation/Name.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Operation/Parameters.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Operation/ToString.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Parameter.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Parameter/%23ctor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Parameter/Description.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Parameter/Name.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Query%601.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/Query%601/Ask.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/TransformationOperation%601.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/TransformationOperation%601/Apply.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Operations/TransformationOperation%601/Relation.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.ReasonOfFailureWhileParsing.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.ReasonOfFailureWhileParsing/InternalError.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.ReasonOfFailureWhileParsing/InternalError/%23ctor.html</loc></url>
@@ -2520,6 +2571,13 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/ModulusSolver.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/ModulusSolver/IsRealForEveryComplex.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/ModulusSolver/SolveOverTheReals.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/NonSquareSystemSolver.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/NonSquareSystemSolver/EachRoot.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/NonSquareSystemSolver/Eliminate.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/NonSquareSystemSolver/Holds.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/NonSquareSystemSolver/Pinned.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/NonSquareSystemSolver/Solve.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/NonSquareSystemSolver/Vanishes.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSignTable.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSignTable/CauchyBound.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSignTable/Evaluate.html</loc></url>
@@ -2548,6 +2606,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver/Equivalent.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver/Filtered.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver/Implication.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver/IsEvidenceAgainst.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver/IsSpurious.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver/LargestModulusTried.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver/LargestTerm.html</loc></url>
@@ -2596,6 +2655,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/Attempt.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/BackSubstitute.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/Canonical.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/Satisfies.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/TrySolve.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.IndefiniteIntegralSolver.html</loc></url>
@@ -2707,10 +2767,15 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/CubeRootLogarithmAnsatz/TrySolveOverTheExtension.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/CubeRootLogarithmAnsatz/TrySolveWithSymbols.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/AtASamplePoint.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/Branches.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/InSolveSystem.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/MostBranches.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/RowsThatHold.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/Solve.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/SolvePiecewiseOrNull.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/SystemSolveBudget.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/Together.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/Gruntz.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/Gruntz/AsExponentials.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/Gruntz/Bare.html</loc></url>
