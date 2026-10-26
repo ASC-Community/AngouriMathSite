@@ -68,7 +68,12 @@ let init () =
     if dirExists("." / generatorP / "Yadg.NET") then
         log "Skipping Yadg.NET cloning..."
     else
-        git ("." / generatorP) "clone https://github.com/WhiteBlackGoose/Yadg.NET Yadg.NET"
+        git ("." / generatorP) "clone -c core.autocrlf=false https://github.com/WhiteBlackGoose/Yadg.NET Yadg.NET"
+        // Yadg.NET has not changed since 2022 and this repository cannot push to it, so the
+        // site carries its fixes in Yadg.NET.patch, at the commit the patch was written against.
+        // The clone keeps LF line endings on Windows too, as the patch has them.
+        git ("." / generatorP / "Yadg.NET") "checkout --quiet a79a053df06a2a87d4fc6fac84dd5e81cecc11f6"
+        git ("." / generatorP / "Yadg.NET") "apply ../Yadg.NET.patch"
 
     if dirExists("." / generatorP / contentP / "_wiki") then
         log "Skipping wiki cloning..."

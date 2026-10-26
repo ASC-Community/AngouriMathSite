@@ -1,0 +1,50 @@
+diff --git a/Yadg.NET/WebsiteBuilder/MemberPageBuilder.cs b/Yadg.NET/WebsiteBuilder/MemberPageBuilder.cs
+index 3caa5da..36ed5fe 100644
+--- a/Yadg.NET/WebsiteBuilder/MemberPageBuilder.cs
++++ b/Yadg.NET/WebsiteBuilder/MemberPageBuilder.cs
+@@ -10,6 +10,10 @@ public sealed record MemberPageBuilder(INamedDocMember Member)
+         "<span class=\"iconify\" data-icon=\"octicon:diamond-16\"></span>&nbsp;";
+         
+     public string BackToMembersButtonText { get; init; }
++
++    // A member's page is Namespace/Type/Member.html, two folders below the root of the docs, as
++    // the link back to its type allows for. A cross-reference is written from that root, so it
++    // climbs both; climbing one led into the type's own namespace, where nothing is.
+     public string Build(string back)
+         =>
+         p(a($"../../{back}", $"{BackToMembersButtonText}")) +
+@@ -26,7 +30,7 @@ public sealed record MemberPageBuilder(INamedDocMember Member)
+                         h1(MemberListBuilder.SplitWrapWordsMethod(method.Name + method.Overloads.First().Parameters)) +
+                         p($"{IconNextToMemberInfo}Method (no overloads)")
+                     ) +
+-                    p(new DescriptionFromXmlBuilder(method.Overloads.First().Description, "../").Build())
++                    p(new DescriptionFromXmlBuilder(method.Overloads.First().Description, "../../").Build())
+ 
+                     :
+ 
+@@ -39,7 +43,7 @@ public sealed record MemberPageBuilder(INamedDocMember Member)
+                         method.Overloads.Select(
+                             overload =>
+                                 h3(MemberListBuilder.SplitWrapWordsMethod(method.Name + overload.Parameters)) +
+-                                p(new DescriptionFromXmlBuilder(overload.Description, "../").Build())
++                                p(new DescriptionFromXmlBuilder(overload.Description, "../../").Build())
+                         )
+                     )
+                     )
+@@ -50,14 +54,14 @@ public sealed record MemberPageBuilder(INamedDocMember Member)
+                         p($"{IconNextToMemberInfo}Property")
+                     )
+                     +
+-                    p(new DescriptionFromXmlBuilder(property.Description, "../").Build()),
++                    p(new DescriptionFromXmlBuilder(property.Description, "../../").Build()),
+                 DocField field =>
+                     p(
+                         h1(field.Name) +
+                         p($"{IconNextToMemberInfo}Field")
+                     )
+                     +
+-                    p(new DescriptionFromXmlBuilder(field.Description, "../").Build()),
++                    p(new DescriptionFromXmlBuilder(field.Description, "../../").Build()),
+                 _ => throw new Exception()
+             } 
+         );
