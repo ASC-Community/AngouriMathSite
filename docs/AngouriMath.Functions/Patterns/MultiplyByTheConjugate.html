@@ -88,7 +88,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.Functions/Patterns.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">MultiplyByTheConjugate&#8203;(AngouriMath.&#8203;Entity)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'><c>num / (a + b)</c> becomes <c>num * (a - b) / (a^2 - b^2)</c> where that clears a<br>            surd out of the denominator, and <text class="yadg-text cw">expr</text> where it does not.<br>            </div></p></p>
+<p class="yadg-p "><a href="../../AngouriMath.Functions/Patterns.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">MultiplyByTheConjugate&#8203;(AngouriMath.&#8203;Entity)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'><c>num / (a + b)</c> becomes <c>num * (a - b) / (a^2 - b^2)</c> where that clears a<br>            surd out of the denominator, and <text class="yadg-text cw">expr</text> where it does not.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para><c>(5 - sqrt(3)) / (5 + sqrt(3))</c> is <c>14/11 - 5/11 * sqrt(3)</c>.<br>            </para><para>            The library already prefers a denominator without a surd -- <c>1/sqrt(2)</c> has<br>            always come back as <c>sqrt(2)/2</c> -- so this extends an existing preference to<br>            the binomial case. https://github.com/asc-community/AngouriMath/issues/205<br>            </para><para>            Three conditions, and each is load-bearing. The denominator must be constant,<br>            because multiplying numerator and denominator by <c>a - b</c> is only valid where<br>            that is non-zero, and for a symbolic denominator it is not decidable -- rewriting<br>            there would either lose a value or attach a condition to every such quotient.<br>            <c>a^2 - b^2</c> must fold to a rational, which is what says the root was<br>            actually cleared: a conjugate does nothing for a cube root, where<br>            <c>1 - 2^(2/3)</c> is no better than <c>1 + 2^(1/3)</c>. And it must be non-zero,<br>            which rules out <c>a = b</c> and, since it is <c>(a-b)(a+b)</c>, guarantees the<br>            original denominator was non-zero too.<br>            </para><para>            Terminates because the rewritten denominator is a rational and this rule requires<br>            a surd in the denominator to fire at all.<br>            </para></div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -102,7 +102,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5035 pages online
+5057 pages online
 </div>
 </body>
 

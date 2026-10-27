@@ -88,7 +88,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.MathS/Settings.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">DowncastingToleranceAsDouble</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Property</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The tolerance within which downcasting rounds a number onto a nearby integer.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            This is <a href="../../AngouriMath.MathS/Settings/PrecisionErrorZeroRange.html">PrecisionErrorZeroRange</a> whenever a caller has set it,<br>            but its default of 1e-16 is far too coarse to be applied blindly: numbers are<br>            evaluated to <a href="../../AngouriMath.MathS/Settings/DecimalPrecisionContext.html">DecimalPrecisionContext</a> digits, 100 by default, so<br>            1e-16 sits nowhere near the noise floor. Applying it destroyed every legitimate<br>            small value -- <c>1e-20</c> parsed to zero and <c>e^(-40)</c> evaluated to zero.<br>            Residuals genuinely left over by exact cancellation, such as the one from<br>            <c>sin(pi)</c>, land around 1e-99, so half the working digits separates the two<br>            cases with room to spare. Never looser than the setting's own default, so that<br>            lowering the precision cannot silently widen the tolerance.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'><a href="../../AngouriMath.MathS/Settings.html">DowncastingTolerance</a> as a double, for the cheap check in front of<br>            the exact one: the conversion of the decimal costs more than the check.<br>            </div></p></p>
+<p class="yadg-p "><a href="../../AngouriMath.MathS/Settings.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">DowncastingToleranceAsDouble</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Property</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'><a href="../../AngouriMath.MathS/Settings/DowncastingTolerance.html">DowncastingTolerance</a> as a double, for the cheap check in front of<br>            the exact one: the conversion of the decimal costs more than the check.<br>            </div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -102,7 +102,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5035 pages online
+5057 pages online
 </div>
 </body>
 
