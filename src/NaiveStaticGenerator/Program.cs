@@ -37,6 +37,7 @@ CopyCssFilesToFinalWebsite();
 CopyImgFolderToFinalWebsite();
 CopyCName();
 CopyRobots();
+TurnOffJekyll();
 GenerateSitemap();
 GenerateLlmsTxt();
 
@@ -284,6 +285,14 @@ void CopyCName()
 void CopyRobots()
 {
     File.Copy(RootP._("robots.txt"), FinalOutputP._("robots.txt"), true);
+}
+
+// GitHub Pages runs a branch through Jekyll unless it holds a .nojekyll, and Jekyll leaves out
+// every file whose name starts with '#', '_' or '.'. The pages here are finished HTML with no
+// front matter, so Jekyll had nothing to do but drop them: each constructor's page, #ctor.html.
+void TurnOffJekyll()
+{
+    File.WriteAllText(FinalOutputP._(".nojekyll"), "");
 }
 
 // Every page of the website, for search engines, which robots.txt points to. A page that is a

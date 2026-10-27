@@ -1,3 +1,56 @@
+diff --git a/Yadg.NET/WebsiteBuilder.cs b/Yadg.NET/WebsiteBuilder.cs
+index 3e808a7..9c5666d 100644
+--- a/Yadg.NET/WebsiteBuilder.cs
++++ b/Yadg.NET/WebsiteBuilder.cs
+@@ -21,7 +21,16 @@ namespace YadgNet
+         public WebsiteBuilder(IPageSave saver)
+             => this.saver = saver;
+ 
++        // The compiler names a constructor #ctor, and writes the dots in the name of an
++        // explicitly implemented interface member as '#'. In a link that character begins the
++        // fragment, so the browser asked for the path before it; it is written %23.
++        internal static string InLink(string name)
++            => name.Replace("#", "%23");
++
+         internal static string? GetLinkWithinAsmByName(string cref)
++            => LinkWithinAsmByName(cref) is { } link ? InLink(link) : null;
++
++        private static string? LinkWithinAsmByName(string cref)
+             => (cref[..2], cref[2..]) switch
+             {
+                 (_, var containsSystem) when NameParser.GetMethodName(cref).Contains("System")
+diff --git a/Yadg.NET/WebsiteBuilder/MemberListBuilder.cs b/Yadg.NET/WebsiteBuilder/MemberListBuilder.cs
+index 5024e8f..1924ab8 100644
+--- a/Yadg.NET/WebsiteBuilder/MemberListBuilder.cs
++++ b/Yadg.NET/WebsiteBuilder/MemberListBuilder.cs
+@@ -42,23 +42,23 @@ namespace YadgNet
+                                     ?
+ 
+                                     p(
+-                                        a($"./{cls.Name}/{method.Name}.html", h3(SplitWrapWordsMethod(method.Name + method.Overloads.First().Parameters))) + "Method"
++                                        a($"./{cls.Name}/{WebsiteBuilder.InLink(method.Name)}.html", h3(SplitWrapWordsMethod(method.Name + method.Overloads.First().Parameters))) + "Method"
+                                     )
+ 
+                                     :
+ 
+                                     p(
+-                                        a($"./{cls.Name}/{method.Name}.html", h3(method.Name)) + "Method and its overloads"
++                                        a($"./{cls.Name}/{WebsiteBuilder.InLink(method.Name)}.html", h3(method.Name)) + "Method and its overloads"
+                                     )
+                                     )
+                                 ,
+                                 DocProperty property =>
+                                     p(
+-                                        a($"./{cls.Name}/{property.Name}.html", h3(property.Name)) + "Property"
++                                        a($"./{cls.Name}/{WebsiteBuilder.InLink(property.Name)}.html", h3(property.Name)) + "Property"
+                                     ),
+                                 DocField field =>
+                                     p(
+-                                        a($"./{cls.Name}/{field.Name}.html", h3(field.Name)) + "Field"
++                                        a($"./{cls.Name}/{WebsiteBuilder.InLink(field.Name)}.html", h3(field.Name)) + "Field"
+                                     ),
+                                 _ => throw new Exception()
+                             }
 diff --git a/Yadg.NET/WebsiteBuilder/MemberPageBuilder.cs b/Yadg.NET/WebsiteBuilder/MemberPageBuilder.cs
 index 3caa5da..36ed5fe 100644
 --- a/Yadg.NET/WebsiteBuilder/MemberPageBuilder.cs
