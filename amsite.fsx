@@ -108,8 +108,11 @@ let run () =
     else if RuntimeInformation.IsOSPlatform(OSPlatform.Linux) then
         runProgram "xdg-open" "." ("." / outputP / "index.html")
 
+// All of .output, not only final: the generator copies every page in .output/pre into final,
+// so a page an older build wrote to pre -- one for a member the library has since removed --
+// came back after a clean, with whatever broken links it had.
 let clean () =
-    dirDelete ("." / outputP)
+    dirDelete ("." / ".output")
 
 match cliArgs with
 | [ _; _; "init" ] -> init ()
