@@ -1,8 +1,14 @@
 diff --git a/Yadg.NET/WebsiteBuilder.cs b/Yadg.NET/WebsiteBuilder.cs
-index 3e808a7..9c5666d 100644
+index 3e808a7..ca2320b 100644
 --- a/Yadg.NET/WebsiteBuilder.cs
 +++ b/Yadg.NET/WebsiteBuilder.cs
-@@ -21,7 +21,16 @@ namespace YadgNet
+@@ -1,4 +1,5 @@
+ ﻿using System;
++using System.Collections.Generic;
+ 
+ namespace YadgNet
+ {
+@@ -21,7 +22,30 @@ namespace YadgNet
          public WebsiteBuilder(IPageSave saver)
              => this.saver = saver;
  
@@ -12,13 +18,44 @@ index 3e808a7..9c5666d 100644
 +        internal static string InLink(string name)
 +            => name.Replace("#", "%23");
 +
++        // The pages Build writes. A cross-reference can name something with no page of its own:
++        // a positional record's parameter is described on its type's page, so it links there,
++        // and a type from another assembly has no page at all, so it is written as text, as a
++        // System type already was. Each led to a page that does not exist.
++        private static HashSet<string>? pages;
++
          internal static string? GetLinkWithinAsmByName(string cref)
-+            => LinkWithinAsmByName(cref) is { } link ? InLink(link) : null;
++        {
++            var link = LinkWithinAsmByName(cref);
++            if (link is not null && pages is not null && !pages.Contains(link))
++                link = cref.StartsWith("T:")
++                    || LinkWithinAsmByName("T:" + NameParser.OneFoldBack(cref[2..])) is not { } owner
++                    || !pages.Contains(owner)
++                    ? null : owner;
++            return link is null ? null : InLink(link);
++        }
 +
 +        private static string? LinkWithinAsmByName(string cref)
              => (cref[..2], cref[2..]) switch
              {
                  (_, var containsSystem) when NameParser.GetMethodName(cref).Contains("System")
+@@ -39,6 +63,16 @@ namespace YadgNet
+ 
+         public void Build(DocAssembly assembly)
+         {
++            pages = new HashSet<string>();
++            foreach (var nspace in assembly.Namespaces)
++                foreach (var cls in nspace.Classes)
++                {
++                    pages.Add($"{nspace.Name}/{cls.Name}.html");
++                    foreach (var mem in cls.Members)
++                        if (mem is INamedDocMember named)
++                            pages.Add($"{nspace.Name}/{cls.Name}/{named.Name}.html");
++                }
++
+             saver.Save("namespaces.html", 
+                 new NamespaceListBuilder(assembly)
+                 { 
 diff --git a/Yadg.NET/WebsiteBuilder/MemberListBuilder.cs b/Yadg.NET/WebsiteBuilder/MemberListBuilder.cs
 index 5024e8f..1924ab8 100644
 --- a/Yadg.NET/WebsiteBuilder/MemberListBuilder.cs
