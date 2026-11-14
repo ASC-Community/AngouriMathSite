@@ -88,7 +88,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.Entity/Absf.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">VectorNorm&#8203;(AngouriMath.&#8203;Entity.&#8203;Matrix,&#8203;System.&#8203;Boolean)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The Euclidean norm of a vector.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            This used to always finish with <a href="../../AngouriMath/Entity/InnerSimplified.html">InnerSimplified</a>, even<br>            when the caller had asked for numeric evaluation. A norm like sqrt(369)<br>            has no exact simplification, so it survived as a <a href="../../AngouriMath.Entity/Powf.html">Powf</a> and<br>            <a href="../../AngouriMath/Entity/EvalNumerical.html">EvalNumerical</a> then rejected it as "not a simple<br>            number" -- it only worked when the norm was a perfect square.<br>            </div></p></p>
+<p class="yadg-p "><a href="../../AngouriMath.Entity/Absf.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">VectorNorm&#8203;(AngouriMath.&#8203;Entity.&#8203;Matrix,&#8203;System.&#8203;Boolean)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>             The Euclidean norm of a vector.<br>             </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>             This used to always finish with <a href="../../AngouriMath/Entity/InnerSimplified.html">InnerSimplified</a>, even<br>             when the caller had asked for numeric evaluation. A norm like sqrt(369)<br>             has no exact simplification, so it survived as a <a href="../../AngouriMath.Entity/Powf.html">Powf</a> and<br>             <a href="../../AngouriMath/Entity/EvalNumerical.html">EvalNumerical</a> then rejected it as "not a simple<br>             number" -- it only worked when the norm was a perfect square.<br>            <br>             The norm over the complex numbers is <c>sqrt(sum |v_k|^2)</c>. Squaring the<br>             component itself is that only on the real line: <c>[1 + i, 2]</c> gave<br>             <c>sqrt(4 + 2i)</c>, <c>[1 + i, 1 - i]</c> gave 0, and <c>[x, y]</c> gave<br>             <c>sqrt(x^2 + y^2)</c>, which is 0 at <c>x = i, y = 0</c> where the norm is 1.<br>             https://github.com/asc-community/AngouriMath/issues/2423<br>             </div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -102,7 +102,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5057 pages online
+5629 pages online
 </div>
 </body>
 

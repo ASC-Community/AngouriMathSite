@@ -124,7 +124,28 @@ THIS IS A TEMPLATE {
 
 -->
     
-<details open><summary><strong>2.6.0</strong></summary>
+<details open><summary><strong>2.7.0</strong></summary>
+<p>
+    A release about limits and compilation. limitcheck compares a limit with the values the expression
+    takes near the point. On the 40 of its seeds that both versions complete, 2.6.0 answers 2,685 limits
+    with a value other than the one those values settle at, and 2.7.0 answers 70. 2.6.0 says 1,519
+    limits do not exist where the values settle, and 2.7.0 says 457; and 495 limits that did not finish in
+    five seconds are down to 3. Matrices compile: a matrix argument is an array, with its inverse, whole
+    powers, functions taken entry by entry, and <code>det</code>, <code>transpose</code>, <code>trace</code>
+    and an entry <code>A[k, l]</code> of a name for a matrix.
+    <b>Every input whose result is now different is listed, with both values and why, in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.7.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>
+    under <code>2.7.0 — since 2.6.0</code>. Read that before upgrading.</b>
+    The ones to read first are names that read differently: <code>re</code>, <code>im</code>,
+    <code>conj</code>, <code>arg</code>, <code>det</code>, <code>transpose</code>, <code>trace</code> and
+    others followed by a bracket were products and are functions now, and <code>eulergamma</code> is Euler's
+    constant where it was a variable.
+    Assembly version stays <code>2.0.0.0</code>, and nothing public was removed, so this is a drop-in
+    replacement for 2.6.0. The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.7.0">the 2.7.0 release</a>.
+</p>
+</details>
+
+<details><summary><strong>2.6.0</strong></summary>
 <p>
     A release about the integrator. Most of its pull requests move integration forward in every chapter
     of Rubi's integration suite, from rational functions to the special functions, and each new route
@@ -971,7 +992,7 @@ Added Tensor, system of equations, polynom divisions, periodic roots for solvers
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5057 pages online
+5629 pages online
 </div>
 </body>
 

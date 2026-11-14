@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions/TrigonometricIdentity</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../">Home</a>
+<a href="../../quickstart">Quick start</a>
+<a href="../../wiki">Wiki</a>
+<a href="../../docs/namespaces.html">Almanac</a>
+<a href="../../research">Research</a>
+<a href="../../whatsnew">What's new</a>
+<a href="../../demo">Try</a>
+<a href="../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<h2 class="yadg-h2 centered">TrigonometricIdentity</h2><hr/><p class="yadg-p "><a href="../AngouriMath.Functions.html">&#8592; Back to list of classes</a></p><h2 class="yadg-h2 ">Description</h2><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Decides whether a rational function of sines, cosines, tangents, cotangents, secants and<br>            cosecants is a constant where it has a value, and which constant. Proving a trigonometric<br>            identity written as a difference is asking whether that constant is zero.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para>            Every angle has to be a combination of the variables with rational coefficients and no<br>            constant term. Each variable <c>v</c> then has a base angle <c>u = v / L</c>, where <c>L</c>            is the least common denominator of its coefficients, and every angle is a whole combination<br>            of base angles. A cosine of <c>n u</c> is the Chebyshev polynomial <c>T_n(cos u)</c> and a sine<br>            is <c>sin(u) U_(n-1)(cos u)</c>, and a sum of base angles is opened by the addition theorem.<br>            So the expression is a quotient of two polynomials over <c>Q</c> in its variables and in a<br>            sine and a cosine of each base angle.<br>            </para><para>            The only relation among those is <c>sin(u)^2 + cos(u)^2 = 1</c>, since <c>x</c> and<br>            <c>e^(ix)</c> are algebraically independent, and so are different variables. Writing each<br>            <c>sin(u)^2</c> as <c>1 - cos(u)^2</c> leaves every sine to the first power at most, and that<br>            form is unique: the relations' leading monomials are coprime, so they are a Gröbner basis. A<br>            polynomial therefore vanishes identically exactly when its form is zero, and the quotient is<br>            the constant <c>k</c> exactly when the numerator's form is <c>k</c> times the denominator's.<br>            </para><para>            Both theorems hold for every complex angle, and the denominator is the product of the ones<br>            the expression divides by, so it vanishes only where the expression has no value. The<br>            constant is the expression's value everywhere else, and a caller states where that is.<br>            <a href="https://github.com/asc-community/AngouriMath/issues/2142">#2142</a></para></div><h2 class="yadg-h2 ">Members</h2><p class="yadg-p "><ul class="yadg-ul "><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./TrigonometricIdentity/Collect.html"><h3 class="yadg-h3 ">Collect&#8203;(AngouriMath.&#8203;Entity,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;HashSet{AngouriMath.&#8203;Entity.&#8203;Variable},&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;List{AngouriMath.&#8203;Entity})</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./TrigonometricIdentity/Gathered.html"><h3 class="yadg-h3 ">Gathered&#8203;(AngouriMath.&#8203;Entity,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;IReadOnlyDictionary{AngouriMath.&#8203;Entity.&#8203;Variable,&#8203;System.&#8203;Int32},&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;IReadOnlyDictionary{AngouriMath.&#8203;Entity,&#8203;System.&#8203;ValueTuple{AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial}},&#8203;System.&#8203;Int32)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./TrigonometricIdentity/LinearCombination.html"><h3 class="yadg-h3 ">LinearCombination&#8203;(AngouriMath.&#8203;Entity)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./TrigonometricIdentity/MaxExponent.html"><h3 class="yadg-h3 ">MaxExponent</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./TrigonometricIdentity/MaxMultiple.html"><h3 class="yadg-h3 ">MaxMultiple</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./TrigonometricIdentity/OfAMultiple.html"><h3 class="yadg-h3 ">OfAMultiple&#8203;(System.&#8203;Int32,&#8203;System.&#8203;ValueTuple{System.&#8203;Int32,&#8203;System.&#8203;Int32},&#8203;System.&#8203;Int32)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./TrigonometricIdentity/Reduced.html"><h3 class="yadg-h3 ">Reduced&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;IReadOnlyList{System.&#8203;ValueTuple{System.&#8203;Int32,&#8203;System.&#8203;Int32}})</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./TrigonometricIdentity/TryConstant.html"><h3 class="yadg-h3 ">TryConstant&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity@)</h3></a>Method</p></li></ul></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2026 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+5629 pages online
+</div>
+</body>
+
+
+
+
+</html>

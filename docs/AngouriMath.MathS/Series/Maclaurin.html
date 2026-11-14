@@ -88,7 +88,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.MathS/Series.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">Maclaurin&#8203;(AngouriMath.&#8203;Entity,&#8203;System.&#8203;Int32,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable[])</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Finds the symbolic expression of terms of the Maclaurin expansion of the given function,<br>            <a href="https://en.wikipedia.org/wiki/Taylor_series">Wikipedia</a></div><p class="yadg-p "><strong class="yadg-strong ">Parameter "expr"</strong></p><div class="yadg-div yadg-param">            The function to find the Maclaurin expansion of<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Parameter "degree"</strong></p><div class="yadg-div yadg-param">            The degree of the resulting Maclaurin polynomial (and the variable in the resulting series)<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Parameter "exprVariables"</strong></p><div class="yadg-div yadg-param">            The variable/s to take the series over (and the variable the series will be over)<br>            (e. g. if you have expr = Sin("t"), then you may want to use "t" for this argument)<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Returns</strong></p><div class='yadg-returns'>            An expression in the polynomial form over the expression variables given in <text class="yadg-text cw">exprVariables</text></div><p class="yadg-p "><strong class="yadg-strong ">Example</strong></p><div class='yadg-example'><pre><code class="language-cs">using AngouriMath;
+<p class="yadg-p "><a href="../../AngouriMath.MathS/Series.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">Maclaurin&#8203;(AngouriMath.&#8203;Entity,&#8203;System.&#8203;Int32,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable[])</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Finds the symbolic expression of terms of the Maclaurin expansion of the given function,<br>            <a href="https://en.wikipedia.org/wiki/Taylor_series">Wikipedia</a></div><p class="yadg-p "><strong class="yadg-strong ">Parameter "expr"</strong></p><div class="yadg-div yadg-param">            The function to find the Maclaurin expansion of<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Parameter "degree"</strong></p><div class="yadg-div yadg-param">            The number of terms, one more than the highest power kept: 4 keeps the powers up to the<br>            cube, as the example shows. https://github.com/asc-community/AngouriMath/issues/2299<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Parameter "exprVariables"</strong></p><div class="yadg-div yadg-param">            The variable/s to take the series over (and the variable the series will be over)<br>            (e. g. if you have expr = Sin("t"), then you may want to use "t" for this argument)<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Returns</strong></p><div class='yadg-returns'>            An expression in the polynomial form over the expression variables given in <text class="yadg-text cw">exprVariables</text></div><p class="yadg-p "><strong class="yadg-strong ">Example</strong></p><div class='yadg-example'><pre><code class="language-cs">using AngouriMath;
 using System;
 using System.Linq;
 using static AngouriMath.MathS;
@@ -130,23 +130,23 @@ foreach (var term in first6Terms)
 x ^ 9 / 362880 - x ^ 7 / 5040 + x ^ 5 / 120 - x ^ 3 / 6 + x
 ----------------------
 sin(x) + cos(y)
-1 + (6 * x ^ 5 - 120 * x ^ 3) / 720 + x + (2 * y ^ 4 - 24 * y ^ 2) / 48
+x ^ 5 / 120 - x ^ 3 / 6 + x + 1 + y ^ 4 / 24 - y ^ 2 / 2
 ----------------------
 sin(x) + cos(y)
-sin(1) + cos(y) + cos(1) * (x - 1) + -sin(1) * (x - 1) ^ 2 / 2! + cos(1) * (-1) * (x - 1) ^ 3 / 3! + -sin(1) * (-1) * (x - 1) ^ 4 / 4! + cos(1) * (-1) * (-1) * (x - 1) ^ 5 / 5!
+cos(y) + sin(1) + cos(1) * (x - 1) + -sin(1) * (x - 1) ^ 2 / 2! + -cos(1) * (x - 1) ^ 3 / 3! + sin(1) * (x - 1) ^ 4 / 4! + cos(1) * (x - 1) ^ 5 / 5!
 ----------------------
 sin(x) + cos(y)
-sin(1) + cos(5) + cos(1) * (x - 1) + -sin(5) * (y - 5) + (-sin(1) * (x - 1) ^ 2 + cos(5) * (-1) * (y - 5) ^ 2) / 2! + (cos(1) * (-1) * (x - 1) ^ 3 + -sin(5) * (-1) * (y - 5) ^ 3) / 3! + (-sin(1) * (-1) * (x - 1) ^ 4 + cos(5) * (-1) * (-1) * (y - 5) ^ 4) / 4! + (cos(1) * (-1) * (-1) * (x - 1) ^ 5 + -sin(5) * (-1) * (-1) * (y - 5) ^ 5) / 5!
+cos(5) + sin(1) + cos(1) * (x - 1) + -sin(5) * (y - 5) + (-sin(1) * (x - 1) ^ 2 + -cos(5) * (y - 5) ^ 2) / 2! + (-cos(1) * (x - 1) ^ 3 + sin(5) * (y - 5) ^ 3) / 3! + (sin(1) * (x - 1) ^ 4 + cos(5) * (y - 5) ^ 4) / 4! + (cos(1) * (x - 1) ^ 5 + -sin(5) * (y - 5) ^ 5) / 5!
 ----------------------
 sin(x) + cos(y)
-sin(1) + cos(5) + cos(1) * (z_1 - 1) + -sin(5) * (z_2 - 5) + (-sin(1) * (z_1 - 1) ^ 2 + cos(5) * (-1) * (z_2 - 5) ^ 2) / 2! + (cos(1) * (-1) * (z_1 - 1) ^ 3 + -sin(5) * (-1) * (z_2 - 5) ^ 3) / 3! + (-sin(1) * (-1) * (z_1 - 1) ^ 4 + cos(5) * (-1) * (-1) * (z_2 - 5) ^ 4) / 4! + (cos(1) * (-1) * (-1) * (z_1 - 1) ^ 5 + -sin(5) * (-1) * (-1) * (z_2 - 5) ^ 5) / 5!
+cos(5) + sin(1) + cos(1) * (z_1 - 1) + -sin(5) * (z_2 - 5) + (-sin(1) * (z_1 - 1) ^ 2 + -cos(5) * (z_2 - 5) ^ 2) / 2! + (-cos(1) * (z_1 - 1) ^ 3 + sin(5) * (z_2 - 5) ^ 3) / 3! + (sin(1) * (z_1 - 1) ^ 4 + cos(5) * (z_2 - 5) ^ 4) / 4! + (cos(1) * (z_1 - 1) ^ 5 + -sin(5) * (z_2 - 5) ^ 5) / 5!
 ----------------------
 Received cos(1)
 Received x + -sin(1) * (y - 1)
-Received cos(1) * (-1) * (y - 1) ^ 2 / 2!
-Received (-x ^ 3 + -sin(1) * (-1) * (y - 1) ^ 3) / 3!
-Received cos(1) * (-1) * (-1) * (y - 1) ^ 4 / 4!
-Received (x ^ 5 + -sin(1) * (-1) * (-1) * (y - 1) ^ 5) / 5!</code></pre></div></p></p>
+Received -cos(1) * (y - 1) ^ 2 / 2!
+Received (-x ^ 3 + sin(1) * (y - 1) ^ 3) / 3!
+Received cos(1) * (y - 1) ^ 4 / 4!
+Received (x ^ 5 + -sin(1) * (y - 1) ^ 5) / 5!</code></pre></div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -160,7 +160,7 @@ Received (x ^ 5 + -sin(1) * (-1) * (-1) * (y - 1) ^ 5) / 5!</code></pre></div></
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5057 pages online
+5629 pages online
 </div>
 </body>
 

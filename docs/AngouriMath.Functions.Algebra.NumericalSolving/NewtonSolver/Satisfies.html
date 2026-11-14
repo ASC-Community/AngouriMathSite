@@ -88,7 +88,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">Satisfies&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable,&#8203;AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Complex)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Whether a candidate root really is one, checked against the expression as it<br>            was handed in rather than against the simplified form Newton iterated on.<br>            Simplification can widen the domain: <c>ln(x) + ln(x+1)</c> becomes<br>            <c>ln(x * (x+1))</c>, whose root -1.618... leaves the original at 2*pi*i, and<br>            the solver reported it as a root of the original equation.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Returns</strong></p><div class='yadg-returns'><text class="yadg-text cw">true</text> for anything that cannot be checked, so that a root is<br>            only ever dropped on positive evidence that it is spurious.<br>            </div></p></p>
+<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">Satisfies&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable,&#8203;AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Complex)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Whether a candidate root really is one, checked against the expression as it<br>            was handed in rather than against the simplified form Newton iterated on.<br>            Simplification can widen the domain: <c>ln(x) + ln(x+1)</c> becomes<br>            <c>ln(x * (x+1))</c>, whose root -1.618... leaves the original at 2*pi*i, and<br>            the solver reported it as a root of the original equation.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Returns</strong></p><div class='yadg-returns'><text class="yadg-text cw">true</text> for anything that cannot be checked, so that a root is<br>            only ever dropped on positive evidence that it is spurious. A point where the<br>            expression is undefined at exact arguments is such evidence: the compiled form<br>            takes <c>0^i</c> to be 0, and <c>x^i + x</c> was answered with the root 0.<br>            </div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -102,7 +102,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5057 pages online
+5629 pages online
 </div>
 </body>
 

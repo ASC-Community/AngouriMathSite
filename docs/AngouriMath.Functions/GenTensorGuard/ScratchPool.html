@@ -88,7 +88,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.Functions/GenTensorGuard.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">ScratchPool</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Field</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Held across any call that reaches GenericTensor's shared scratch-matrix pool -- which<br>            is <c>DeterminantLaplace</c>, <c>Adjoint</c>, and <c>InvertMatrix</c>, since inverting<br>            goes through the adjugate. <c>DeterminantGaussianSafeDivision</c> and<br>            <c>MatrixMultiply</c> do not touch the pool and are deliberately not covered.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            It is private, and the three operations below are the whole surface, because mutual<br>            exclusion here is not a property any one caller can hold up: a single call that skips<br>            the lock corrupts every call that takes it, and reads corrupted minors back. Exposing<br>            the lock lets a caller reach GenericTensor without it; exposing only the operations<br>            does not.<br>            </div></p></p>
+<p class="yadg-p "><a href="../../AngouriMath.Functions/GenTensorGuard.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">ScratchPool</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Field</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Held across any call that reaches GenericTensor's shared scratch-matrix pool -- which<br>            is <c>DeterminantLaplace</c> and <c>Adjoint</c>; <c>InvertMatrix</c> goes through the<br>            adjugate too, and the inverse is no longer taken from it. <c>DeterminantGaussianSafeDivision</c> and<br>            <c>MatrixMultiply</c> do not touch the pool and are deliberately not covered.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            It is private, and the operations below are the whole surface, because mutual<br>            exclusion here is not a property any one caller can hold up: a single call that skips<br>            the lock corrupts every call that takes it, and reads corrupted minors back. Exposing<br>            the lock lets a caller reach GenericTensor without it; exposing only the operations<br>            does not.<br>            </div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -102,7 +102,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5057 pages online
+5629 pages online
 </div>
 </body>
 

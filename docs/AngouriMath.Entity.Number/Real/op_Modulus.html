@@ -88,7 +88,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.Entity.Number/Real.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">op_Modulus&#8203;(AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Real,&#8203;AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Real)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The floored remainder, which takes the sign of the divisor: -7 % 3 is 2 and<br>            7 % (-3) is -2. See https://github.com/asc-community/AngouriMath/issues/708.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            This one used to truncate and so took the sign of the dividend, disagreeing<br>            with the same operator on <a href="../../AngouriMath.Entity.Number/Integer.html">Integer</a> and on<br>            <a href="../../AngouriMath.Entity.Number/Rational.html">Rational</a> -- which one applied depended on the static type at<br>            the call site rather than on the values.<br>            </div></p></p>
+<p class="yadg-p "><a href="../../AngouriMath.Entity.Number/Real.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">op_Modulus&#8203;(AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Real,&#8203;AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Real)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The floored remainder, which takes the sign of the divisor: -7 % 3 is 2 and<br>            7 % (-3) is -2. See https://github.com/asc-community/AngouriMath/issues/708.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            This one used to truncate and so took the sign of the dividend, disagreeing<br>            with the same operator on <a href="../../AngouriMath.Entity.Number/Integer.html">Integer</a> and on<br>            <a href="../../AngouriMath.Entity.Number/Rational.html">Rational</a> -- which one applied depended on the static type at<br>            the call site rather than on the values.<br>            <para />            Two ratios are divided as ratios, whatever their static type. Their decimals<br>            are rounded, and a remainder jumps at every multiple of the divisor: 6 % (1/27)<br>            is 0, and with 1/27 rounded up in its last digit the quotient fell just short<br>            of 162, so it came back as 1/27. And a quotient wider than the working<br>            precision has no decimal remainder at all, so 10^200 % 7 was NaN.<br>            </div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -102,7 +102,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5057 pages online
+5629 pages online
 </div>
 </body>
 

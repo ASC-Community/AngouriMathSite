@@ -347,14 +347,17 @@ Console.WriteLine((v.T * v).InnerSimplified.GetType());
 AngouriMath.Entity+Matrix
 AngouriMath.Entity+Number+Integer
 </code></pre>
-<p>Applying <text class='cw'>Abs</text> onto a vector will compute its absolute length, as a sum of squares of its elements:</p>
+<p>Applying <text class='cw'>Abs</text> onto a vector, a column or a row, computes its length: the square root of the sum of its components'
+squared moduli, <text class='cw'>sqrt(|v_1|^2 + ... + |v_n|^2)</text>. A component that may be complex, such as a bare symbol, keeps its
+<text class='cw'>abs</text>; a component known to be real, such as one declared with <text class='cw'>domain(a, RR)</text>, is squared as it is. On any other
+matrix, <text class='cw'>Abs</text> is taken entry by entry.</p>
 <pre><code>using AngouriMath.Extensions;
 
 Console.WriteLine(&quot;(| [ a, b, c ] |)&quot;.Simplify());
 Console.WriteLine(&quot;(| [ 2, 3, 6 ] |)&quot;.EvalNumerical());
 </code></pre>
 <p>Output:</p>
-<pre><code>sqrt(a ^ 2 + b ^ 2 + c ^ 2)
+<pre><code>sqrt(abs(a) ^ 2 + abs(b) ^ 2 + abs(c) ^ 2)
 7
 </code></pre>
 <p><text class='cw'>ComputeInverse()</text>: tries to compute inverse. May throw an exception.</p>
@@ -377,7 +380,7 @@ Console.WriteLine(&quot;(| [ 2, 3, 6 ] |)&quot;.EvalNumerical());
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5057 pages online
+5629 pages online
 </div>
 </body>
 
