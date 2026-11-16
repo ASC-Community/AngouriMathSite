@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath/Entity/AtAnInfiniteBound</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../../">Home</a>
+<a href="../../../quickstart">Quick start</a>
+<a href="../../../wiki">Wiki</a>
+<a href="../../../docs/namespaces.html">Almanac</a>
+<a href="../../../research">Research</a>
+<a href="../../../whatsnew">What's new</a>
+<a href="../../../demo">Try</a>
+<a href="../../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="../../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<p class="yadg-p "><a href="../../AngouriMath/Entity.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">AtAnInfiniteBound&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable,&#8203;AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The antiderivative's limit at an infinite bound, where substituting the bound left an infinity inside<br>            the value, or <text class="yadg-text cw">null</text> to keep the substituted value as it was.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para><c>erf(+oo - y)</c> is left as it is by the arithmetic, since <c>y</c> could itself be infinite; but an<br>            integral with a parameter is a function of that parameter at each of its finite values, and the limit<br>            of <c>erf(t - y)</c> as <c>t</c> grows reads <c>y</c> as exactly that, a finite constant, and is 1. So<br>            <c>e^(-(t - y)^2)</c> over the line is <c>sqrt(pi)</c> rather than a difference of two unsettled error<br>            functions. https://github.com/asc-community/AngouriMath/issues/2451<br>            </para><para>            It is taken only where the antiderivative was read to be continuous across the range, so that the limit<br>            at the end is the whole integral and not the last piece of it: <c>1/(t^2 + y^2)</c>'s antiderivative<br>            for <c>y^2 &lt; 0</c> is a logarithm with zeros at <c>t = ±sqrt(-y^2)</c>, which cannot be listed for a<br>            symbolic <c>y</c>, and taking its limits would answer 0, the principal value, where a concrete <c>y = i</c>            answers <c>NaN</c>. What the breaks read is the real line with the parameters real: <c>arctan(t - y)</c>            is continuous in <c>t</c> for every real <c>y</c>, but for <c>|Im y| &gt; 1</c> it crosses arctan's cut,<br>            and the integral of <c>1/(1 + (t - y)^2)</c> over the line is 0 there and not <c>pi</c>. A symbol is read as<br>            real wherever the breaks are read, so that is the answer for a symbolic <c>y</c>; at a concrete <c>y</c> off<br>            the line the crossing is placed, and the answer is 0 (see <a href="../../AngouriMath/Entity/AcrossTheCuts.html">AcrossTheCuts(AngouriMath.Entity,AngouriMath.Entity.Variable,System.Collections.Generic.List{System.ValueTuple{AngouriMath.Entity,AngouriMath.Entity,AngouriMath.Entity.Number.Real,AngouriMath.Entity}},AngouriMath.Entity.Number.Real,AngouriMath.Entity.Number.Real,System.Collections.Generic.List{System.ValueTuple{AngouriMath.Entity,AngouriMath.Entity.Number.Real}})</a>).<br>            https://github.com/asc-community/AngouriMath/issues/2460<br>            </para><para>            A limit that is undecided, undefined, or still holds an infinity inside it -- <c>e^(-y t)</c> at<br>            <c>+oo</c> depends on the sign of <c>y</c>, and the limit says so by staying <c>e^(+oo * -y)</c> -- leaves<br>            the substituted value as it was.<br>            </para></div></p></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2026 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+5999 pages online
+</div>
+</body>
+
+
+
+
+</html>

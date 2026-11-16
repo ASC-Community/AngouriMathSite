@@ -97,8 +97,11 @@ your expression to be <text class='cw'>f(x) - g(x)</text>, that is, it should be
 Console.WriteLine(expr.SolveEquation(&quot;x&quot;));
 </code></pre>
 <p>Output:</p>
-<pre><code>{ (arcsin(b / 2) + 2 * pi * n_1) / a, (pi - arcsin(b / 2) + 2 * pi * n_1) / a }
+<pre><code>union({ (arcsin(b / 2) + 2 * pi * n) / a, (pi - arcsin(b / 2) + 2 * pi * n) / a }, n in ZZ)
 </code></pre>
+<p>An equation with infinitely many roots is answered with all of them, as a union over the whole numbers <text class='cw'>n</text>.
+Over the complex numbers that includes an exponential equation: <text class='cw'>e^x = 2</text> is
+<text class='cw'>union({ ln(2) + 2 * pi * i * n }, n in ZZ)</text>, and over the reals it is <text class='cw'>{ ln(2) }</text>.</p>
 <p>Nonetheless, AM allows you to solve <text class='cw'>Statement</text>s, be that equalities, inequalities, and more advanced cases.</p>
 <p>Extension: <text class='cw'>string.SolveEquation(Variable)</text>.</p>
 <h2>Solving a statement</h2>
@@ -216,7 +219,7 @@ entry on its own does work, so read the entries out and simplify each.</p>
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5629 pages online
+5999 pages online
 </div>
 </body>
 

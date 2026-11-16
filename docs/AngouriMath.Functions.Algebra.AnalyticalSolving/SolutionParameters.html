@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions.Algebra.AnalyticalSolving/SolutionParameters</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../">Home</a>
+<a href="../../quickstart">Quick start</a>
+<a href="../../wiki">Wiki</a>
+<a href="../../docs/namespaces.html">Almanac</a>
+<a href="../../research">Research</a>
+<a href="../../whatsnew">What's new</a>
+<a href="../../demo">Try</a>
+<a href="../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<h2 class="yadg-h2 centered">SolutionParameters</h2><hr/><p class="yadg-p "><a href="../AngouriMath.Functions.Algebra.AnalyticalSolving.html">&#8592; Back to list of classes</a></p><h2 class="yadg-h2 ">Description</h2><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The parameters a solve brings into its answer -- <c>n_1</c> for a whole number of periods,<br>            <c>t_1</c> for an unknown nothing constrains, <c>r_1</c> for an argument -- each minted here<br>            with the set it ranges over, so that the set is said where the parameter is made and not<br>            read back from its name.<br>            <a href="https://github.com/asc-community/AngouriMath/issues/212">#212</a></div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para>            While a system is being solved a scope is open, and within it one name stands for one<br>            set: a name already minted for another set is passed over for the next free one, so a<br>            <c>t</c> from <c>floor(x) = 1</c>, which ranges over <c>[0, 1)</c>, and the <c>t</c> of<br>            an unknown left free are never both <c>t_1</c> in one answer.<br>            </para><para>            Outside a scope, as in the solve of one equation, minting is<br>            <a href="../AngouriMath.Entity/Variable/CreateUnique.html">CreateUnique(AngouriMath.Entity,System.String)</a> and nothing more. A scope is a thread-static pointer<br>            read once per parameter minted; the solve it covers is synchronous.<br>            </para></div><h2 class="yadg-h2 ">Members</h2><p class="yadg-p "><ul class="yadg-ul "><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Apart.html"><h3 class="yadg-h3 ">Apart&#8203;(AngouriMath.&#8203;Entity,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;IReadOnlyList{AngouriMath.&#8203;Entity},&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;IEnumerable{AngouriMath.&#8203;Entity},&#8203;AngouriMath.&#8203;Entity)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/AtAMember.html"><h3 class="yadg-h3 ">AtAMember&#8203;(AngouriMath.&#8203;Entity)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Bind.html"><h3 class="yadg-h3 ">Bind&#8203;(AngouriMath.&#8203;Entity.&#8203;Set.&#8203;FiniteSet)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/BindWholeParameters.html"><h3 class="yadg-h3 ">BindWholeParameters&#8203;(AngouriMath.&#8203;Entity.&#8203;Set)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Bound.html"><h3 class="yadg-h3 ">Bound&#8203;(``0,&#8203;System.&#8203;Func{``0,&#8203;AngouriMath.&#8203;Entity.&#8203;Set})</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Close.html"><h3 class="yadg-h3 ">Close</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Current.html"><h3 class="yadg-h3 ">Current</h3></a>Property</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Each.html"><h3 class="yadg-h3 ">Each&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Free.html"><h3 class="yadg-h3 ">Free</h3></a>Property</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/IsWhole.html"><h3 class="yadg-h3 ">IsWhole&#8203;(AngouriMath.&#8203;Entity.&#8203;Set)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Mint.html"><h3 class="yadg-h3 ">Mint&#8203;(AngouriMath.&#8203;Entity,&#8203;System.&#8203;String,&#8203;AngouriMath.&#8203;Entity.&#8203;Set)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/minted.html"><h3 class="yadg-h3 ">minted</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/NumericLine.html"><h3 class="yadg-h3 ">NumericLine&#8203;(AngouriMath.&#8203;Entity,&#8203;AngouriMath.&#8203;Entity.&#8203;Variable)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/Open.html"><h3 class="yadg-h3 ">Open&#8203;(System.&#8203;Boolean@)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/SetOf.html"><h3 class="yadg-h3 ">SetOf&#8203;(AngouriMath.&#8203;Entity.&#8203;Variable)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./SolutionParameters/WholeParametersOf.html"><h3 class="yadg-h3 ">WholeParametersOf&#8203;(AngouriMath.&#8203;Entity)</h3></a>Method</p></li></ul></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2026 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+5999 pages online
+</div>
+</body>
+
+
+
+
+</html>

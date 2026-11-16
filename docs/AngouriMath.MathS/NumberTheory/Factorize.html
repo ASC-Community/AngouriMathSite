@@ -88,7 +88,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.MathS/NumberTheory.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">Factorize&#8203;(AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Integer)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Factorization of integer. Returns a sequence of unique primes<br>            and their corresponding power. Sorted by value of prime (starting<br>            from the smallest).<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Example</strong></p><div class='yadg-example'><pre><code class="language-cs">var factors = MathS.NumberTheory.Factorize(1872);
+<p class="yadg-p "><a href="../../AngouriMath.MathS/NumberTheory.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">Factorize&#8203;(AngouriMath.&#8203;Entity.&#8203;Number.&#8203;Integer)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The prime factorisation of a positive integer: each prime that divides it with its<br>            power, the smallest prime first. Empty for 1, the empty product.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Exception "<a href="../../AngouriMath.Core.Exceptions/InvalidNumberException.html">InvalidNumberException</a>"</strong></p><div class="yadg-div yadg-exception">            Thrown where <text class="yadg-text cw">integer</text> is 0 or negative, which have no factorisation<br>            into primes alone. https://github.com/asc-community/AngouriMath/issues/2466<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Example</strong></p><div class='yadg-example'><pre><code class="language-cs">var factors = MathS.NumberTheory.Factorize(1872);
 foreach (var (prime, power) in factors)
     Console.WriteLine($"{prime} ^ {power}");</code></pre><br>            Prints<br>            <pre><code class="language-cs">2 ^ 4
 3 ^ 2
@@ -106,7 +106,7 @@ foreach (var (prime, power) in factors)
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-5629 pages online
+5999 pages online
 </div>
 </body>
 

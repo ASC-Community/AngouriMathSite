@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Entity.Number/Real/IsProvablyNoSmallRational</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../styles.css">
+    <link rel="stylesheet" href="../../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<div class="nav-left pc">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../../img/icon_cropped.png" width="120wh" height="120wh"/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc" style="color: gray">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h5>Table of contents</h5>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../../" alt="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../../research">Research</a>
+    <li><!--active_whatsnew-->  <span class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../../demo">Try online</a>                                                               </li>
+    <li><span class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../../#contacts">Contacts</a>    </li>
+</ul>
+
+</div>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../../img/icon_cropped.png" width="100wh"/>
+<h2>AngouriMath</h2>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../../">Home</a>
+<a href="../../../quickstart">Quick start</a>
+<a href="../../../wiki">Wiki</a>
+<a href="../../../docs/namespaces.html">Almanac</a>
+<a href="../../../research">Research</a>
+<a href="../../../whatsnew">What's new</a>
+<a href="../../../demo">Try</a>
+<a href="../../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="../../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<p class="yadg-p "><a href="../../AngouriMath.Entity.Number/Real.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">IsProvablyNoSmallRational&#8203;(System.&#8203;Double)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Whether <a href="../../AngouriMath.Entity.Number/Real/Create.html">Create(PeterO.Numbers.EDecimal,System.Boolean,PeterO.Numbers.EDecimal)</a>, from a machine number, provably answers the<br>            <a href="../../AngouriMath.Entity.Number/Real.html">Real</a> it was given for <text class="yadg-text cw">x</text>: neither its rounding onto an integer nor its<br>            continued-fraction search can return anything else. <text class="yadg-text cw">false</text> is no claim at all.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para><b>What the downcasting can return.</b> Write <c>t</c> for<br>            <a href="../../AngouriMath.MathS/Settings/PrecisionErrorZeroRange.html">PrecisionErrorZeroRange</a>, <c>B</c> for<br>            <a href="../../AngouriMath.MathS/Settings/MaxAbsNumeratorOrDenominatorValue.html">MaxAbsNumeratorOrDenominatorValue</a>, <c>P</c> for the working precision's<br>            digits and <c>u = 10^(1 - P)</c>. Other than the <a href="../../AngouriMath.Entity.Number/Real.html">Real</a> itself it returns either an integer<br>            within <a href="../../AngouriMath.MathS/Settings/DowncastingTolerance.html">DowncastingTolerance</a> of <c>x</c> -- excluded below by measuring<br>            <c>x</c>'s distance to the nearest integer, with a factor of two to spare -- or a ratio <c>p/q</c>,<br>            <c>|p|, q &lt;= B</c>, from <a href="../../AngouriMath.Entity.Number/Rational/FindRationalExactly.html">FindRationalExactly(PeterO.Numbers.EDecimal,System.Int32,PeterO.Numbers.EDecimal)</a>. That runs the continued fraction<br>            of <c>|x|</c>: <c>y_0 = |x|</c>, <c>a_i = floor(y_i)</c>, <c>r_i = y_i - a_i</c> exactly,<br>            <c>y_(i+1) = 1/r_i</c> rounded to the working precision, so that <c>y_(i+1) = (1/r_i)(1 + theta)</c>            with <c>|theta| &lt;= u</c> (to places, an error under 10^(-P) on a quotient over 1; to digits, an ulp);<br>            refuses a level with <c>a_i &gt; B</c>; and stops at the level <c>n</c> where<br>            <c>r_n &lt; a_n t (1 + u)</c>, at most <a href="../../AngouriMath.MathS/Settings/FloatToRationalIterCount.html">FloatToRationalIterCount</a> - 1 levels<br>            down, returning <c>R = [a_0; a_1, ..., a_n]</c>.<br>            </para><para><b>How far such an answer is from x.</b> Let <c>rho_i = [a_i; ..., a_n]</c>, <c>v_i = 1/r_(i-1)</c> and<br>            <c>e_i = |y_i - rho_i|</c>. Then <c>e_n = r_n &lt; a_n t (1 + u)</c>, and<br>            <c>e_(i-1) = |1/v_i - 1/rho_i| &lt;= (e_i + u v_i) / (v_i rho_i)</c>. Every <c>rho_i</c> and every<br>            <c>y_i</c> past the first is at least 1, so <c>e_(i-1) &lt;= e_i (1 + u) + u</c> and every<br>            <c>e_i &lt;= E = (B t (1 + u) + N u)(1 + u)^N</c> for <c>N &gt;= n</c>; hence<br>            <c>v_i &gt;= c rho_i</c> with <c>c = (1 - E)/(1 + u)</c>. Since the product of the <c>rho_i</c> is<br>            <c>q</c>, unrolling gives <c>|x - R| &lt;= K (a_n t (1 + u) + N u q^2) / q^2</c>, <c>K = c^(-N)</c>.<br>            Within the gate below -- <c>P &gt;= 30</c>, <c>B &lt;= 10^9</c>, <c>B t &lt;= 10^(-3)</c>,<br>            <c>N = 100</c> -- <c>E &lt; 1.001e-3</c> and <c>K &lt; 1.12</c>; 1.2 is used.<br>            </para><para><b>Which ratios those can be.</b> The same bound with <c>a_n &lt;= B</c> and <c>q &lt;= B</c> is under<br>            <c>1/(2 q^2)</c>, so by Legendre's theorem <c>R</c> is a convergent <c>p_k/q_k</c> of <c>|x|</c>            itself. The levels the search took are one of <c>R</c>'s two expansions, so <c>n &lt;= k + 1</c> and<br>            <c>a_n</c> is <c>a_k</c>, 1, or <c>a_(k-1) + 1</c>. And <c>|x| - p_k/q_k</c> is<br>            <c>1/(q_k^2 (x_(k+1) + q_(k-1)/q_k))</c> exactly, <c>x_(k+1)</c> the complete quotient. So the<br>            search can return the convergent only if<br>            <c>x_(k+1) + q_(k-1)/q_k &gt;= 1/(K (A t (1 + u) + N u q_k^2))</c>,<br>            <c>A = min(B, max(a_k, a_(k-1) + 1))</c> -- a partial quotient after it near <c>1/(A t)</c>, a hundred<br>            million at the defaults, where a double that is no small rational has its next quotient near its own<br>            size. A double is <c>m / 2^k</c>, so its continued fraction is Euclid's algorithm on two machine<br>            integers, run here exactly; every convergent within <c>B</c> is tested, with another factor of two<br>            for the rounding of the doubles the test is made in, and one the search can return -- or a<br>            fraction the double equals -- sends the value to the search.<br>            </para><para><b>The gate.</b> The bound needs the context to round as it is assumed to: digits in decimal, no<br>            traps, a rounding mode, and exponents where every quotient (at most <c>10^max(324, P)</c>) and every<br>            tolerance (at least <c>t</c>) is normal. Any other setting is left to the search.<br>            </para></div></p></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2026 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+5999 pages online
+</div>
+</body>
+
+
+
+
+</html>
