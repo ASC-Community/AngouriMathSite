@@ -39,12 +39,14 @@ also need to address the following resources:
         <pre><code>dotnet add package AngouriMath.FSharp</code></pre>
     </p>
     <p>
-        The current release is <b>2.7.0</b>, and every 2.x release changes answers that earlier versions
+        The current release is <b>2.8.0</b>, and every 2.x release changes answers that earlier versions
         got wrong. Whichever version you are coming from, read
-        <a href="https://github.com/asc-community/AngouriMath/blob/v2.7.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>
+        <a href="https://github.com/asc-community/AngouriMath/blob/v2.8.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>
         first: it lists every input whose result is now different, with the old value and the new one,
-        under a heading per release. 2.7.0 is a drop-in replacement for 2.6.0 — the assembly version is
-        pinned at <code>2.0.0.0</code> for the whole of 2.x.
+        under a heading per release. 2.8.0 is not a drop-in replacement for 2.7.0: a solver's answer can now
+        be an indexed union, and some names read differently, so read the list of what to read first under
+        <code>2.8.0 — since 2.7.0</code> before upgrading. The assembly version is pinned at
+        <code>2.0.0.0</code> for the whole of 2.x.
     </p>
     <p>
         The library targets <code>netstandard2.0</code>, <code>net8.0</code> and <code>net10.0</code>.

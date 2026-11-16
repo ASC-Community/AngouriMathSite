@@ -33,8 +33,92 @@ THIS IS A TEMPLATE {
 } COPY AND PASTE FOR A NEW BLOCK
 
 -->
-    
-<details open><summary><strong>2.7.0</strong></summary>
+
+<details open><summary><strong>2.8.0</strong></summary>
+<p>
+    A release about answers that are complete and answers that do not depend on where they were asked.
+    Over the complex numbers an equation with infinitely many roots is now answered with all of them, as a
+    family indexed by the whole numbers: <code>e^x = 2</code> was <code>{ ln(2) }</code>, a finite set that
+    claims to be every root, and is <code>union({ ln(2) + 2 * pi * i * n }, n in ZZ)</code>. Of 24 equations
+    whose roots were listed and searched for numerically, 17 had incomplete answers on master just before
+    this change, and none do now. And a value no longer carries the settings it was first computed under: the
+    parse cache and the caches on a node, <code>Evaled</code> among them, gave the first answer back under any
+    settings and on any thread. Outside a settings scope nothing moves.
+</p>
+<p>
+    Wrong answers fixed include a definite integral whose antiderivative crosses a branch cut off the real
+    line (<code>integral(1/(1+(t-3i)^2), t, -oo, +oo)</code> was <code>pi</code>, and is <code>0</code>), a
+    rational guessed for a root inside the tolerance it was guessed under (<code>x^2 - 3x - 1e-24</code> was
+    <code>{ 0, 3 }</code>), and two periodic unknowns of a system that shared one parameter. New are
+    <code>MathS.AreEqual</code>, an equality question with three answers; systems from a conjunction, and with
+    each parameter's set; a product over a set and a prime factorisation; the total and the partial derivative
+    in an unknown function; <code>zeta</code>, <code>beta</code>, the p-norm, and the gradient, divergence and
+    curl; shader source; dimensional analysis of a formula; and Unicode output.
+</p>
+<p>
+    Dimensional analysis and shader source together, on a water wave. Its dispersion relation is <code>ω² = g k tanh(k h)</code>, with
+    <code>ω</code> the angular frequency, <code>k</code> the wave number and <code>h</code> the depth. In
+    shallow water <code>tanh(k h)</code> is close to <code>k h</code>, and writing <code>ω = sqrt(g k h)</code>
+    for that, a factor of <code>k</code> short, is a typical slip, which
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.8.0/Sources/AngouriMath/Docs/Usage/Dimensions.md"><code>MathS.Dimensions</code></a>
+    finds inside the phase of the wave. It also gives the wave's dimensionless groups, and
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.8.0/Sources/AngouriMath/Docs/Usage/Shaders.md"><code>MathS.Shaders</code></a>
+    prints the surface height, with <code>ω</code> put in, as HLSL:
+</p>
+<!-- amcheck:cs -->
+<pre><code>using System.Collections.Generic;
+using AngouriMath.Core;
+
+var (L, T) = (Dimension.Length, Dimension.Time);
+var dims = new Dictionary&lt;Variable, Dimension&gt;
+{
+    ["omega"] = Dimension.Dimensionless / T, ["g"] = L / T.Pow(2), ["k"] = Dimension.Dimensionless / L,
+    ["h"] = L, ["A"] = L, ["x"] = L, ["t"] = T,
+};
+Console.WriteLine(MathS.Dimensions.Of("omega^2 = g k tanh(k h)", dims));
+Console.WriteLine(MathS.Dimensions.Of("A sin(k x - sqrt(g k h) t)", dims));
+foreach (var group in MathS.Dimensions.DimensionlessGroups(new Variable[] { "k", "g", "A", "h", "t" }, dims))
+    Console.WriteLine(group);
+
+Entity height = "A sin(k x - omega t)";
+height = height.Substitute("omega", "sqrt(g k tanh(k h))");
+Console.WriteLine(MathS.Dimensions.Of(height, dims));
+Console.Write(MathS.Shaders.Hlsl(new List&lt;KeyValuePair&lt;string, Entity&gt;&gt; { new("height", height) }).Code);</code></pre>
+<p>Prints:</p>
+<pre><code class="language-plaintext">Consistent: 1
+Inconsistent at k * x - sqrt(g * k * h) * t: k * x has dimension 1 and sqrt(g * k * h) * t has dimension L^(1/2), so they cannot be subtracted
+k * A
+k * h
+k * g * t ^ 2
+Consistent: L
+height = (A * sin(((k * x) - (sqrt(((g * k) * (1.0 + (((-1.0) - 1.0) / (exp((2.0 * (k * h))) + 1.0))))) * t))));</code></pre>
+<p>
+    The surface depends on the amplitude, the depth and the time only through <code>k A</code>, the steepness,
+    <code>k h</code>, the depth in wavelengths, and <code>g k t²</code>, the time in units of the deep-water
+    period. The shader computes what <code>Compile&lt;double, …&gt;</code> computes, and writes
+    <code>tanh</code> so that it is 1 for a large argument rather than infinity over infinity.
+</p>
+<p>
+    <b>Every input whose result is now different is listed, with both values and why, in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.8.0/BREAKING-CHANGES.md#280--since-270">BREAKING-CHANGES.md</a>
+    under <code>2.8.0 — since 2.7.0</code>. Read that before upgrading.</b>
+    It holds 28 entries, and 12 of them are silent: the call still succeeds and returns something else.
+    The ones to read first: a family of roots is a set of another type, an indexed union where
+    <code>Solve</code> gave a <code>FiniteSet</code>, so code that takes the answer apart as a
+    <code>FiniteSet</code> gets another node. Names read differently: <code>factorization(…)</code> and
+    <code>primefactors(…)</code> are functions where they were products; <code>factorize(…)</code>,
+    <code>nextprime(…)</code>, <code>divisors(…)</code> and <code>φ(…)</code> are refused by name, with what to
+    write instead; and <code>gradient</code>, <code>divergence</code> and <code>curl</code> take the variables
+    as their second argument. Silently, a value cached under one setting is no longer given back under
+    another. And <code>MathS.NumberTheory.Factorize</code> throws <code>InvalidNumberException</code> for 0
+    and negative integers, where it answered the empty list.
+    Assembly version stays <code>2.0.0.0</code>, and nothing public was removed, so code that compiled
+    against 2.7.0 still compiles; but a solver's answer can now be another type, so this is not a drop-in
+    replacement for 2.7.0. The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.8.0">the 2.8.0 release</a>.
+</p>
+</details>
+
+<details><summary><strong>2.7.0</strong></summary>
 <p>
     A release about limits and compilation. limitcheck compares a limit with the values the expression
     takes near the point. On the 40 of its seeds that both versions complete, 2.6.0 answers 2,685 limits
