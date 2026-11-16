@@ -1061,8 +1061,10 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core/Parser.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core/Parser/ExpandSuperscripts.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core/Parser/InsertOmittedTokensOrProvideDiagnostic.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core/Parser/ParseSilent.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core/Parser/ParseThrowingRefusals.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core/Parser/RationalLiterals.html</loc></url>
-  <url><loc>https://am.angouri.org/docs/AngouriMath.Core/Parser/SplitOneArgumentCalls.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core/Parser/RefuseOneArgumentCalls.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core/PatternOperator.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core/PatternOperator/ClassOn.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core/PatternOperator/Progression.html</loc></url>
@@ -3194,6 +3196,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/SolveInverting.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/SpellingsToSolveOver.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/Unsolved.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/WithRootsAtRadicandZeros.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalInequalitySolver.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalInequalitySolver/AscendingEndpoints.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalInequalitySolver/Assuming.html</loc></url>
@@ -3215,6 +3218,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/ExponentialSolver/SolveTwoPowersOfNumericBases.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/ExponentialSolver/SolveTwoPowersOverTheComplexNumbers.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/FractionedPolynoms.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/FractionedPolynoms/HasARadicalOf.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/FractionedPolynoms/TwoSquareRootsSquaredAway.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/LambertWSolver.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/LinearSystemSolver.html</loc></url>

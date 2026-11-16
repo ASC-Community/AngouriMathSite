@@ -22,11 +22,15 @@
     }
     
     .active-link a {
-        color: #A7A7A7;
+        color: #767676;
     }
 
     .active-link:hover a {
-        color: #A7A7A7;
+        color: #767676;
+    }
+
+    .slogan {
+        color: #6E6E6E;
     }
 	
 	pre {
@@ -71,7 +75,7 @@
     .code {
         background-color: #5A5A5A;
         border: solid #5A5A5A;
-        color: darkgray;
+        color: #E6E6E6;
     }
     
     .anchor {
@@ -85,6 +89,10 @@
     .active-link:hover a {
         color: #A7A7A7;
     }   
+
+    .slogan {
+        color: #8B949E;
+    }
 	
 	pre {
 		background-color: #1D2127;

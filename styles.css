@@ -58,6 +58,12 @@ body {
 	
 }
 
+/* The sidebar's heading is an h4 under the h3 above it, at the size an h5 had. */
+.toc-heading {
+	font-size: 0.83em;
+	margin: 1.67em 0;
+}
+
 /* With class Phone it will only be so on mobile devices */
 .phone {
     display: none;
