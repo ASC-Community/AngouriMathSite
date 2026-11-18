@@ -1,8 +1,33 @@
 body {
     font-family: "Overpass Mono";
     font-size: 14pt;
-    line-height: 1.5;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
     overflow-x: hidden;
+}
+
+/* Prose in a monospace face tires the eye on long lines: paragraphs and lists stop near seventy
+   characters, a little apart, so a page reads as paragraphs rather than as one block. */
+.main p,
+.main li {
+    max-width: 70ch;
+}
+
+.main li {
+    margin-bottom: 0.45em;
+}
+
+/* Code inside a sentence, in the site's own face rather than the browser's monospace, on a tint
+   so that a formula is told from the words around it. */
+:not(pre) > code {
+    font-family: "Overpass Mono", monospace;
+    font-size: 0.92em;
+    padding: 0.08em 0.35em;
+    border-radius: 4px;
+    /* A long formula wraps, its tint carried onto each line, rather than pushing a phone's page sideways. */
+    overflow-wrap: anywhere;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 .regular-table table, .regular-table tbody tr th, .regular-table tr td {
@@ -107,9 +132,10 @@ mjx-container[display="true"] {
 
 @media (max-width: 1099px)
 {
+    /* Most of a phone's width for the text: at 70% a line held some twenty characters. */
     .main {
-        width: 70%;
-        margin-left: 15%;
+        width: 90%;
+        margin-left: 5%;
     }
     
     iframe {
@@ -148,8 +174,13 @@ mjx-container[display="true"] {
         padding: 15px;
     }
     
+    /* A phone's first screen shows the name, the way in and the page, not only the logo. */
     .logo {
-        width: 250px;
+        width: 96px;
+    }
+
+    .head-of-page a.try-live {
+        font-size: 16pt;
     }
 }
 
