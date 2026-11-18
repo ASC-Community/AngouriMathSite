@@ -1,71 +1,75 @@
-
 <h2 class="centered">What is AngouriMath?</h2>
 <hr>
 <p>
-Well, first of all, it's a computer/symbolic algebra library. Say, are you familiar with SymPy? If so, think of AngouriMath as of something 
-similar, but for .NET. It's .NET, after all, which is going to rule the programming world, not python.
+A symbolic algebra library for .NET: it works with formulas as formulas, the way SymPy does in Python.
+It parses <code>x^2 + 1 = 0</code> from a string, solves it to <code>{ i, -i }</code> exactly, and
+differentiates, integrates, simplifies, takes limits and works with sets, matrices and boolean logic.
 </p>
 
 <p>
-If you don't know SymPy, AngouriMath can be similar to Wolfram|Alpha in some way. You can manipulate so-called symbolic expressions, 
-that is, mathematical expressions written within a normal human notation (aka with functions, operators, etc.), and variables.
+It is a library, not an application or a web service: you install it from
+<a href="https://www.nuget.org/packages/AngouriMath">NuGet</a> and call it from C#, F# or a Jupyter
+notebook, with no server, no account and no limit on use. It is MIT-licensed, so that includes commercial
+projects. To see it before installing anything, <a href="../live/">try it live</a>: the library itself,
+running in your browser.
 </p>
 
-<h3 class="centered">How can it be used?</h3>
+<h3 class="centered"><a name="checked" href="#checked" class="anchor">How the answers are checked</a></h3>
 <hr>
 <p>
-Unlike Computer Algebra Systems (CAS), AM is a library. That is, you may embed it in any your project without learning a web-api,
-having to pay money for machine loads, etc. You press the button "Install", and there you go, unlimited use of it. 
-</p>
-
-<p>
-Now, how about where? I'd say that you may want to use it in:
+A computer algebra system is full of answers that look right. So the library's answers are checked
+against independent arithmetic, on inputs nobody chose, not only against a list of expected strings:
 </p>
 
 <ul>
 <li>
-<p>
-Modelling. Yes, it's convenient when a user puts an expression into an input box, and thanks to compilation, you can quickly 
-run the function hundreds of times to render the plot or model something more complicated.
-</p>
+Integrals are differentiated back and compared with the integrand. Of a sample of 402 of
+<a href="https://rulebasedintegration.org/testProblems.html">Rubi's</a> integration problems, two from every
+file in all nine of its families, all 402 are answered and check out (on <code>bfc7f5bdc</code>, November 2026).
 </li>
-
 <li>
-<p>
-LaTeX. The text from which you parse the expression is very similar to human notation (say, `{ x : x > 0 }` - that's how
-you create a set in set-builder notation). Not only that, after having parsed one, you can run the `Latexise()` method to get a
-string of LaTeX code. And then just pass this string to your renderer!
-</p>
+Roots are put back into their equations, and random equations are solved and cross-checked against an
+independent numerical search, so a missing root is found as well as a wrong one.
 </li>
-
 <li>
-<p>
-Math applications. Say, you're developing an app to solve some equations. Sometimes you may want to solve an equation requested
-by the user, or check the answer, or simplify it, etc. You can use AM for it. Not only that, if the request appears to be too long, you can cancel it thanks to cancellation token injected checks.
-</p>
+Computations from Modenov's <i>Problems in Geometry</i>, 642 of them, run on every change, with the
+book's own errata as rows the library must not confirm: 480 are solved, and none is wrong.
 </li>
-
 <li>
-<p>
-School applications. Obviously, via AM you can build an app for students to help them to develop their skills. The Step recorder,
-although rather a feature of the future, will show the detailed solution with no constraints (unlike any other computer algebra library).
-</p>
-</li>
-
-<li>
-<p>
-Many others. It's hard to estimate from now where one can use it. It's a math library, and math is euber alles!
-</p>
+Every answer that changes between versions is listed, with the old value and the new one, in
+<a href="https://github.com/asc-community/AngouriMath/blob/master/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>.
 </li>
 </ul>
 
-<h3 class="centered">Is there a better solution?</h3>
+<p>
+Where the library cannot settle a question, it says so: an unsolved equation comes back as written, not
+as a guess.
+</p>
+
+<h3 class="centered"><a name="uses" href="#uses" class="anchor">Where it is used</a></h3>
+<hr>
+<ul>
+<li>
+<b>Calculators and modelling.</b> A formula a user types is parsed and compiled to a fast function,
+which can be evaluated millions of times to draw a plot or run a model.
+</li>
+<li>
+<b>LaTeX.</b> The input syntax is close to how mathematics is written (<code>{ x : x &gt; 0 }</code> is
+a set in set-builder notation), and <code>Latexize()</code> prints any expression as LaTeX for a renderer.
+</li>
+<li>
+<b>Education and quiz apps.</b> Solve, simplify or check a student's answer, with a cancellation token
+to stop a request that runs too long.
+</li>
+<li>
+<b>Agents.</b> The library's <a href="https://github.com/asc-community/AngouriMath/tree/master/Sources/MCP">MCP server</a> lets a language model hand its algebra to a system that checks it.
+</li>
+</ul>
+
+<h3 class="centered"><a name="help" href="#help" class="anchor">Questions and bugs</a></h3>
 <hr>
 <p>
-Although it depends, if you are looking for a supported and powerful symbolic algebra library in .NET, we're afraid it's the only possible choice. There are a few which can perform some basic operations, even those that can, they mostly don't have any solvers, limits, and other features with which AM stands out.
+Ask on <a href="https://github.com/asc-community/AngouriMath/issues">GitHub</a> or on
+<a href="https://discord.gg/YWJEX7a">Discord</a>. A wrong answer is the most useful report there is:
+please include the input and what you expected.
 </p>
-
-<p>
-Nonetheless, we're constantly developing the library. Any issue will be answered within a day or sooner. If you even don't have a day, <a href="https://discord.gg/YWJEX7a">ask us directly</a>.
-</p>
-
