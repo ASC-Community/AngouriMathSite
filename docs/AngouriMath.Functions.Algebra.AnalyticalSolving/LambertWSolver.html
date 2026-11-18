@@ -48,7 +48,7 @@
     <li class="active-link">      <span aria-hidden="true" class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../docs/namespaces.html">Almanac</a>                                                    </li>
     <li><!--active_research-->         <span aria-hidden="true" class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../research">Research</a>
     <li><!--active_whatsnew-->  <span aria-hidden="true" class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../whatsnew">What's new</a>                                                    </li>
-    <li><!--active_demo-->      <span aria-hidden="true" class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../demo">Try online</a>                                                               </li>
+    <li><!--active_demo-->      <span aria-hidden="true" class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a class="try-live" href="../../live/" title="AngouriMath in your browser, nothing to install">Try it live</a>                                                               </li>
     <li><span aria-hidden="true" class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
     <li><span aria-hidden="true" class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
     <li><span aria-hidden="true" class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../#contacts">Contacts</a>    </li>
@@ -75,7 +75,7 @@
 <a href="../../docs/namespaces.html">Almanac</a>
 <a href="../../research">Research</a>
 <a href="../../whatsnew">What's new</a>
-<a href="../../demo">Try</a>
+<a class="try-live" href="../../live/">Try it live</a>
 <a href="../../why">Use</a>
 <a href="https://angouri.org" target="_blank">Angouri.org</a>
 <a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
@@ -89,7 +89,7 @@
 
 <!--Top end-->
 
-<h2 class="yadg-h2 centered">LambertWSolver</h2><hr/><p class="yadg-p "><a href="../AngouriMath.Functions.Algebra.AnalyticalSolving.html">&#8592; Back to list of classes</a></p><h2 class="yadg-h2 ">Description</h2><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'><c>K (alpha x + beta) b^(gamma x + delta) = c</c>, a linear function times an exponential of<br>            another, solved by the Lambert W function. https://github.com/asc-community/AngouriMath/issues/2182<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            Written <c>e^((gamma x + delta) ln b)</c>, the exponent is <c>u = g x + d</c>, and with<br>            <c>s = beta g / alpha - d</c> the equation is <c>(u + s) e^(u + s) = A</c>,<br>            <c>A = c g e^s / (K alpha)</c>, so <c>u + s = W(A)</c> and <c>x = W(A) / g - beta / alpha</c>.<br>            Over the complex numbers every branch is a root, <c>W_n</c> for a whole <c>n</c>, as a periodic<br>            equation's roots are written. Over the reals two branches can be: <c>W_0</c> where<br>            <c>A &gt;= -1/e</c> and <c>W_(-1)</c> where <c>-1/e &lt;= A &lt; 0</c>, and none where<br>            <c>A &lt; -1/e</c>, since <c>w e^w &gt;= -1/e</c> for every real <c>w</c>.<br>            </div><h2 class="yadg-h2 ">Members</h2><p class="yadg-p "><ul class="yadg-ul "></ul></p>
+<h2 class="yadg-h2 centered">LambertWSolver</h2><hr/><p class="yadg-p "><a href="../AngouriMath.Functions.Algebra.AnalyticalSolving.html">&#8592; Back to list of classes</a></p><h2 class="yadg-h2 ">Description</h2><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'><c>K (alpha x + beta) b^(gamma x + delta) = c</c>, a linear function times an exponential of<br>            another, solved by the Lambert W function, and an exponential equal to a line, which is that<br>            product written as a sum. https://github.com/asc-community/AngouriMath/issues/2182<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            Written <c>e^((gamma x + delta) ln b)</c>, the exponent is <c>u = g x + d</c>, and with<br>            <c>s = beta g / alpha - d</c> the equation is <c>(u + s) e^(u + s) = A</c>,<br>            <c>A = c g e^s / (K alpha)</c>, so <c>u + s = W(A)</c> and <c>x = W(A) / g - beta / alpha</c>.<br>            Over the complex numbers every branch is a root, <c>W_n</c> for a whole <c>n</c>, as a periodic<br>            equation's roots are written. Over the reals two branches can be: <c>W_0</c> where<br>            <c>A &gt;= -1/e</c> and <c>W_(-1)</c> where <c>-1/e &lt;= A &lt; 0</c>, and none where<br>            <c>A &lt; -1/e</c>, since <c>w e^w &gt;= -1/e</c> for every real <c>w</c>.<br>            </div><h2 class="yadg-h2 ">Members</h2><p class="yadg-p "><ul class="yadg-ul "><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./LambertWSolver/AsAProduct.html"><h3 class="yadg-h3 ">AsAProduct&#8203;(System.&#8203;Collections.&#8203;Generic.&#8203;IReadOnlyList{AngouriMath.&#8203;Entity},&#8203;AngouriMath.&#8203;Entity.&#8203;Variable)</h3></a>Method</p></li></ul></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -103,7 +103,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-6003 pages online
+6018 pages online
 </div>
 </body>
 

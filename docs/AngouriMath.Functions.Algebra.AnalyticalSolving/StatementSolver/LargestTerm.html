@@ -48,7 +48,7 @@
     <li class="active-link">      <span aria-hidden="true" class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../../docs/namespaces.html">Almanac</a>                                                    </li>
     <li><!--active_research-->         <span aria-hidden="true" class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../../research">Research</a>
     <li><!--active_whatsnew-->  <span aria-hidden="true" class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../../whatsnew">What's new</a>                                                    </li>
-    <li><!--active_demo-->      <span aria-hidden="true" class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a href="../../../demo">Try online</a>                                                               </li>
+    <li><!--active_demo-->      <span aria-hidden="true" class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a class="try-live" href="../../../live/" title="AngouriMath in your browser, nothing to install">Try it live</a>                                                               </li>
     <li><span aria-hidden="true" class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
     <li><span aria-hidden="true" class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
     <li><span aria-hidden="true" class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../../#contacts">Contacts</a>    </li>
@@ -75,7 +75,7 @@
 <a href="../../../docs/namespaces.html">Almanac</a>
 <a href="../../../research">Research</a>
 <a href="../../../whatsnew">What's new</a>
-<a href="../../../demo">Try</a>
+<a class="try-live" href="../../../live/">Try it live</a>
 <a href="../../../why">Use</a>
 <a href="https://angouri.org" target="_blank">Angouri.org</a>
 <a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
@@ -89,7 +89,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">LargestTerm&#8203;(AngouriMath.&#8203;Entity)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The largest of the terms the equation adds up to at the root, which is the scale<br>            the residual has to be read against. A single term is its own largest, so an<br>            equation that is not a sum is judged on the size of its residual alone -- there<br>            is nothing there for a root to have cancelled inexactly.<br>            </div></p></p>
+<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra.AnalyticalSolving/StatementSolver.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">LargestTerm&#8203;(AngouriMath.&#8203;Entity,&#8203;System.&#8203;Boolean@)</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Method (no overloads)</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            The largest of the terms the equation adds up to at the root, which is the scale<br>            the residual has to be read against, and in <text class="yadg-text cw">cancels</text> whether there<br>            are terms at all: whether a sum was split.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'>            A product or a quotient by a number is multiplied out first. The terms of<br>            <c>(sin(x) - x) 10^-12</c> are <c>sin(x) 10^-12</c> and <c>x 10^-12</c>; read as one<br>            term, it was its own scale, and every root Newton's method found for it was thrown out<br>            at <c>10^12</c>, where its residual is past the floor.<br>            </div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -103,7 +103,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-6003 pages online
+6018 pages online
 </div>
 </body>
 
