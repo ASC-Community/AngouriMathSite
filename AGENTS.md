@@ -12,6 +12,8 @@ sets the working practice for both. When there is nothing to do here, it goes ba
   `build` runs `src/NaiveStaticGenerator`, which wraps every page in `src/content` in
   `src/content/_templates/top.html` and `bottom.html` and writes `.output/final`. `run` builds and
   opens the home page.
+- `build` then publishes `live/`, AngouriMath Live, the library in the browser as WebAssembly, and
+  copies it to `.output/final/live`. The nav's *Try online* leads there. See `live/README.md`.
 - `.output/final` also gets the stylesheets, `img/`, `CNAME`, `robots.txt`, and a `sitemap.xml` and an
   `llms.txt` that the generator writes from the pages it produced.
 - A pull request builds the site on Windows, Linux and macOS (`build-test.yml`).
@@ -24,7 +26,8 @@ sets the working practice for both. When there is nothing to do here, it goes ba
 ## What a release of the library owes the site
 
 The library's release checklist names it. The *What's new* page gets a block for the release, with
-the link to `BREAKING-CHANGES.md` pinned to the release's tag, and the quickstart names the release.
+the link to `BREAKING-CHANGES.md` pinned to the release's tag, and the quickstart names the release, and
+`live/AmLive.csproj`, the web app at `/live`, references the release's package.
 The library's `docsamples` harness, run in its CI with this repository checked out, checks that every
 code sample here compiles, runs and prints what its page says. Its report is the place to look before
 editing a sample.
