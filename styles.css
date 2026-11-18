@@ -251,3 +251,22 @@ a {
 .whatsnew-page li {
     margin-top: 1vh;
 }
+
+/* The way into AngouriMath Live, the library in the browser: a button rather than a link, in the
+   site's magenta, wherever it appears. Its colours hold in both themes. */
+a.try-live,
+.nav-left ul li a.try-live {
+	display: inline-block;
+	padding: 0.35em 1em;
+	border-radius: 999px;
+	background-color: #BB0099;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.try-live:hover,
+.nav-left ul li a.try-live:hover {
+	background-color: #D4007A;
+	color: white;
+}

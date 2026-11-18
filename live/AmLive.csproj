@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.WebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AngouriMath" Version="2.8.0" />
+    <!-- The library is reached through its own reflection-free API, but it has not been
+         checked under the trimmer; keep it whole rather than find out in the browser. -->
+    <TrimmerRootAssembly Include="AngouriMath" />
+  </ItemGroup>
+
+</Project>

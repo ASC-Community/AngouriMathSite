@@ -97,8 +97,31 @@ let uninit () =
     else
         dirDelete("." / generatorP / contentP / "_wiki") 
 
+// AngouriMath Live, the app in live/: the library in the browser as WebAssembly. It is published
+// and copied to /live, after the generator, which writes the rest of .output/final. The runtime's
+// precompressed .br and .gz copies are left out, since GitHub Pages compresses what it serves itself;
+// what is left is the files dotnet.js loads. Its _framework folder is copied as framework, the name
+// the page's worker imports dotnet.js by: a host that drops names starting with '_' cannot lose it,
+// and dotnet.js finds the rest relative to its own URL.
+let buildLive () =
+    let published = "." / ".output" / "live"
+    dotnet "live" $"publish -c Release -o {Path.GetFullPath published}"
+    let source = published / "wwwroot"
+    let target = "." / outputP / "live"
+    if dirExists target then dirDelete target
+    for file in Directory.GetFiles(source, "*", SearchOption.AllDirectories) do
+        if not (file.EndsWith ".br" || file.EndsWith ".gz") then
+            let relative = Path.GetRelativePath(source, file)
+            let relative =
+                if relative.StartsWith("_framework" + string Path.DirectorySeparatorChar) then relative.Substring 1
+                else relative
+            let destination = target / relative
+            Directory.CreateDirectory(Path.GetDirectoryName destination) |> ignore
+            File.Copy(file, destination, true)
+
 let build () =
     dotnet (generatorP / "NaiveStaticGenerator") "run"
+    buildLive ()
 
 let run () =
     if RuntimeInformation.IsOSPlatform(OSPlatform.Windows) then
