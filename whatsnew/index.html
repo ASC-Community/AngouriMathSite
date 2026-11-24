@@ -126,7 +126,66 @@ THIS IS A TEMPLATE {
 
 -->
 
-<details open><summary><strong>2.8.0</strong></summary>
+<details open><summary><strong>2.9.0</strong></summary>
+<p>
+    A release about answers that hold at every scale. A value below about <code>1e-50</code> read as
+    <code>0</code> in most of the special functions, the trigonometric functions of a non-real number, the
+    modulus of a decimal and a decimal literal. Two constants were equal when they differed by less than
+    <code>1e-16</code>. And the solvers judged a root, a residual or a coefficient against a fixed
+    <code>1e-16</code> or <code>1e-7</code> rather than against the equation's own size. Each of these is now
+    decided by the size of what it is about. The solver also answers more equations exactly: an exponential
+    equal to a line, by the Lambert W function; a sum of arctangents; an equation between two inverse
+    trigonometric functions; a polynomial with non-real coefficients; and an equation in a factorial, by its
+    whole roots and the equation for the rest.
+</p>
+<p>
+    Each line below was answered differently by 2.8.0. Multiplying <code>sin(x) = x</code> by
+    <code>10^12</code> left it one root, <code>0</code>, where it has nine; <code>x^2 - 10^(-8) x = 0</code>
+    lost its root <code>10^(-8)</code>; <code>sinh(10^(-60))</code> was <code>0</code>; two different small
+    constants were equal; <code>x + x! = x^3</code> was thirteen decimals, short of a real root; and
+    <code>e^x = x + 2</code> was decimals from Newton's method:
+</p>
+<!-- amcheck:cs -->
+<pre><code>using AngouriMath.Extensions;
+
+var scaled = (Set.FiniteSet)"(sin(x) - x) * 10^12 = 0".ToEntity().Solve("x");
+var plain = (Set.FiniteSet)"sin(x) - x = 0".ToEntity().Solve("x");
+Console.WriteLine($"{scaled.Count} roots, and {plain.Count} without the factor");
+Console.WriteLine("x^2 - 10^(-8) x = 0".ToEntity().Solve("x"));
+Console.WriteLine("sinh(10^(-60)) * 10^60".ToEntity().Evaled);
+Console.WriteLine("10^(-20) = 2 * 10^(-20)".ToEntity().Evaled);
+Console.WriteLine("x + x! = x^3".ToEntity().Solve("x"));
+Console.WriteLine("e^x = x + 2".ToEntity().Solve("x"));</code></pre>
+<p>Prints:</p>
+<pre><code class="language-plaintext">9 roots, and 9 without the factor
+{ 0, 1/100000000 }
+1
+False
+{ 5 } \/ { x : x + x! = x ^ 3 and not x = 5 }
+union({ -lambertw(n, (-1) / e ^ 2) + -2 }, n in ZZ)</code></pre>
+<p>
+    <code>x + x! = x^3</code> has infinitely many real roots, two between some pairs of the poles at the
+    negative whole numbers, so no finite set is its answer. Its one whole root is found exactly, by a search
+    that ends with a proof that no larger whole number is a root, and the rest are left as the equation.
+</p>
+<p>
+    <b>Every input whose result is now different is listed, with both values and why, in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.9.0/BREAKING-CHANGES.md#290--since-280">BREAKING-CHANGES.md</a>
+    under <code>2.9.0 — since 2.8.0</code>. Read that before upgrading.</b>
+    It holds 42 entries, and almost all of them are silent: the call still succeeds and returns something
+    else. The ones to read first: an equation in a factorial or <code>gamma</code> is answered as a union with
+    a set builder, where it was a <code>FiniteSet</code>; <code>MathS.Parse</code> and
+    <code>Entity.TryParse</code> return a refused call where they threw, and <code>norm(v)</code> and
+    <code>beta(x)</code> with one argument throw, where they parsed as products; and, silently, two constants
+    are equal only when their difference is zero, a small value is the value rather than <code>0</code>, and
+    <code>arcosh</code> and <code>arsech</code> take their principal values.
+    Assembly version stays <code>2.0.0.0</code>, and the public surface is the same as 2.8.0's, so code that
+    compiled against 2.8.0 still compiles; but answers change, so this is not a drop-in replacement for 2.8.0.
+    The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.9.0">the 2.9.0 release</a>.
+</p>
+</details>
+
+<details><summary><strong>2.8.0</strong></summary>
 <p>
     A release about answers that are complete and answers that do not depend on where they were asked.
     Over the complex numbers an equation with infinitely many roots is now answered with all of them, as a
@@ -1078,7 +1137,7 @@ Added Tensor, system of equations, polynom divisions, periodic roots for solvers
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-6018 pages online
+6038 pages online
 </div>
 </body>
 

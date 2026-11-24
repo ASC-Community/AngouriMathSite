@@ -90,7 +90,7 @@
 
 <!--Top end-->
 
-<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra.Groebner/GroebnerBudget.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">Default</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Field</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            What this algorithm bounds itself by when the caller has expressed no opinion.<br>            The clock and no step ceiling, which is what it has always done — a step ceiling<br>            here would be a different answer on the systems that currently finish just inside<br>            five seconds, and picking one is a measurement rather than a default.<br>            </div></p></p>
+<p class="yadg-p "><a href="../../AngouriMath.Functions.Algebra.Groebner/GroebnerBudget.html">&#8592; Back to list of members</a></p><p class="yadg-p "><p class="yadg-p "><h1 class="yadg-h1 ">Default</h1><p class="yadg-p "><span class="iconify" data-icon="octicon:diamond-16"></span>&nbsp;Field</p></p><p class="yadg-p "><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            What this algorithm bounds itself by when the caller has expressed no opinion:<br>            steps, and no clock.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para>            A clock of five seconds was the bound, and it made the answer depend on the machine:<br>            the equation (-3) - 3x + (2 + i) x^2 + (i - x) x sgn(-3 + i - x) = 0 is answered on a<br>            desktop and spent the five seconds on the Windows and macOS runners, where it came<br>            back as a conditional set. Measured over 4800 solves of generated equations<br>            in conj, Re, abs and sgn, as written and with x written as 10^-12 x and 10^20 x, and<br>            over the unit suite, no computation that finishes takes more than 2638 steps, and<br>            cyclic-5 declines for its roots after 5523. 20 000 admits all of them with room to<br>            spare and is about what five seconds allowed on a desktop: cyclic-6 stopped at<br>            13 643 steps and 3.6 s, and stops at the ceiling now.<br>            </para><para>            No clock, not even a generous one, because the clock was never timing the steps. A<br>            step, a reduction of polynomials no wider than the ceilings above, is tens of<br>            microseconds. Most of the time is spent between two steps, in solving the univariate<br>            equations back-substituted and deciding their roots exactly, which have bounds of their<br>            own, and the clock is read only at the next step, after that work is done. A<br>            backstop of 60 s threw a finished computation away on the macOS runner: the equation<br>            above with x written as 10^-12 x took 175 steps and 93 s there, and about 8 s on a<br>            desktop.<br>            </para></div></p></p>
 <!--Bottom begin-->
 
 <br><br><br><br>
@@ -104,7 +104,7 @@
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-6018 pages online
+6038 pages online
 </div>
 </body>
 

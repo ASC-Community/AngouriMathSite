@@ -2461,6 +2461,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Minusf/%23ctor.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Minusf/Codomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Minusf/DefaultCodomain.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Minusf/DifferenceOfExponentials.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Minusf/InitDirectChildren.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Minusf/InnerDifferentiate.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Minusf/InnerSimplify.html</loc></url>
@@ -2548,6 +2549,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Notf/ToString.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Abs.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/ArcSinOrCos.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Arccos.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Arccosecant.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Arccotan.html</loc></url>
@@ -2579,6 +2581,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Cotan.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/CotangentDerivative.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/DecimalOrder.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/DigitsBelowOne.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/DivideBySmith.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Ei.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/EiByTheAsymptoticSeries.html</loc></url>
@@ -2596,6 +2599,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/ExactPolygammaParts.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/ExactZeta.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Exp.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/ExpDifference.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Factorial.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Gamma.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/GammaOf.html</loc></url>
@@ -2637,6 +2641,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Si.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Signum.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Sin.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/SinhAndCosh.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/SpougeFactorial.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/Sqrt.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Number/SuperSwitch.html</loc></url>
@@ -3196,6 +3201,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/Solve.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/SolveInverting.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/SpellingsToSolveOver.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/TenMillion.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/Unsolved.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalEquationSolver/WithRootsAtRadicandZeros.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/AnalyticalInequalitySolver.html</loc></url>
@@ -3221,6 +3227,8 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/ExponentialSolver/SolveLinearOverTheComplexNumbers.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/ExponentialSolver/SolveTwoPowersOfNumericBases.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/ExponentialSolver/SolveTwoPowersOverTheComplexNumbers.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/FactorialSolver.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/FactorialSolver/MostWholeNumbersTried.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/FractionedPolynoms.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/FractionedPolynoms/HasARadicalOf.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/FractionedPolynoms/TwoSquareRootsSquaredAway.html</loc></url>
@@ -3259,6 +3267,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/NonSquareSystemSolver/VanishesWhere.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialCandidates.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialCandidates/CommonFactor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialCandidates/DividedByACommonConstant.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialCandidates/RootsAmong.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialCandidates/WholeMultiple.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSignTable.html</loc></url>
@@ -3377,6 +3386,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/NegligibleShare.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/Satisfies.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/TrySolve.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.Groebner/GroebnerSystemSolver/VanishesAtTheExactRoot.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.IndefiniteIntegralSolver.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.IndefiniteIntegralSolver/ALinearBesideTheRoot.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.IndefiniteIntegralSolver/ALinearBesideTheRoot/%23ctor.html</loc></url>
@@ -3416,13 +3426,18 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.MonoidAlgebra/SparseTerms%601/Terms.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner/AsARoot.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner/ExponentOfTheRoots.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner/GuardDigits.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner/Log10OfModulus.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner/MaxSweeps.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner/Roots.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner/RootsOf.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/DurandKerner/RootsOfUnitSize.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver/AreIsolated.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver/Halved.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver/HasOnlyRealNumbers.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver/NotRealHere.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver/OnePerRoot.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.NumericalSolving/NewtonSolver/RealSignChanges.html</loc></url>
@@ -3496,6 +3511,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/AtASamplePoint.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/Branches.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/FilterRoots.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/InSolveSystem.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/IsExact.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra/EquationSolver/MostBranches.html</loc></url>
@@ -5050,6 +5066,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/PolynomialFactoring/MaxDegree.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/PolynomialFactoring/MayBeAPolynomialWithRationalCoefficients.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/PolynomialFactoring/MultiplyByLinear.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/PolynomialFactoring/NumericalCandidates.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/PolynomialFactoring/RationalRootCandidates.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/PolynomialFactoring/RootCandidates.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/PolynomialFactoring/TryGetRationalCoefficients.html</loc></url>
@@ -5269,6 +5286,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/TrigonometricIdentity/Reduced.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/TrigonometricIdentity/TryConstant.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/TrigonometryTableValues.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/TrigonometryTableValues/AgreesToTheWorkingDigits.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/TrigonometryTableValues/HalfTurn.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/TrigonometryTableValues/IsWrittenThroughTheComplexNumbers.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/TrigonometryTableValues/OrHalfTurn.html</loc></url>
@@ -5534,12 +5552,14 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/AroundTheMiddle.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/AtTheEnds.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/BySlope.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/Constant.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/EvaluateNode.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/Gaussian.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/In.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/Multiply.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/Of.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/OverTheRoots.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/Part.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/RootsEnclosed.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseEvaluation/ValueOf.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Numerics/PreciseInterval.html</loc></url>
