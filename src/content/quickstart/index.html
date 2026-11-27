@@ -39,14 +39,14 @@ also need to address the following resources:
         <pre><code>dotnet add package AngouriMath.FSharp</code></pre>
     </p>
     <p>
-        The current release is <b>2.9.0</b>, and every 2.x release changes answers that earlier versions
+        The current release is <b>2.10.0</b>, and every 2.x release changes answers that earlier versions
         got wrong. Whichever version you are coming from, read
-        <a href="https://github.com/asc-community/AngouriMath/blob/v2.9.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>
+        <a href="https://github.com/asc-community/AngouriMath/blob/v2.10.0/BREAKING-CHANGES.md">BREAKING-CHANGES.md</a>
         first: it lists every input whose result is now different, with the old value and the new one,
-        under a heading per release. 2.9.0 is not a drop-in replacement for 2.8.0: small values are kept
-        rather than read as 0, two constants are equal only when their difference is zero, and an equation
-        in a factorial is answered as a union, so read the list of what to read first under
-        <code>2.9.0 — since 2.8.0</code> before upgrading. The assembly version is pinned at
+        under a heading per release. 2.10.0 is not a drop-in replacement for 2.9.0: <code>Matrix.Trace</code>
+        is <code>null</code> for a matrix that is not square, a matrix operation beside a written matrix is no
+        longer read as a number, and more polynomials in several variables are factored, so read the list of
+        what to read first under <code>2.10.0 — since 2.9.0</code> before upgrading. The assembly version is pinned at
         <code>2.0.0.0</code> for the whole of 2.x.
     </p>
     <p>
