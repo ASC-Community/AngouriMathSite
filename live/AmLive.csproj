@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AngouriMath" Version="2.9.0" />
+    <PackageReference Include="AngouriMath" Version="2.10.0" />
     <!-- The library is reached through its own reflection-free API, but it has not been
          checked under the trimmer; keep it whole rather than find out in the browser. -->
     <TrimmerRootAssembly Include="AngouriMath" />
