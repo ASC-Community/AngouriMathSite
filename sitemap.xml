@@ -303,6 +303,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/IntoLinqCompiler/BuildNorms.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/IntoLinqCompiler/CheckResultShape.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/IntoLinqCompiler/Conditional.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/IntoLinqCompiler/Holds.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/IntoLinqCompiler/IsRealWhereverDefined.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/MathAllMethods.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/MathAllMethods/Definitions.html</loc></url>
@@ -373,6 +374,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/TensorCompilation/WholeExponent.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/TensorCompilation/WholeIndex.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/TensorCompilation/Widened.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/TensorCompilation/WidenedBeside.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/TensorCompilation/Zip.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/ThreeValuedLogic.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation.IntoLinq/ThreeValuedLogic/Comparison.html</loc></url>
@@ -388,6 +390,9 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/ComplexBranches/Arcsin.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/ComplexBranches/Log.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/ComplexBranches/Unsigned.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/MatrixOperationsOverNumbers.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/MatrixOperationsOverNumbers/Check.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/MatrixOperationsOverNumbers/Rewritten.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/RealOnly.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/RealOnly/Max.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Core.Compilation/RealOnly/Min.html</loc></url>
@@ -1882,6 +1887,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Cotanf/ToString.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/CrossProductf.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/CrossProductf/%23ctor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/CrossProductf/CarriedOut.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/CrossProductf/Codomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/CrossProductf/DefaultCodomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/CrossProductf/InitDirectChildren.html</loc></url>
@@ -1908,6 +1914,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Derivativef/ToString.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Determinantf.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Determinantf/%23ctor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Determinantf/CarriedOut.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Determinantf/Codomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Determinantf/DefaultCodomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Determinantf/InitDirectChildren.html</loc></url>
@@ -1961,6 +1968,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/DivisorSigmaf/ToString.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/DotProductf.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/DotProductf/%23ctor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/DotProductf/CarriedOut.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/DotProductf/Codomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/DotProductf/DefaultCodomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/DotProductf/InitDirectChildren.html</loc></url>
@@ -2346,6 +2354,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Matrix/AsScalar.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Matrix/CharacteristicPolynomial.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Matrix/Codomain.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Matrix/CofactorAdjugate.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Matrix/ColumnCount.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Matrix/DefaultCodomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Matrix/Determinant.html</loc></url>
@@ -2395,6 +2404,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Matrix/op_Subtraction.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/MatrixEntryf.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/MatrixEntryf/%23ctor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/MatrixEntryf/CarriedOut.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/MatrixEntryf/Codomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/MatrixEntryf/DefaultCodomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/MatrixEntryf/InitDirectChildren.html</loc></url>
@@ -3058,6 +3068,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Tanf/ToString.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Tracef.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Tracef/%23ctor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Tracef/CarriedOut.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Tracef/Codomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Tracef/DefaultCodomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Tracef/InitDirectChildren.html</loc></url>
@@ -3070,6 +3081,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Tracef/ToString.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Transposef.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Transposef/%23ctor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Transposef/CarriedOut.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Transposef/Codomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Transposef/DefaultCodomain.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Entity/Transposef/InitDirectChildren.html</loc></url>
@@ -3286,7 +3298,9 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/HasEvenDegreesWherever.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/IsAPositiveNumber.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/IsOne.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/MinusQuotient.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/ParseMonomial.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/Quotient.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/ReduceCommonPower.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/RootsOverASquareDiscriminant.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/SolveAsPolynomial.html</loc></url>
@@ -3295,6 +3309,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/SolveQuadratic.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/SolveQuartic.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/SquarePart.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/PolynomialSolver/WithoutALeadingMinus.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/SolutionParameters.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/SolutionParameters/Apart.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Algebra.AnalyticalSolving/SolutionParameters/AtAMember.html</loc></url>
@@ -4632,6 +4647,8 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Compilation.IntoSource.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Compilation.IntoSource/ShaderSource.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.Compilation.IntoSource/SourceDialect.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.MultivariateHenselFactorization.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.MultivariateHenselFactorization/UnivariateDiophantine.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.PartialFractions.ModularElimination.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.PartialFractions.ModularElimination/Image.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions.PartialFractions.ModularElimination/Image/EnsureRoom.html</loc></url>
@@ -4787,6 +4804,15 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/GeometricSeries/PowerAt.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/GeometricSeries/TryReadLinear.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/GeometricSeries/TryReadSlope.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd/Content.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd/Evaluate.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd/Gcd.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd/Interpolate.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd/MaxAttempts.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd/MaxBits.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd/Norm.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/HeuristicGcd/Whole.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/ImageByCalculus.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/ImageByCalculus/AsReal.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/ImageByCalculus/At.html</loc></url>
@@ -4852,12 +4878,16 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/IversonSum/Root.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/IversonSum/RootFloor.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/ByLiftingTheOthersAsOne.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/BySquareFreePart.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/BySubstitution.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/DividesBackExactly.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/Factor.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/FromImage.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/MaxCollapsedDegree.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/MaxImageFactors.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/OnlyOther.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/ReadBack.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/Recombine.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/Subsets.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/KroneckerFactorization/ToImage.html</loc></url>
@@ -4868,6 +4898,26 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MonomialProduct/ClosedForm.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MonomialProduct/MaxPower.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MonomialProduct/OfAPower.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/AtZero.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Attempt.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/ByMonicisation.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Candidates.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Cofactors.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Combine.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Diophantine.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Factor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Image.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/ImageFactorCount.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Lift.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/MaxImageFactors.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/MaxMonicGrowth.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/MaxPoints.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/PointFor.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Product.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/ToUnivariate.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Translate.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariateHenselFactorization/Values.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/CoefficientsIn.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/Degree.html</loc></url>
@@ -4887,6 +4937,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/ShiftedBy.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/Terms.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/TimesTerm.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/Truncated.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/TryParse.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/TrySquareRoot.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/MultivariatePolynomial/ValueModulo.html</loc></url>
@@ -5169,6 +5220,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/Primes/published.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/ProductsOfMatrices.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/ProductsOfMatrices/Frozen.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/ProductsOfMatrices/IsAMatrixNotWrittenOut.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/ProductsOfMatrices/Thawed.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/RationalFunction.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath.Functions/RationalFunction/Conditioned.html</loc></url>
@@ -5664,6 +5716,7 @@
   <url><loc>https://am.angouri.org/docs/AngouriMath/Entity/Factorize.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath/Entity/Floor.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath/Entity/FreeVariables.html</loc></url>
+  <url><loc>https://am.angouri.org/docs/AngouriMath/Entity/FromString.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath/Entity/Gcd.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath/Entity/GetHashCode.html</loc></url>
   <url><loc>https://am.angouri.org/docs/AngouriMath/Entity/HasANameOutsideAWrittenMatrix.html</loc></url>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AngouriMath, an open-source symbolic algebra library for .NET: solve equations and systems, simplify, differentiate, integrate, take limits, and compile expressions.">
+    <title>AngouriMath | docs/AngouriMath.Functions/MultivariateHenselFactorization</title>    
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../themes.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono">
+    
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script src="https://buttons.github.io/buttons.js"></script>
+
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+<link rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/styles/rainbow.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+
+
+<nav class="nav-left pc" aria-label="Site">
+<div class="centered nav-top">
+<div>
+
+<div class="centered">
+    <img class="logo pc" src="../../img/icon_cropped.png" width="120" height="120" alt=""/>
+</div>
+
+<h3>AngouriMath</h3>
+<p class="slogan pc">Symbolics for .NET</p>
+</div>
+<br>
+</div>
+
+<h4 class="toc-heading">Table of contents</h4>
+<ul class='table-of-contents'>
+    <li><!--active_-->          <span aria-hidden="true" class="iconify" data-icon="octicon:home-16" data-inline="true"></span><a href="../../" title="Main page with all key points">Home page</a>                                              </li>
+    <li><!--active_quickstart--><span aria-hidden="true" class="iconify" data-icon="octicon:zap-16" data-inline="true"></span><a href="../../quickstart">Quick start</a>                                                    </li>
+    <li><!--active_wiki-->      <span aria-hidden="true" class="iconify" data-icon="octicon:book-16" data-inline="true"></span><a href="../../wiki">Wiki</a>                                                               </li>
+    <li class="active-link">      <span aria-hidden="true" class="iconify" data-icon="octicon:database-16" data-inline="true"></span><a href="../../docs/namespaces.html">Almanac</a>                                                    </li>
+    <li><!--active_research-->         <span aria-hidden="true" class="iconify" data-icon="octicon:beaker-16" data-inline="true"></span><a href="../../research">Research</a>
+    <li><!--active_whatsnew-->  <span aria-hidden="true" class="iconify" data-icon="octicon:flame-16" data-inline="true"></span><a href="../../whatsnew">What's new</a>                                                    </li>
+    <li><!--active_demo-->      <span aria-hidden="true" class="iconify" data-icon="octicon:code-review-16" data-inline="true"></span><a class="try-live" href="../../live/" title="AngouriMath in your browser, nothing to install">Try it live</a>                                                               </li>
+    <li><span aria-hidden="true" class="iconify" data-icon="octicon:mark-github-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>     </li>
+    <li><span aria-hidden="true" class="iconify" data-icon="octicon:bug-16" data-inline="true"></span><a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a></li>
+    <li><span aria-hidden="true" class="iconify" data-icon="octicon:comment-discussion-16" data-inline="true"></span><a href="../../#contacts">Contacts</a>    </li>
+</ul>
+
+</nav>
+
+<div class="main">
+<div class="head-of-page">
+
+<!--Head of page for mobiles-->
+<div class="centered phone">
+<img class="logo" src="../../img/icon_cropped.png" width="100" alt=""/>
+<h2>AngouriMath</h2>
+<p><a class="try-live" href="../../live/">Try it live</a></p>
+</div>
+<!--End-->
+
+<!--For mobiles-->
+<details class="phone"><summary>Navigation</summary>
+<div class="centered link-block-mob">
+<a href="../../">Home</a>
+<a href="../../quickstart">Quick start</a>
+<a href="../../wiki">Wiki</a>
+<a href="../../docs/namespaces.html">Almanac</a>
+<a href="../../research">Research</a>
+<a href="../../whatsnew">What's new</a>
+<a class="try-live" href="../../live/">Try it live</a>
+<a href="../../why">Use</a>
+<a href="https://angouri.org" target="_blank">Angouri.org</a>
+<a href="https://github.com/asc-community/AngouriMath" target="_blank">GitHub</a>
+<a href="https://github.com/asc-community/AngouriMath/issues/new/choose" target="_blank">Report a bug</a>
+<a href="../../#contacts">Contacts</a>
+</div>
+</details>
+<!--End-->
+
+</div>
+
+<!--Top end-->
+
+<h2 class="yadg-h2 centered">MultivariateHenselFactorization</h2><hr/><p class="yadg-p "><a href="../AngouriMath.Functions.html">&#8592; Back to list of classes</a></p><h2 class="yadg-h2 ">Description</h2><p class="yadg-p "><strong class="yadg-strong ">Summary</strong></p><div class='yadg-summary'>            Factorisation in three or more variables by <b>Hensel lifting one variable at a<br>            time</b>, after Wang: factor at a point, lift the factorisation to two variables with<br>            <a href="../AngouriMath.Functions/BivariateHenselFactorization.html">BivariateHenselFactorization</a>, then bring back each remaining variable in<br>            turn.<br>            </div><p class="yadg-p "><strong class="yadg-strong ">Remarks</strong></p><div class='yadg-remarks'><para><b>What this adds to the collapse.</b><c>KroneckerFactorization</c> also reaches three<br>            or more variables, by substituting all the others into one in mixed radix and lifting<br>            the two-variable image. That image's degree is a <i>product</i> of the degrees, and past<br>            what one exponent holds it is refused. Lifting one variable at a time costs a<br>            <i>sum</i>: each variable is lifted to its own degree and no further, so<br>            <c>x ^ 7 - (y + z ^ 3) ^ 7</c>, whose collapsed image has degree 175, is reached here at<br>            degrees 7 and 21.<br>            </para><para><b>The lift.</b> The other variables are moved so that the point is the origin:<br>            <c>g = f(x, y_1 + a_1, …, y_k + a_k)</c>. The slice <c>g(x, y_1, 0, …, 0)</c> is<br>            factored by the two-variable lift, which also does the recombination, so its factors<br>            are true ones. Then for each further variable <c>y_j</c> the factors are pushed from<br>            agreeing with <c>g</c> at <c>y_j = 0</c> to agreeing in every power of <c>y_j</c>: the<br>            coefficient of <c>y_j ^ m</c> in the error is written as <c>Σ σ_i · Π_(l≠i) F_l</c>,<br>            with each <c>σ_i</c> of lower degree in <c>x</c> than <c>F_i</c>, and <c>σ_i y_j ^ m</c>            is added to <c>F_i</c>. That equation is in the variables already lifted, and it is<br>            solved the same way one variable down, until at the bottom it is in <c>x</c> alone and<br>            the Bezout pairs of the image's factors answer it.<br>            </para><para><b>Why a single image factor is a proof.</b> The leading coefficient in <c>x</c> is a<br>            constant and the content in the other variables has been taken out. A factorisation<br>            <c>g = A · B</c> with both of positive degree in <c>x</c> then survives setting any<br>            variable to zero, each side keeping its degree in <c>x</c>; so a slice that does not<br>            factor proves that <c>g</c> does not, and <c>g</c> is the input moved by a ring<br>            automorphism.<br>            </para><para><b>A leading coefficient that is a polynomial</b> — Wang's leading-coefficient<br>            problem — is answered the way the two-variable lift answers it, by asking about the<br>            monic <c>L ^ (n - 1) · f(z / L, …)</c> instead; see <a href="../AngouriMath.Functions/MultivariateHenselFactorization/ByMonicisation.html">ByMonicisation(AngouriMath.Functions.MultivariatePolynomial,System.Int32,System.Collections.Generic.List{System.Int32})</a>.<br>            </para><para><b>What is refused.</b> A monic form that adds more than<br>            <a href="../AngouriMath.Functions/MultivariateHenselFactorization/MaxMonicGrowth.html">MaxMonicGrowth</a> to the degrees; a polynomial with a repeated factor, whose<br>            images are never square-free; and a slice that splits further than the polynomial<br>            does, for every point tried. The lift cannot follow a factor of the slice that is not<br>            the image of one of the polynomial, so it finds that the product it built is not the<br>            polynomial and the point is given up. Every factor is checked by exact division before<br>            it is returned.<br>            </para></div><h2 class="yadg-h2 ">Members</h2><p class="yadg-p "><ul class="yadg-ul "><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Attempt.html"><h3 class="yadg-h3 ">Attempt&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Int32,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;List{System.&#8203;Int32},&#8203;System.&#8203;Int32[],&#8203;System.&#8203;Int32[])</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/AtZero.html"><h3 class="yadg-h3 ">AtZero&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Int32)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/ByMonicisation.html"><h3 class="yadg-h3 ">ByMonicisation&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Int32,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;List{System.&#8203;Int32})</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Candidates.html"><h3 class="yadg-h3 ">Candidates</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Cofactors.html"><h3 class="yadg-h3 ">Cofactors&#8203;(System.&#8203;Collections.&#8203;Generic.&#8203;List{AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial},&#8203;System.&#8203;Int32[])</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Combine.html"><h3 class="yadg-h3 ">Combine&#8203;(System.&#8203;Collections.&#8203;Generic.&#8203;List{AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial},&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;List{AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial},&#8203;System.&#8203;Int32[])</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Diophantine.html"><h3 class="yadg-h3 ">Diophantine&#8203;(System.&#8203;Collections.&#8203;Generic.&#8203;List{AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial},&#8203;AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;List{System.&#8203;Int32},&#8203;System.&#8203;Int32,&#8203;System.&#8203;Int32[],&#8203;AngouriMath.&#8203;Functions.&#8203;MultivariateHenselFactorization.&#8203;UnivariateDiophantine)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Factor.html"><h3 class="yadg-h3 ">Factor&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Int32)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Image.html"><h3 class="yadg-h3 ">Image&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Int32,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;IReadOnlyList{System.&#8203;Int32},&#8203;System.&#8203;Int32[])</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/ImageFactorCount.html"><h3 class="yadg-h3 ">ImageFactorCount&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Int32,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;IReadOnlyList{System.&#8203;Int32},&#8203;System.&#8203;Int32[])</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Lift.html"><h3 class="yadg-h3 ">Lift&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;List{AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial},&#8203;System.&#8203;Int32,&#8203;System.&#8203;Collections.&#8203;Generic.&#8203;List{System.&#8203;Int32},&#8203;System.&#8203;Int32[],&#8203;AngouriMath.&#8203;Functions.&#8203;MultivariateHenselFactorization.&#8203;UnivariateDiophantine)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/MaxImageFactors.html"><h3 class="yadg-h3 ">MaxImageFactors</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/MaxMonicGrowth.html"><h3 class="yadg-h3 ">MaxMonicGrowth</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/MaxPoints.html"><h3 class="yadg-h3 ">MaxPoints</h3></a>Field</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/PointFor.html"><h3 class="yadg-h3 ">PointFor&#8203;(System.&#8203;Int32,&#8203;System.&#8203;Int32)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Product.html"><h3 class="yadg-h3 ">Product&#8203;(System.&#8203;Collections.&#8203;Generic.&#8203;List{AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial},&#8203;System.&#8203;Int32[])</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/ToUnivariate.html"><h3 class="yadg-h3 ">ToUnivariate&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Int32)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Translate.html"><h3 class="yadg-h3 ">Translate&#8203;(AngouriMath.&#8203;Functions.&#8203;MultivariatePolynomial,&#8203;System.&#8203;Int32,&#8203;PeterO.&#8203;Numbers.&#8203;ERational)</h3></a>Method</p></li><li class="yadg-li yadg-member yadg-list"><p class="yadg-p "><a href="./MultivariateHenselFactorization/Values.html"><h3 class="yadg-h3 ">Values</h3></a>Field</p></li></ul></p>
+<!--Bottom begin-->
+
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<a href="https://angouri.org">Angouri</a> © 2019-2026 &middot; 
+<a href="https://github.com/asc-community/AngouriMath">Project's repo</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
+<a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
+<a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
+6091 pages online
+</div>
+</body>
+
+
+
+
+</html>

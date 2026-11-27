@@ -126,7 +126,59 @@ THIS IS A TEMPLATE {
 
 -->
 
-<details open><summary><strong>2.9.0</strong></summary>
+<details open><summary><strong>2.10.0</strong></summary>
+<p>
+    A release about matrices next to names, and answers that come back. Most of what it fixes was found by
+    writing the code a user writes: compiling <code>dot(x * [1, 2], [3, 4])</code> for a plot, inverting
+    <code>[[a, b], [c, d]]</code> and putting numbers in, taking <code>tanh</code> of a large argument. A name
+    beside a written matrix was read as a number where it could be a matrix, and refused where it could not;
+    a symbolic inverse had no value where an elimination pivot was 0, though the inverse exists there; and
+    <code>tanh(10^8)</code> did not return. Factoring also reaches further in several variables: a polynomial
+    in three or more variables, a repeated factor in more than one, and the square-free part of a larger
+    polynomial.
+</p>
+<p>
+    Each line below was answered differently by 2.9.0. The factorisation was <code>null</code>; the inverse
+    at <code>a = 0, b = 1, c = 1, d = 0</code> was <code>NaN</code>; the compilation was refused;
+    <code>tanh(10^8)</code> did not return; the root was <code>-p * V / (-n * R)</code>; and the message said
+    only that no variable could be parsed from <code>v0</code>:
+</p>
+<!-- amcheck:cs -->
+<pre><code>using AngouriMath.Extensions;
+
+Console.WriteLine(MathS.Polynomials.Factor("x ^ 3 - (y + z) ^ 3", "x"));
+var inverse = "[[a, b], [c, d]] ^ (-1)".ToEntity().Simplify();
+Console.WriteLine(inverse.Substitute("a", 0).Substitute("b", 1).Substitute("c", 1).Substitute("d", 0).Evaled);
+Console.WriteLine("dot(x * [1, 2], [3, 4])".Compile("x").Call(2).Real);
+Console.WriteLine("tanh(10^8)".ToEntity().Evaled);
+Console.WriteLine("p V = n R T".ToEntity().Solve("T"));
+try { Entity.Variable v = "v0"; }
+catch (Exception e) { Console.WriteLine(e.Message); }</code></pre>
+<p>Prints:</p>
+<pre><code class="language-plaintext">(x - y - z) * (x ^ 2 + x * y + x * z + y ^ 2 + 2 * y * z + z ^ 2)
+[[0, 1], [1, 0]]
+22
+1
+{ p * V / (n * R) }
+Cannot parse an instance of Variable from `v0`: it parses as `v ^ 0`: a digit written against a name is its power, and `v_0` is the variable with that index</code></pre>
+<p>
+    <b>Every input whose result is now different is listed, with both values and why, in
+    <a href="https://github.com/asc-community/AngouriMath/blob/v2.10.0/BREAKING-CHANGES.md#2100--since-290">BREAKING-CHANGES.md</a>
+    under <code>2.10.0 — since 2.9.0</code>. Read that before upgrading.</b>
+    It holds 13 entries. The ones to read first: <code>Matrix.Trace</code> is <code>Entity?</code>,
+    <code>null</code> for a matrix that is not square; a singular matrix to a negative power throws
+    <code>InvalidMatrixOperationException</code>, where it threw GenericTensor's
+    <code>InvalidDeterminantException</code>; and, silently, a transpose beside a written matrix is left as
+    written where it was read as a number, a constant beside a compiled matrix of whole numbers is not
+    truncated, and a solved root is printed with one sign where it had two.
+    Assembly version stays <code>2.0.0.0</code>, and the one change to the public surface is the nullable
+    annotation on <code>Matrix.Trace</code>, so code that compiled against 2.9.0 still compiles; but answers
+    change, so this is not a drop-in replacement for 2.9.0.
+    The full notes are on <a href="https://github.com/asc-community/AngouriMath/releases/tag/v2.10.0">the 2.10.0 release</a>.
+</p>
+</details>
+
+<details><summary><strong>2.9.0</strong></summary>
 <p>
     A release about answers that hold at every scale. A value below about <code>1e-50</code> read as
     <code>0</code> in most of the special functions, the trigonometric functions of a non-real number, the
@@ -1137,7 +1189,7 @@ Added Tensor, system of equations, polynom divisions, periodic roots for solvers
 <a href="https://github.com/asc-community/AngouriMathSite">Site's repo</a> &middot; 
 <a href="https://iconify.design/icon-sets/octicon/" target="_blank">Octicons</a> &middot; 
 <a href="https://github.com/asc-community/AngouriMathSite#transparency">Transparency</a> &middot; 
-6038 pages online
+6091 pages online
 </div>
 </body>
 
